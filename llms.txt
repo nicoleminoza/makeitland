@@ -12,6 +12,7 @@
 
 ## Also from the studio
 - [House Style](https://makeitland.studio/work/house-style.html): a shipped product, a curated library of 40+ opinionated AI prompts for brand, marketing, and product leaders.
+  - [Open the library](https://housestyle.makeitland.studio/): the live House Style app.
 - [How Institutions Behave](https://makeitland.studio/work/how-institutions-behave.html): an interactive thesis benchmarking nine landmark cultural-institution rebrands. Brand is behavior, not image.
 
 ## Contact
