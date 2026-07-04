@@ -1,0 +1,186 @@
+<!DOCTYPE html><html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="4">The Thesis · Make It Land Studio</title><meta name="description" content="Visibility is cheap now. Preference is not. Make It Land builds brands to be chosen, not just seen, by naming the one overlooked advantage and proving it." data-dc-tpl="5"><meta name="author" content="Nicole Miñoza" data-dc-tpl="6"><link rel="canonical" href="https://makeitland.studio/thesis.html" data-dc-tpl="7"><meta name="theme-color" content="#241f1d" data-dc-tpl="8"><meta property="og:type" content="article" data-dc-tpl="9"><meta property="og:site_name" content="Make It Land Studio" data-dc-tpl="10"><meta property="og:title" content="Built to be chosen, not just seen." data-dc-tpl="11"><meta property="og:description" content="Visibility is cheap now. Preference is not. The studio thesis: find the one overlooked advantage, design everything around it, and prove it." data-dc-tpl="12"><meta property="og:url" content="https://makeitland.studio/thesis.html" data-dc-tpl="13"><meta property="og:image" content="https://makeitland.studio/og-thesis.png" data-dc-tpl="14"><meta property="og:image:alt" content="Built to be chosen, not just seen. The Make It Land thesis." data-dc-tpl="15"><meta property="og:image:width" content="1200" data-dc-tpl="16"><meta property="og:image:height" content="630" data-dc-tpl="17"><meta property="article:author" content="Nicole Miñoza" data-dc-tpl="18"><meta name="twitter:card" content="summary_large_image" data-dc-tpl="19"><meta name="twitter:title" content="Built to be chosen, not just seen." data-dc-tpl="20"><meta name="twitter:description" content="Visibility is cheap now. Preference is not. The Make It Land studio thesis." data-dc-tpl="21"><meta name="twitter:image" content="https://makeitland.studio/og-thesis.png" data-dc-tpl="22"><meta name="twitter:image:alt" content="Built to be chosen, not just seen. The Make It Land thesis." data-dc-tpl="23"><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="25"><link rel="preconnect" href="https://fonts.gstatic.com" data-dc-tpl="26"><style data-dc-tpl="27">/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+</style><style data-dc-tpl="28">
+    body { margin:0; background:#FAF8F4; }
+    * { box-sizing:border-box; }
+    a { text-decoration:none; color:inherit; }
+    @media (max-width:760px){ .th-h1{ font-size:44px !important; } .th-sec{ padding:64px 24px !important; } .th-lead{ font-size:26px !important; } }
+  </style><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png"><link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Most brands are seen. Few are chosen.",
+    "description": "The Make It Land studio thesis: find the one overlooked advantage, design everything around it, and prove it. Built to be chosen, not just seen.",
+    "author": { "@type": "Person", "name": "Nicole Miñoza" },
+    "publisher": { "@type": "Organization", "name": "Make It Land Studio", "url": "https://makeitland.studio" },
+    "image": "https://makeitland.studio/og-thesis.png",
+    "url": "https://makeitland.studio/thesis.html",
+    "mainEntityOfPage": "https://makeitland.studio/thesis.html"
+  }
+</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..720&family=Hanken+Grotesk:wght@300..700&display=swap">
+</head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="thesis"><div data-dc-tpl="29" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-family: &quot;Hanken Grotesk&quot;, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <header data-dc-tpl="30" style="border-bottom: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="31" style="max-width: 820px; margin: 0px auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
+      <a data-dc-tpl="32" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 23px; white-space: nowrap;">Make It Land<span data-dc-tpl="33" style="color: rgb(200, 73, 46);">.</span></a>
+      <a data-dc-tpl="34" href="/" style="font-size: 15px; color: rgb(107, 102, 97); font-weight: 500;">← Home</a>
+    </div>
+  </header>
+
+  
+  <section data-dc-tpl="35" class="th-sec" style="max-width: 820px; margin: 0px auto; padding: 110px 40px 64px;">
+    <div data-dc-tpl="36" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 600; margin-bottom: 24px;">The thesis</div>
+    <h1 data-dc-tpl="37" class="th-h1" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.02em; font-size: 60px; line-height: 1.05; margin: 0px;">Most brands are seen. Few are chosen.</h1>
+  </section>
+
+  
+  <article data-dc-tpl="38" class="th-sec" style="max-width: 820px; margin: 0px auto; padding: 0px 40px 40px; font-size: 19px; line-height: 1.7; color: rgb(26, 26, 26);">
+    <p data-dc-tpl="39" class="th-lead" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 30px; line-height: 1.32; letter-spacing: -0.01em; margin: 0px 0px 44px; color: rgb(26, 26, 26);">Visibility is cheap now. Preference is not. Attention is not the prize it once was, and building for it is building for the wrong thing.</p>
+
+    <p data-dc-tpl="40" style="margin: 0px 0px 28px;">Every founder has been told to be more visible. Post more, ship more, show up more. So they do, and they end up seen. But seen is not chosen. Seen is a glance. Chosen is a decision, made by someone with a real choice in front of them and a reason to pick one option over the rest.</p>
+
+    <p data-dc-tpl="41" style="margin: 0px 0px 28px;">That reason is usually something the business already has and has learned to overlook. A result nobody thought to lead with. A capability treated as ordinary because it is familiar from the inside. A story so close it stopped feeling like a story. The advantage that gets missed is rarely small. It is usually the whole strategy, waiting to be named.</p>
+
+    <div data-dc-tpl="42" style="border-left: 2px solid rgb(200, 73, 46); padding: 6px 0px 6px 28px; margin: 44px 0px;">
+      <p data-dc-tpl="43" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 27px; line-height: 1.34; margin: 0px; color: rgb(26, 26, 26);">Being chosen is a design problem, not a volume problem.</p>
+    </div>
+
+    <p data-dc-tpl="44" style="margin: 0px 0px 28px;">This is the part most brand work skips. It reaches for a nicer logo, a louder launch, another channel, more noise on more noise. None of it answers the only question that decides anything: when someone is choosing, why you? Answer that with precision and the rest gets simpler. The site has one job. The story has one spine. The proof points one way.</p>
+
+    <p data-dc-tpl="45" style="margin: 0px 0px 28px;">So we start by finding the one overlooked thing, then design everything around it and prove it. Not with hype or filler, but with evidence a decision-maker can hold: what happened, what changed, what it was worth. Provenance, not polish, is what survives the room where the choice actually gets made.</p>
+
+    <p data-dc-tpl="46" style="margin: 0px;">Built to be chosen, not just seen. That is the whole idea, and it is the standard we hold every project to. Then we make it land.</p>
+
+    <div data-dc-tpl="47" style="margin: 52px 0px 0px;">
+      <a data-dc-tpl="48" href="/#work" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.01em; font-size: 24px; color: rgb(200, 73, 46); display: inline-flex; align-items: baseline; gap: 10px;">See it in the work <span data-dc-tpl="49" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; font-weight: 500;">-&gt;</span></a>
+    </div>
+  </article>
+
+  
+  <section data-dc-tpl="50" class="th-sec" style="max-width: 820px; margin: 0px auto; padding: 40px 40px 96px;">
+    <div data-dc-tpl="51" style="border-top: 1px solid rgb(231, 226, 217); padding-top: 32px; font-size: 15px; color: rgb(107, 102, 97);">Nicole Miñoza, founder, Make It Land Studio</div>
+  </section>
+
+  
+  <section data-dc-tpl="52" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="53" class="th-sec" style="max-width: 820px; margin: 0px auto; padding: 100px 40px; text-align: center;">
+      <h2 data-dc-tpl="54" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 44px; line-height: 1.1; margin: 0px 0px 24px;">What are you trying to land?</h2>
+      <p data-dc-tpl="55" style="font-size: 15px; line-height: 1.6; color: rgba(250, 248, 244, 0.82); margin: 0px 0px 32px;">Make It Land takes on one or two engagements at a time.</p>
+      <div data-dc-tpl="56" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
+        <a data-dc-tpl="57" href="https://calendly.com/makeitland/30min?month=2026-07" target="_blank" rel="noopener" class="scp0" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-size: 16px; font-weight: 600; padding: 16px 34px; display: inline-block;">Schedule a fit call</a>
+        <div data-dc-tpl="58" style="font-size: 14px; font-weight: 400; color: rgba(250, 248, 244, 0.78);">Prefer email? <a data-dc-tpl="59" href="mailto:hello@makeitland.studio?subject=Fit%20call" class="scp1" style="color: rgb(250, 248, 244); font-weight: 500; text-decoration: underline 1px rgba(250, 248, 244, 0.45); text-underline-offset: 3px;">hello@makeitland.studio</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-dc-tpl="60" style="background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="61" style="max-width: 1000px; margin: 0px auto; padding: 46px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+      <a data-dc-tpl="62" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 22px; color: rgb(250, 248, 244);">Make It Land<span data-dc-tpl="63" style="color: rgb(200, 73, 46);">.</span></a>
+      <nav data-dc-tpl="64" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="65" href="/#work" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Work</a>
+        <a data-dc-tpl="66" href="/thesis.html" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Thesis</a>
+        <a data-dc-tpl="67" href="/" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Home</a>
+        <span data-dc-tpl="68" style="width: 1px; height: 14px; background: rgba(250, 248, 244, 0.2);"></span>
+        <a data-dc-tpl="69" href="https://www.instagram.com/makeitlandstudio/" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Instagram</a>
+        <a data-dc-tpl="70" href="https://linkedin.com/company/make-it-land-studio" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">LinkedIn</a>
+      </nav>
+    </div>
+    <div data-dc-tpl="71" style="border-top: 1px solid rgba(250, 248, 244, 0.1);">
+      <div data-dc-tpl="72" style="max-width: 1000px; margin: 0px auto; padding: 20px 40px; font-size: 13px; color: rgba(250, 248, 244, 0.45);">© 2026 Make It Land Studio</div>
+    </div>
+  </footer></div></div></div>
+
+
+</body></html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html><html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="5">How Institutions Behave · Make It Land</title><meta name="description" content="A close read of how nine landmark institutions earned trust by performing their values, and the mechanics any brand can borrow. Brand is behavior, not image." data-dc-tpl="6"><meta name="author" content="Nicole Miñoza" data-dc-tpl="7"><meta name="theme-color" content="#201d19" data-dc-tpl="8"><link rel="canonical" href="https://makeitland.studio/work/how-institutions-behave.html" data-dc-tpl="9"><meta property="og:type" content="article" data-dc-tpl="10"><meta property="og:site_name" content="Make It Land Studio" data-dc-tpl="11"><meta property="og:title" content="How Institutions Behave" data-dc-tpl="12"><meta property="og:description" content="A close read of how nine landmark institutions earned trust by performing their values. Brand is behavior, not image." data-dc-tpl="13"><meta property="og:url" content="https://makeitland.studio/work/how-institutions-behave.html" data-dc-tpl="14"><meta property="og:image" content="https://makeitland.studio/og-how-institutions-behave.png" data-dc-tpl="15"><meta property="og:image:alt" content="How Institutions Behave. Brand is behavior, not image." data-dc-tpl="16"><meta property="og:image:width" content="1200" data-dc-tpl="17"><meta property="og:image:height" content="630" data-dc-tpl="18"><meta name="twitter:card" content="summary_large_image" data-dc-tpl="19"><meta name="twitter:title" content="How Institutions Behave" data-dc-tpl="20"><meta name="twitter:description" content="How nine landmark institutions earned trust by performing their values." data-dc-tpl="21"><meta name="twitter:image" content="https://makeitland.studio/og-how-institutions-behave.png" data-dc-tpl="22"><meta name="twitter:image:alt" content="How Institutions Behave. Brand is behavior, not image." data-dc-tpl="23"><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="26"><link rel="preconnect" href="https://fonts.gstatic.com" data-dc-tpl="27"><style data-dc-tpl="28">/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+</style><style data-dc-tpl="29">
+    body { margin:0; background:#FAF8F4; }
+    * { box-sizing:border-box; }
+    a { text-decoration:none; color:inherit; }
+    @media (max-width:760px){ .hi-h1{ font-size:44px !important; } }
+  </style><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png"><link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Institutions Behave",
+    "description": "A close read of how nine landmark institutions earned trust by performing their values, and the mechanics any brand can borrow.",
+    "author": { "@type": "Person", "name": "Nicole Miñoza" },
+    "publisher": { "@type": "Organization", "name": "Make It Land Studio", "url": "https://makeitland.studio" },
+    "image": "https://makeitland.studio/og-how-institutions-behave.png",
+    "url": "https://makeitland.studio/work/how-institutions-behave.html",
+    "mainEntityOfPage": "https://makeitland.studio/work/how-institutions-behave.html"
+  }
+</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..720&family=Hanken+Grotesk:wght@300..700&display=swap">
+</head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="how-institutions-behave"><div data-dc-tpl="30" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-family: &quot;Hanken Grotesk&quot;, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <header data-dc-tpl="31" style="border-bottom: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="32" style="max-width: 1000px; margin: 0px auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
+      <a data-dc-tpl="33" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 23px; white-space: nowrap;">Make It Land<span data-dc-tpl="34" style="color: rgb(200, 73, 46);">.</span></a>
+      <a data-dc-tpl="35" href="/#work" style="font-size: 15px; color: rgb(107, 102, 97); font-weight: 500;">← All work</a>
+    </div>
+  </header>
+
+  
+  <section data-dc-tpl="36" style="max-width: 1000px; margin: 0px auto; padding: 110px 40px 64px;">
+    <div data-dc-tpl="37" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 600; margin-bottom: 24px;">A studio artifact, thesis</div>
+    <h1 data-dc-tpl="38" class="hi-h1" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.02em; font-size: 60px; line-height: 1.04; margin: 0px 0px 28px; max-width: 760px;">How Institutions Behave</h1>
+    <p data-dc-tpl="39" style="font-size: 21px; line-height: 1.55; color: rgb(26, 26, 26); margin: 0px; max-width: 680px;">Brand is behavior, not image. A close read of how nine landmark institutions earned trust by performing their values, and the mechanics any brand can borrow.</p>
+  </section>
+
+  <div data-dc-tpl="40" style="max-width: 1000px; margin: 0px auto; padding: 0px 40px;">
+    <video id="hib-hero-video" autoplay playsinline muted loop poster="/hib-hero.png" style="display: block; width: 100%; height: auto; border: 1px solid rgb(231, 226, 217);">
+      <source src="/hib-hero.webm" type="video/webm">
+      <source src="/hib-hero.mp4" type="video/mp4">
+    </video>
+    <div data-dc-tpl="44" style="padding-top: 24px;">
+      <a data-dc-tpl="45" href="https://makeitland.studio/how-institutions-behave" target="_blank" rel="noopener" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.01em; font-size: 24px; color: rgb(200, 73, 46); display: inline-flex; align-items: baseline; gap: 10px;">Experience the thesis <span data-dc-tpl="46" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; font-weight: 500;">-&gt;</span></a>
+    </div>
+  </div>
+
+  
+  <section data-dc-tpl="47" style="max-width: 1000px; margin: 0px auto; padding: 88px 40px 40px;">
+    <div data-dc-tpl="48" style="display: flex; flex-direction: column; gap: 64px;">
+      <div data-dc-tpl="49" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="50" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">The argument</div>
+        <p data-dc-tpl="51" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 27px; line-height: 1.32; margin: 0px;">A logo change is not a rebrand. Institutions earn trust through how they behave over time, not the mark they put on it.</p>
+      </div>
+      <div data-dc-tpl="52" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="53" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">The work</div>
+        <p data-dc-tpl="54" style="font-size: 18px; line-height: 1.65; color: rgb(26, 26, 26); margin: 0px;">An interactive piece benchmarking nine landmark cultural-institution rebrands against that standard. Strategy, writing, design, and build, all solo, in one piece.</p>
+      </div>
+      <div data-dc-tpl="55" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="56" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">Why it matters here</div>
+        <p data-dc-tpl="57" style="font-size: 18px; line-height: 1.65; color: rgb(107, 102, 97); margin: 0px;">The same conviction that runs the studio: positioning is proven by behavior, not asserted. Here it is, made into something you can move through.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="58" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244); margin-top: 96px;">
+    <div data-dc-tpl="59" style="max-width: 1000px; margin: 0px auto; padding: 100px 40px; text-align: center;">
+      <h2 data-dc-tpl="60" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 44px; line-height: 1.1; margin: 0px 0px 24px;">Hold your rebrand to this standard.</h2>
+      <p data-dc-tpl="61" style="font-size: 15px; line-height: 1.6; color: rgba(250, 248, 244, 0.82); margin: 0px 0px 32px;">Make It Land takes on one or two engagements at a time.</p>
+      <div data-dc-tpl="62" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
+        <a data-dc-tpl="63" href="https://calendly.com/makeitland/30min?month=2026-07" target="_blank" rel="noopener" class="scp0" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-size: 16px; font-weight: 600; padding: 16px 34px; display: inline-block;">Schedule a fit call</a>
+        <div data-dc-tpl="64" style="font-size: 14px; font-weight: 400; color: rgba(250, 248, 244, 0.78);">Prefer email? <a data-dc-tpl="65" href="mailto:hello@makeitland.studio?subject=Fit%20call" class="scp1" style="color: rgb(250, 248, 244); font-weight: 500; text-decoration: underline 1px rgba(250, 248, 244, 0.45); text-underline-offset: 3px;">hello@makeitland.studio</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-dc-tpl="66" style="background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="67" style="max-width: 1000px; margin: 0px auto; padding: 46px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+      <a data-dc-tpl="68" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 22px; color: rgb(250, 248, 244);">Make It Land<span data-dc-tpl="69" style="color: rgb(200, 73, 46);">.</span></a>
+      <nav data-dc-tpl="70" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="71" href="/#work" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Work</a>
+        <a data-dc-tpl="72" href="/thesis.html" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Thesis</a>
+        <a data-dc-tpl="73" href="/" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Home</a>
+        <span data-dc-tpl="74" style="width: 1px; height: 14px; background: rgba(250, 248, 244, 0.2);"></span>
+        <a data-dc-tpl="75" href="https://www.instagram.com/makeitlandstudio/" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Instagram</a>
+        <a data-dc-tpl="76" href="https://linkedin.com/company/make-it-land-studio" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">LinkedIn</a>
+      </nav>
+    </div>
+    <div data-dc-tpl="77" style="border-top: 1px solid rgba(250, 248, 244, 0.1);">
+      <div data-dc-tpl="78" style="max-width: 1000px; margin: 0px auto; padding: 20px 40px; font-size: 13px; color: rgba(250, 248, 244, 0.45);">© 2026 Make It Land Studio</div>
+    </div>
+  </footer></div></div></div>
+
+
+
+</body></html>

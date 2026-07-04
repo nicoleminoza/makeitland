@@ -1,0 +1,21 @@
+# Make It Land Studio
+
+> A premium boutique brand studio for founders and emerging brands. The thesis: most brands are seen, few are chosen. Make It Land finds the one overlooked advantage a business already has, designs everything around it, and proves it with evidence a decision-maker can hold. Built to be chosen, not just seen. Founded by Nicole Miñoza, whose founder track record includes 23 years at Adobe, most recently as Director of Marketing and Product for Adobe Fonts. The studio takes on one or two engagements at a time.
+
+## Core pages
+- [Home](https://makeitland.studio/): what the studio does, who it is for, and how it works.
+- [The Thesis](https://makeitland.studio/thesis.html): the studio's core belief. Visibility is cheap, preference is not; being chosen is a design problem, not a volume problem.
+
+## Selected work
+- [Cuppa Lumpia](https://makeitland.studio/work/cuppa-lumpia.html): a 50-year family lumpia recipe built like a brand you would cross the island for. Naming, identity, packaging, and site.
+- [Adobe: the overlooked thing, made measurable](https://makeitland.studio/work/adobe.html): founder track record leading marketing and product for Adobe Fonts, treating type as a growth lever at enterprise scale.
+
+## Also from the studio
+- [House Style](https://makeitland.studio/work/house-style.html): a shipped product, a curated library of 40+ opinionated AI prompts for brand, marketing, and product leaders.
+- [How Institutions Behave](https://makeitland.studio/work/how-institutions-behave.html): an interactive thesis benchmarking nine landmark cultural-institution rebrands. Brand is behavior, not image.
+
+## Contact
+- Email: hello@makeitland.studio
+- Founder: Nicole Miñoza
+- Instagram: https://www.instagram.com/makeitlandstudio/
+- LinkedIn: https://linkedin.com/company/make-it-land-studio

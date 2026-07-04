@@ -1,0 +1,236 @@
+<!DOCTYPE html><html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="5">House Style · Make It Land</title><meta name="description" content="A curated library of more than 40 opinionated AI prompts for brand, marketing, and product leaders, built and shipped as a real product. Curation is the product." data-dc-tpl="6"><meta name="author" content="Nicole Miñoza" data-dc-tpl="7"><meta name="theme-color" content="#201d19" data-dc-tpl="8"><link rel="canonical" href="https://makeitland.studio/work/house-style.html" data-dc-tpl="9"><meta property="og:type" content="article" data-dc-tpl="10"><meta property="og:site_name" content="Make It Land Studio" data-dc-tpl="11"><meta property="og:title" content="House Style · Prompts with a point of view" data-dc-tpl="12"><meta property="og:description" content="More than 40 opinionated AI prompts for brand, marketing, and product leaders, built and shipped as a real product. Curation is the product." data-dc-tpl="13"><meta property="og:url" content="https://makeitland.studio/work/house-style.html" data-dc-tpl="14"><meta property="og:image" content="https://makeitland.studio/og-house-style.png" data-dc-tpl="15"><meta property="og:image:alt" content="House Style. Prompts with a point of view." data-dc-tpl="16"><meta property="og:image:width" content="1200" data-dc-tpl="17"><meta property="og:image:height" content="630" data-dc-tpl="18"><meta name="twitter:card" content="summary_large_image" data-dc-tpl="19"><meta name="twitter:title" content="House Style · Prompts with a point of view" data-dc-tpl="20"><meta name="twitter:description" content="40+ opinionated AI prompts for leaders, shipped as a real product." data-dc-tpl="21"><meta name="twitter:image" content="https://makeitland.studio/og-house-style.png" data-dc-tpl="22"><meta name="twitter:image:alt" content="House Style. Prompts with a point of view." data-dc-tpl="23"><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="26"><link rel="preconnect" href="https://fonts.gstatic.com" data-dc-tpl="27"><style data-dc-tpl="28">/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+</style><style data-dc-tpl="29">
+    body { margin:0; background:#FAF8F4; }
+    * { box-sizing:border-box; }
+    a { text-decoration:none; color:inherit; }
+    @media (max-width:760px){ .hs-h1{ font-size:44px !important; } .hs-row{ grid-template-columns:1fr !important; gap:14px !important; } .hs-two{ grid-template-columns:1fr !important; } }
+  </style><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png"><link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "House Style",
+    "description": "A curated library of more than 40 opinionated AI prompts for brand, marketing, and product leaders, built and shipped as a real product.",
+    "author": { "@type": "Person", "name": "Nicole Miñoza" },
+    "publisher": { "@type": "Organization", "name": "Make It Land Studio", "url": "https://makeitland.studio" },
+    "image": "https://makeitland.studio/og-house-style.png",
+    "url": "https://makeitland.studio/work/house-style.html",
+    "mainEntityOfPage": "https://makeitland.studio/work/house-style.html"
+  }
+</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..720&family=Hanken+Grotesk:wght@300..700&display=swap">
+</head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="house-style"><div data-dc-tpl="30" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-family: &quot;Hanken Grotesk&quot;, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  <header data-dc-tpl="31" style="border-bottom: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="32" style="max-width: 1000px; margin: 0px auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
+      <a data-dc-tpl="33" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 23px; white-space: nowrap;">Make It Land<span data-dc-tpl="34" style="color: rgb(200, 73, 46);">.</span></a>
+      <a data-dc-tpl="35" href="/#work" style="font-size: 15px; color: rgb(107, 102, 97); font-weight: 500;">← All work</a>
+    </div>
+  </header>
+
+  
+  <section data-dc-tpl="36" style="max-width: 1000px; margin: 0px auto; padding: 110px 40px 64px;">
+    <div data-dc-tpl="37" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 600; margin-bottom: 24px;">A studio artifact, playbook library</div>
+    <h1 data-dc-tpl="38" class="hs-h1" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.02em; font-size: 60px; line-height: 1.04; margin: 0px 0px 28px;">House Style</h1>
+    <p data-dc-tpl="39" style="font-size: 21px; line-height: 1.55; color: rgb(26, 26, 26); margin: 0px; max-width: 660px;">Prompts with a point of view. A curated library of more than 40 AI prompts for brand, marketing, and product leaders, built and shipped as a real product.</p>
+  </section>
+
+  <div data-dc-tpl="40" style="background: rgb(241, 236, 227); border-top: 1px solid rgb(231, 226, 217); border-bottom: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="41" style="max-width: 1040px; margin: 0px auto; padding: 64px 40px 72px;">
+      <div data-dc-tpl="42" style="border-radius: 10px; overflow: hidden; box-shadow: rgba(26, 26, 26, 0.32) 0px 34px 70px -34px; border: 1px solid rgb(224, 217, 205); background: rgb(250, 248, 244);">
+        <div data-dc-tpl="43" style="display: flex; align-items: center; gap: 14px; padding: 12px 16px; background: rgb(239, 234, 225); border-bottom: 1px solid rgb(224, 217, 205);">
+          <div data-dc-tpl="44" style="display: flex; gap: 7px;">
+            <span data-dc-tpl="45" style="width: 11px; height: 11px; border-radius: 50%; background: rgb(201, 192, 178);"></span>
+            <span data-dc-tpl="46" style="width: 11px; height: 11px; border-radius: 50%; background: rgb(201, 192, 178);"></span>
+            <span data-dc-tpl="47" style="width: 11px; height: 11px; border-radius: 50%; background: rgb(201, 192, 178);"></span>
+          </div>
+          <div data-dc-tpl="48" style="flex: 1 1 0%; max-width: 360px; margin: 0px auto; background: rgb(250, 248, 244); border: 1px solid rgb(224, 217, 205); border-radius: 100px; padding: 5px 16px; text-align: center; font-size: 12px; color: rgb(107, 102, 97); letter-spacing: 0.01em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">housestyle.makeitland.studio</div>
+          <div data-dc-tpl="49" style="width: 42px;"></div>
+        </div>
+        <img data-dc-tpl="50" src="/house-style-preview.png" alt="House Style catalog, showing the tagline and the three pinned hero frameworks" style="display: block; width: 100%; height: auto;">
+      </div>
+      <div data-dc-tpl="51" style="padding-top: 24px;">
+        <a data-dc-tpl="52" href="https://housestyle.makeitland.studio" target="_blank" rel="noopener" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.01em; font-size: 24px; color: rgb(200, 73, 46); display: inline-flex; align-items: baseline; gap: 10px;">Open the library <span data-dc-tpl="53" style="font-family: &quot;Hanken Grotesk&quot;, sans-serif; font-weight: 500;">-&gt;</span></a>
+      </div>
+    </div>
+  </div>
+
+  
+  <section data-dc-tpl="54" style="max-width: 1000px; margin: 0px auto; padding: 88px 40px 40px;">
+    <div data-dc-tpl="55" style="display: flex; flex-direction: column; gap: 64px;">
+
+      <div data-dc-tpl="56" class="hs-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="57" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">The idea</div>
+        <p data-dc-tpl="58" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 27px; line-height: 1.32; margin: 0px;">Most AI prompts are generic. Leaders need ones with taste and judgment built in. Curation is the product.</p>
+      </div>
+
+      <div data-dc-tpl="59" class="hs-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="60" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">What it is</div>
+        <div data-dc-tpl="61">
+          <p data-dc-tpl="62" style="font-size: 18px; line-height: 1.65; color: rgb(26, 26, 26); margin: 0px 0px 28px;">More than 40 prompts across three categories, product marketing and go-to-market, executive, and AI and creative tools. Each assigns a sharp, credentialed role, takes bracketed variables, and pushes for a better answer than the obvious one. Three flagship frameworks anchor the library:</p>
+          <div data-dc-tpl="63" class="hs-two" style="display: grid; grid-template-columns: 1fr; gap: 2px;">
+            <div data-dc-tpl="64" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline;">
+              <div data-dc-tpl="65" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 20px;">The Executive Voice Matrix</div>
+              <div data-dc-tpl="66" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 700;">Hero framework</div>
+            </div>
+            <div data-dc-tpl="67" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline;">
+              <div data-dc-tpl="68" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 20px;">The Positioning System</div>
+              <div data-dc-tpl="69" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 700;">Hero framework</div>
+            </div>
+            <div data-dc-tpl="70" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 24px 28px; display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline;">
+              <div data-dc-tpl="71" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 20px;">The AI Launch Operating System</div>
+              <div data-dc-tpl="72" style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 700;">Hero framework</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-dc-tpl="73" class="hs-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="74" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">The method</div>
+        <div data-dc-tpl="75">
+          <p data-dc-tpl="76" style="font-size: 18px; line-height: 1.65; color: rgb(26, 26, 26); margin: 0px 0px 24px;">Every prompt is written in one house style, extracted from real work and documented so the taste is repeatable:</p>
+          <div data-dc-tpl="77" style="display: flex; flex-direction: column; gap: 12px;">
+            <div data-dc-tpl="78" style="font-size: 16px; line-height: 1.5; color: rgb(26, 26, 26); padding-left: 20px; position: relative;"><span data-dc-tpl="79" style="position: absolute; left: 0px; color: rgb(200, 73, 46);">—</span>A sharp, credentialed persona with an attitude.</div>
+            <div data-dc-tpl="80" style="font-size: 16px; line-height: 1.5; color: rgb(26, 26, 26); padding-left: 20px; position: relative;"><span data-dc-tpl="81" style="position: absolute; left: 0px; color: rgb(200, 73, 46);">—</span>Legislate the language: banned-word lists, no AI-isms.</div>
+            <div data-dc-tpl="82" style="font-size: 16px; line-height: 1.5; color: rgb(26, 26, 26); padding-left: 20px; position: relative;"><span data-dc-tpl="83" style="position: absolute; left: 0px; color: rgb(200, 73, 46);">—</span>Every claim carries a number or a name.</div>
+            <div data-dc-tpl="84" style="font-size: 16px; line-height: 1.5; color: rgb(26, 26, 26); padding-left: 20px; position: relative;"><span data-dc-tpl="85" style="position: absolute; left: 0px; color: rgb(200, 73, 46);">—</span>Lead with ownership verbs, dictate the output order.</div>
+            <div data-dc-tpl="86" style="font-size: 16px; line-height: 1.5; color: rgb(26, 26, 26); padding-left: 20px; position: relative;"><span data-dc-tpl="87" style="position: absolute; left: 0px; color: rgb(200, 73, 46);">—</span>Calibrate with bad-to-good examples, and build in an acceptance test.</div>
+          </div>
+        </div>
+      </div>
+
+      <div data-dc-tpl="88" class="hs-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="89" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">Built as a product</div>
+        <p data-dc-tpl="90" style="font-size: 18px; line-height: 1.65; color: rgb(26, 26, 26); margin: 0px;">Not a slide, a shipped product. Architected as a freemium, product-led portfolio with the core library free and copyable, the workflow layer gated, and real telemetry reading which frameworks land. Positioning, product, and craft in one artifact.</p>
+      </div>
+
+      <div data-dc-tpl="91" class="hs-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+        <div data-dc-tpl="92" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; padding-top: 8px;">Why it matters here</div>
+        <p data-dc-tpl="93" style="font-size: 18px; line-height: 1.65; color: rgb(107, 102, 97); margin: 0px;">Proof the studio ships more than websites. The same instinct that names a brand can run a whole product. Taste, made into something people can use.</p>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="94" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244); margin-top: 96px;">
+    <div data-dc-tpl="95" style="max-width: 1000px; margin: 0px auto; padding: 100px 40px; text-align: center;">
+      <h2 data-dc-tpl="96" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 44px; line-height: 1.1; margin: 0px 0px 24px;">Taste like this, working for you.</h2>
+      <p data-dc-tpl="97" style="font-size: 15px; line-height: 1.6; color: rgba(250, 248, 244, 0.82); margin: 0px 0px 32px;">Make It Land takes on one or two engagements at a time.</p>
+      <div data-dc-tpl="98" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
+        <a data-dc-tpl="99" href="https://calendly.com/makeitland/30min?month=2026-07" target="_blank" rel="noopener" class="scp0" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-size: 16px; font-weight: 600; padding: 16px 34px; display: inline-block;">Schedule a fit call</a>
+        <div data-dc-tpl="100" style="font-size: 14px; font-weight: 400; color: rgba(250, 248, 244, 0.78);">Prefer email? <a data-dc-tpl="101" href="mailto:hello@makeitland.studio?subject=Fit%20call" class="scp1" style="color: rgb(250, 248, 244); font-weight: 500; text-decoration: underline 1px rgba(250, 248, 244, 0.45); text-underline-offset: 3px;">hello@makeitland.studio</a></div>
+      </div>
+    </div>
+  </section>
+
+  <footer data-dc-tpl="102" style="background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="103" style="max-width: 1000px; margin: 0px auto; padding: 46px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+      <a data-dc-tpl="104" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 22px; color: rgb(250, 248, 244);">Make It Land<span data-dc-tpl="105" style="color: rgb(200, 73, 46);">.</span></a>
+      <nav data-dc-tpl="106" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="107" href="/#work" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Work</a>
+        <a data-dc-tpl="108" href="/thesis.html" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Thesis</a>
+        <a data-dc-tpl="109" href="/" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Home</a>
+        <span data-dc-tpl="110" style="width: 1px; height: 14px; background: rgba(250, 248, 244, 0.2);"></span>
+        <a data-dc-tpl="111" href="https://www.instagram.com/makeitlandstudio/" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Instagram</a>
+        <a data-dc-tpl="112" href="https://linkedin.com/company/make-it-land-studio" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">LinkedIn</a>
+      </nav>
+    </div>
+    <div data-dc-tpl="113" style="border-top: 1px solid rgba(250, 248, 244, 0.1);">
+      <div data-dc-tpl="114" style="max-width: 1000px; margin: 0px auto; padding: 20px 40px; font-size: 13px; color: rgba(250, 248, 244, 0.45);">© 2026 Make It Land Studio</div>
+    </div>
+  </footer></div></div></div>
+
+
+</body></html>

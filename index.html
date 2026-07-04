@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html><head><style>
+    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
+      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
+      border-radius:2px;box-sizing:border-box;overflow:hidden}
+    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
+    html.sc-dc-streaming .sc-placeholder,
+    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
+      background:color-mix(in srgb,currentColor 5%,transparent);
+      border-color:transparent}
+    html.sc-dc-streaming .sc-placeholder::before,
+    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
+      position:absolute;inset:0;pointer-events:none;
+      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
+      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
+    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
+    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
+      background:color-mix(in srgb,currentColor 8%,transparent)}
+    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
+      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
+    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
+      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
+      border-radius:2px;box-sizing:border-box;color:transparent;
+      user-select:none}
+    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
+      color:color-mix(in srgb,currentColor 50%,transparent);
+      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
+      padding:0 3px}
+    .sc-host.sc-has-error{position:relative}
+    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
+      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
+      border-radius:4px;white-space:pre-wrap;pointer-events:none}
+    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
+       in sync until dc-runtime regains a build step. */
+    @media print {
+      @page { margin: 0.5cm; }
+      figure, table { break-inside: avoid; }
+      #dc-root, #dc-root > .sc-host { height: auto; }
+      *, *::before, *::after {
+        print-color-adjust: exact; -webkit-print-color-adjust: exact;
+        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
+        animation-delay: -99s !important; animation-duration: .001s !important;
+        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
+        animation-play-state: running !important; transition-duration: 0s !important;
+      }
+    }
+  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>x-dc{display:none!important}</style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png"><link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><title data-dc-tpl="5">Make It Land · Built to be chosen, not just seen</title><meta name="description" content="A boutique brand studio for founders and emerging brands. We find the one overlooked advantage, design everything around it, and prove it. Built to be chosen, not just seen." data-dc-tpl="6"><meta name="author" content="Nicole Miñoza" data-dc-tpl="7"><meta name="theme-color" content="#201d19" data-dc-tpl="8"><link rel="canonical" href="https://makeitland.studio/" data-dc-tpl="9"><meta property="og:type" content="website" data-dc-tpl="10"><meta property="og:site_name" content="Make It Land Studio" data-dc-tpl="11"><meta property="og:title" content="Make It Land · Built to be chosen, not just seen" data-dc-tpl="12"><meta property="og:description" content="A boutique brand studio for founders. We find the one overlooked advantage, design everything around it, and prove it." data-dc-tpl="13"><meta property="og:url" content="https://makeitland.studio/" data-dc-tpl="14"><meta property="og:image" content="https://makeitland.studio/og-home.png" data-dc-tpl="15"><meta property="og:image:alt" content="Make It Land Studio. Built to be chosen, not just seen." data-dc-tpl="16"><meta property="og:image:width" content="1200" data-dc-tpl="17"><meta property="og:image:height" content="630" data-dc-tpl="18"><meta name="twitter:card" content="summary_large_image" data-dc-tpl="19"><meta name="twitter:title" content="Make It Land · Built to be chosen, not just seen" data-dc-tpl="20"><meta name="twitter:description" content="A boutique brand studio for founders. Built to be chosen, not just seen." data-dc-tpl="21"><meta name="twitter:image" content="https://makeitland.studio/og-home.png" data-dc-tpl="22"><meta name="twitter:image:alt" content="Make It Land Studio. Built to be chosen, not just seen." data-dc-tpl="23"><script type="application/ld+json" data-dc-tpl="24">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Make It Land Studio",
+    "url": "https://makeitland.studio",
+    "description": "A boutique brand studio for founders and emerging brands. Built to be chosen, not just seen.",
+    "founder": { "@type": "Person", "name": "Nicole Miñoza" },
+    "logo": "https://makeitland.studio/favicon.png",
+    "image": "https://makeitland.studio/og-home.png",
+    "sameAs": ["https://www.instagram.com/makeitlandstudio/", "https://linkedin.com/company/make-it-land-studio"]
+  }
+  </script><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="25"><link rel="preconnect" href="https://fonts.gstatic.com" data-dc-tpl="26"><style data-dc-tpl="27">/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+/* cyrillic-ext */
+
+/* vietnamese */
+
+/* latin-ext */
+
+/* latin */
+
+</style><style data-dc-tpl="29">
+    body { margin:0; background:#FAF8F4; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    a { text-decoration:none; color:inherit; }
+    @keyframes milHeroReveal {
+      0%   { font-variation-settings:'opsz' 9,'wght' 300; letter-spacing:0.04em; opacity:0; }
+      100% { font-variation-settings:'opsz' 90,'wght' 500; letter-spacing:-0.02em; opacity:1; }
+    }
+    @keyframes milHeroRevealBold {
+      0%   { font-variation-settings:'opsz' 9,'wght' 320; letter-spacing:0.04em; opacity:0; }
+      100% { font-variation-settings:'opsz' 90,'wght' 600; letter-spacing:-0.02em; opacity:1; }
+    }
+    .mil-hero-reveal { animation: milHeroReveal 900ms cubic-bezier(0.16,1,0.3,1) both; }
+    .mil-hero-reveal .mil-chosen { animation: milHeroRevealBold 900ms cubic-bezier(0.16,1,0.3,1) both; }
+    .mil-wm-letter { display:inline-block; transition: font-variation-settings 240ms cubic-bezier(0.22,1,0.36,1); will-change: font-variation-settings; }
+    @media (prefers-reduced-motion: reduce) {
+      .mil-hero-reveal, .mil-hero-reveal .mil-chosen { animation: none !important; }
+    }
+    @media (max-width: 860px) {
+      .mil-hero { padding: 96px 24px 72px !important; }
+      .mil-hero-h1 { font-size: 46px !important; }
+      .mil-hero-sub { font-size: 19px !important; }
+      .mil-section { padding: 64px 24px !important; }
+      .mil-lead { font-size: 30px !important; }
+      .mil-grid3 { grid-template-columns: 1fr !important; }
+      .mil-workcard { grid-template-columns: 1fr !important; }
+      .mil-approach { grid-template-columns: 1fr !important; gap: 28px !important; }
+      .mil-nav { gap: 18px !important; }
+      .mil-nav a[data-navlink] { display: none !important; }
+      .mil-header-inner { padding: 18px 24px !important; }
+      .mil-cta-h2 { font-size: 38px !important; }
+      .mil-panel { height: 220px !important; }
+    }
+  </style>  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..720&family=Hanken+Grotesk:wght@300..700&display=swap">
+</head>
+<body>
+<div id="dc-root"><div class="sc-host" data-sc-name="index"><div data-dc-tpl="30" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-family: &quot;Hanken Grotesk&quot;, sans-serif; -webkit-font-smoothing: antialiased;">
+
+  
+  <header data-dc-tpl="31" style="position: sticky; top: 0px; z-index: 10; background: rgba(250, 248, 244, 0.9); backdrop-filter: blur(8px); border-bottom: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="32" class="mil-header-inner" style="max-width: 1160px; margin: 0px auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
+      <a data-dc-tpl="33" id="mil-wm" href="#top" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 23px; white-space: nowrap;"><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">M</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">a</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">k</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">e</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">&nbsp;</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">I</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">t</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">&nbsp;</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">L</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">a</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">n</span><span class="mil-wm-letter" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">d</span><span data-dc-tpl="34" style="color: rgb(200, 73, 46);">.</span></a>
+      <nav data-dc-tpl="35" class="mil-nav" style="display: flex; align-items: center; gap: 34px;">
+        <a data-dc-tpl="36" href="#work" data-navlink="1" style="font-size: 15px; color: rgb(26, 26, 26); font-weight: 500;">Work</a>
+        <a data-dc-tpl="37" href="#point-of-view" data-navlink="1" style="font-size: 15px; color: rgb(26, 26, 26); font-weight: 500;">Thesis</a>
+        <a data-dc-tpl="38" href="#about" data-navlink="1" style="font-size: 15px; color: rgb(26, 26, 26); font-weight: 500;">About</a>
+        <a data-dc-tpl="39" href="https://calendly.com/makeitland/30min" target="_blank" rel="noopener" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244); font-size: 15px; font-weight: 600; padding: 11px 22px; white-space: nowrap;">Start a fit call</a>
+      </nav>
+    </div>
+  </header>
+
+  
+  <section data-dc-tpl="40" id="top" class="mil-hero" style="max-width: 1160px; margin: 0px auto; padding: 140px 40px 120px;">
+    <div data-dc-tpl="41" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin-bottom: 40px;">Make It Land Studio</div>
+    <h1 data-dc-tpl="42" id="mil-hero" class="mil-hero-h1 mil-hero-reveal" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.02em; font-size: 78px; line-height: 1.04; margin: 0px; max-width: 900px;"><span data-dc-tpl="43" style="white-space: nowrap;">Built to be <span data-dc-tpl="44" class="mil-chosen" style="font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600;">chosen</span>,</span> <span data-dc-tpl="45" style="white-space: nowrap;">not just seen.</span></h1>
+    <p data-dc-tpl="46" class="mil-hero-sub" style="font-size: 21px; line-height: 1.5; color: rgb(26, 26, 26); margin: 44px 0px 0px; max-width: 640px;">We find the one thing that makes you the obvious choice, then design the brand and the proof that land it.</p>
+    <div data-dc-tpl="47" style="margin-top: 48px; display: flex; align-items: center; gap: 28px; flex-wrap: wrap;">
+      <a data-dc-tpl="48" href="#work" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244); font-size: 16px; font-weight: 600; padding: 16px 34px; white-space: nowrap;">See the work</a>
+      <a data-dc-tpl="49" href="https://calendly.com/makeitland/30min?month=2026-07" target="_blank" rel="noopener" style="font-size: 16px; color: rgb(26, 26, 26); font-weight: 600; border-bottom: 2px solid rgb(200, 73, 46); padding-bottom: 3px;">Start a fit call</a>
+    </div>
+    <p data-dc-tpl="50" style="font-size: 15px; color: rgb(107, 102, 97); font-weight: 500; margin: 28px 0px 0px;">Strategy through production, in weeks, not quarters.</p>
+  </section>
+
+  
+  <section data-dc-tpl="51" style="border-top: 1px solid rgb(231, 226, 217); background: rgb(241, 236, 227);">
+    <div data-dc-tpl="52" class="mil-section" style="max-width: 1160px; margin: 0px auto; padding: 44px 40px; display: flex; align-items: center; gap: 40px; flex-wrap: wrap; justify-content: space-between;">
+      <div data-dc-tpl="53" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 19px; color: rgb(26, 26, 26);">Founded by Nicole Miñoza</div>
+      <div data-dc-tpl="54" style="display: flex; align-items: center; gap: 14px; flex-wrap: wrap; font-size: 14px; color: rgb(107, 102, 97); font-weight: 500;">
+        <span data-dc-tpl="55">23 years at Adobe</span>
+        <span data-dc-tpl="56" style="display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: rgb(200, 73, 46);"></span>
+        <span data-dc-tpl="57">a decade-plus in marketing, seven years in product, for fonts and typography</span>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="58" style="border-top: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="59" class="mil-section" style="max-width: 1160px; margin: 0px auto; padding: 100px 40px;">
+      <div data-dc-tpl="60" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin-bottom: 44px;">What we do</div>
+      <p data-dc-tpl="61" class="mil-lead" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 40px; line-height: 1.22; margin: 0px 0px 72px; max-width: 900px;">We build the asset layer that makes a leader or a business the obvious choice.</p>
+      <div data-dc-tpl="62" class="mil-grid3" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;">
+        <div data-dc-tpl="63" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px;">
+          <div data-dc-tpl="64" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; color: rgb(200, 73, 46); font-size: 22px; margin-bottom: 18px;">01</div>
+          <div data-dc-tpl="65" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 24px; margin-bottom: 14px;">Positioning</div>
+          <p data-dc-tpl="66" style="font-size: 15px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px;">We find the one overlooked thing that makes you the obvious choice, and make it the center of everything.</p>
+        </div>
+        <div data-dc-tpl="67" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px;">
+          <div data-dc-tpl="68" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; color: rgb(200, 73, 46); font-size: 22px; margin-bottom: 18px;">02</div>
+          <div data-dc-tpl="69" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 24px; margin-bottom: 14px;">The site</div>
+          <p data-dc-tpl="70" style="font-size: 15px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px;">Designed and built to make the decision easy for whoever is choosing you, and to move them from interest to yes.</p>
+        </div>
+        <div data-dc-tpl="71" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px;">
+          <div data-dc-tpl="72" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; color: rgb(200, 73, 46); font-size: 22px; margin-bottom: 18px;">03</div>
+          <div data-dc-tpl="73" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 24px; margin-bottom: 14px;">The proof</div>
+          <p data-dc-tpl="74" style="font-size: 15px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px;">Case studies built around evidence: what happened, what changed, what it was worth.</p>
+        </div>
+      </div>
+      <div data-dc-tpl="75" style="border-width: medium 1px 1px; border-style: none solid solid; border-color: currentcolor rgb(231, 226, 217) rgb(231, 226, 217); border-image: initial; background: rgb(250, 248, 244); padding: 36px 44px; display: flex; align-items: baseline; gap: 24px; flex-wrap: wrap;">
+        <div data-dc-tpl="76" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 600; white-space: nowrap;">How we work</div>
+        <p data-dc-tpl="77" style="font-size: 17px; line-height: 1.55; color: rgb(26, 26, 26); margin: 0px; flex: 1 1 0%; min-width: 280px;">The judgment and the words are ours, sharpened by a career in typography. AI only makes us faster, moving from strategy to production in weeks, not quarters.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="78" id="work" style="border-top: 1px solid rgb(231, 226, 217); background: rgb(241, 236, 227);">
+    <div data-dc-tpl="79" class="mil-section" style="max-width: 1160px; margin: 0px auto; padding: 100px 40px;">
+      <div data-dc-tpl="80" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin-bottom: 44px;">Selected work</div>
+      <div data-dc-tpl="81" style="display: flex; flex-direction: column; gap: 2px;">
+
+        <a data-dc-tpl="82" href="/work/cuppa-lumpia.html" class="mil-workcard" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0px; background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217);">
+          <div data-dc-tpl="83" style="padding: 56px;">
+            <div data-dc-tpl="84" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 600; margin-bottom: 20px;">A brand built from the ground up</div>
+            <h3 data-dc-tpl="85" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 38px; line-height: 1.08; margin: 0px 0px 18px;">Cuppa Lumpia</h3>
+            <p data-dc-tpl="86" style="font-size: 16px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px 0px 28px;">Naming, identity, packaging, and the site. Strategy through production on our own venture.</p>
+            <span data-dc-tpl="87" style="font-size: 15px; color: rgb(26, 26, 26); font-weight: 600;">View the case study →</span>
+          </div>
+          <div data-dc-tpl="88" class="mil-panel" style="background: rgb(237, 231, 221); border-left: 1px solid rgb(231, 226, 217); min-height: 340px; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 32px; gap: 12px;">
+            <div data-dc-tpl="89" style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 700;">Photo to come</div>
+            <div data-dc-tpl="90" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 19px; color: rgb(26, 26, 26);">The stand, open for business</div>
+            <div data-dc-tpl="91" style="font-size: 13px; color: rgb(107, 102, 97); max-width: 320px; line-height: 1.5;">The OPEN TODAY sign at the end of our driveway, with the product, cups of lumpia, at the stand. Shows the brand live and in context.</div>
+          </div>
+        </a>
+
+        <a data-dc-tpl="92" href="/work/adobe.html" class="mil-workcard" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0px; background: rgb(26, 26, 26); color: rgb(250, 248, 244); border: 1px solid rgb(26, 26, 26);">
+          <div data-dc-tpl="93" class="mil-panel" style="background: rgb(200, 73, 46); min-height: 340px; display: flex; align-items: stretch; justify-content: center; position: relative; order: 1; overflow: hidden;">
+            <img data-dc-tpl="94" src="/founder-nicole.jpg" alt="Nicole Miñoza, founder of Make It Land Studio" style="width: 100%; height: 100%; object-fit: cover; object-position: 40% 22%;">
+            <div data-dc-tpl="95" style="position: absolute; inset: 0px; background: linear-gradient(90deg, rgba(26, 26, 26, 0) 68%, rgba(26, 26, 26, 0.28) 90%, rgba(26, 26, 26, 0.6) 100%);"></div>
+          </div>
+          <div data-dc-tpl="96" style="padding: 56px; order: 2;">
+            <div data-dc-tpl="97" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(250, 248, 244, 0.6); font-weight: 600; margin-bottom: 20px;">Founder track record, at Adobe</div>
+            <h3 data-dc-tpl="98" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 38px; line-height: 1.08; margin: 0px 0px 18px;">The overlooked thing, made measurable.</h3>
+            <p data-dc-tpl="99" style="font-size: 16px; line-height: 1.6; color: rgba(250, 248, 244, 0.75); margin: 0px 0px 28px;">The playbook behind the studio, proven at enterprise scale: find the overlooked capability, make it measurable, and design the path straight to it.</p>
+            <span data-dc-tpl="100" style="font-size: 15px; color: rgb(250, 248, 244); font-weight: 600;">View the case study →</span>
+          </div>
+        </a>
+
+        <div data-dc-tpl="101" style="margin-top: 2px; padding: 32px 4px 26px; display: flex; align-items: center; gap: 16px;">
+          <div data-dc-tpl="102" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 700; white-space: nowrap;">Also from the studio</div>
+          <div data-dc-tpl="103" style="flex: 1 1 0%; height: 1px; background: rgb(231, 226, 217);"></div>
+        </div>
+
+        <div data-dc-tpl="104" class="mil-grid3" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+          <a data-dc-tpl="105" href="/work/house-style.html" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 40px; display: flex; flex-direction: column; min-height: 240px;">
+            <div data-dc-tpl="106" style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 700; margin-bottom: 20px;">Playbook library</div>
+            <div data-dc-tpl="107" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 26px; line-height: 1.12; margin-bottom: 14px;">House Style</div>
+            <p data-dc-tpl="108" style="font-size: 15px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px 0px 24px;">More than 40 opinionated AI prompts for brand, marketing, and product leaders. Built and positioned end to end.</p>
+            <span data-dc-tpl="109" style="margin-top: auto; font-size: 14px; color: rgb(26, 26, 26); font-weight: 600;">View the artifact →</span>
+          </a>
+          <a data-dc-tpl="110" href="/work/how-institutions-behave.html" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 40px; display: flex; flex-direction: column; min-height: 240px;">
+            <div data-dc-tpl="111" style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(200, 73, 46); font-weight: 700; margin-bottom: 20px;">Thesis</div>
+            <div data-dc-tpl="112" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 26px; line-height: 1.12; margin-bottom: 14px;">How Institutions Behave</div>
+            <p data-dc-tpl="113" style="font-size: 15px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px 0px 24px;">An interactive thesis benchmarking nine landmark cultural-institution rebrands. Researched, written, designed, and built solo.</p>
+            <span data-dc-tpl="114" style="margin-top: auto; font-size: 14px; color: rgb(26, 26, 26); font-weight: 600;">Read the thesis →</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="115" id="point-of-view" style="border-top: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="116" class="mil-section" style="max-width: 1160px; margin: 0px auto; padding: 100px 40px;">
+      <div data-dc-tpl="117" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin-bottom: 44px;">Thesis</div>
+      <div data-dc-tpl="118" class="mil-approach" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;">
+        <p data-dc-tpl="119" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 34px; line-height: 1.25; margin: 0px;">Most brands are seen. Few are chosen. We build for chosen.</p>
+        <div data-dc-tpl="120" style="display: flex; flex-direction: column; gap: 24px; padding-top: 8px;">
+          <p data-dc-tpl="121" style="font-size: 17px; line-height: 1.6; color: rgb(26, 26, 26); margin: 0px;">The advantage that gets missed is rarely small. It is usually the whole strategy, waiting to be named.</p>
+          <p data-dc-tpl="122" style="font-size: 17px; line-height: 1.6; color: rgb(107, 102, 97); margin: 0px;">Visibility is cheap now. Preference is not. The work is not to be noticed more, it is to be the obvious choice when the decision gets made.</p>
+          <a data-dc-tpl="123" href="/thesis.html" style="font-size: 16px; color: rgb(26, 26, 26); font-weight: 600; border-bottom: 2px solid rgb(200, 73, 46); padding-bottom: 3px; align-self: flex-start;">Read the thesis →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="124" id="about" style="border-top: 1px solid rgb(231, 226, 217); background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="125" class="mil-section" style="max-width: 1160px; margin: 0px auto; padding: 120px 40px;">
+      <div data-dc-tpl="126" style="font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(250, 248, 244, 0.6); font-weight: 600; margin-bottom: 44px;">About</div>
+      <div data-dc-tpl="127" style="display: flex; flex-direction: column; align-items: flex-start; gap: 26px; margin: 0px 0px 40px;">
+        <img data-dc-tpl="128" src="/founder-nicole-thumb.jpg" alt="Nicole Miñoza" style="width: 96px; height: 96px; border-radius: 50%; object-fit: cover; object-position: center center; flex-shrink: 0;">
+        <p data-dc-tpl="129" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 38px; line-height: 1.25; margin: 0px; max-width: 940px;">Make It Land Studio is the practice of Nicole Miñoza.</p>
+      </div>
+      <div data-dc-tpl="130" class="mil-approach" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start;">
+        <div data-dc-tpl="131" style="display: flex; flex-direction: column; gap: 22px;">
+          <p data-dc-tpl="132" style="font-size: 18px; line-height: 1.65; color: rgba(250, 248, 244, 0.85); margin: 0px;">For two decades I worked on the most overlooked thing in software: typography. Everyone used it; almost no one thought it mattered. I turned it from a finishing touch into a reason people chose Adobe and stayed.</p>
+          <p data-dc-tpl="133" style="font-size: 18px; line-height: 1.65; color: rgba(250, 248, 244, 0.7); margin: 0px;">That is the method. Find the advantage a business has learned to overlook, make it measurable, and design everything around it until it becomes the reason you get picked. Strategy, product, brand, and craft usually live in different people. In me they live in one, now with AI that takes me from thinking to shipped in weeks, not quarters. The judgment stays human. The details are the whole thing.</p>
+          <p data-dc-tpl="134" style="font-size: 18px; line-height: 1.65; color: rgba(250, 248, 244, 0.7); margin: 0px;">Make It Land brings that method to a small number of founders and leaders who are undervalued and ready to be chosen. Find the one thing. Prove it. Make it land.</p>
+        </div>
+        <div data-dc-tpl="135" style="display: flex; flex-direction: column; gap: 2px; border-left: 1px solid rgba(250, 248, 244, 0.15); padding-left: 36px;">
+          <div data-dc-tpl="136" style="padding: 8px 0px;">
+            <div data-dc-tpl="137" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; color: rgb(250, 248, 244); font-size: 34px; line-height: 1;">12<span data-dc-tpl="138" style="font-size: 0.8em;">M+</span></div>
+            <div data-dc-tpl="139" style="font-size: 13px; color: rgba(250, 248, 244, 0.6); margin-top: 8px;">Monthly active users of Adobe Fonts, grew 3x faster than Creative Cloud year over year (December 2025)</div>
+          </div>
+          <div data-dc-tpl="140" style="padding: 20px 0px 8px;">
+            <div data-dc-tpl="141" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; color: rgb(250, 248, 244); font-size: 34px; line-height: 1;"><span data-dc-tpl="142" style="font-size: 0.8em; vertical-align: 0.14em;">-</span>66<span data-dc-tpl="143" style="font-size: 0.8em;">%</span></div>
+            <div data-dc-tpl="144" style="font-size: 13px; color: rgba(250, 248, 244, 0.6); margin-top: 8px;">Lower monthly churn among Creative Cloud all-app subscribers who adopted Adobe Fonts (causal analysis, March 2025)</div>
+          </div>
+          <div data-dc-tpl="145" style="padding: 20px 0px 8px;">
+            <div data-dc-tpl="146" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; color: rgb(250, 248, 244); font-size: 34px; line-height: 1;"><span data-dc-tpl="147" style="font-size: 0.8em; vertical-align: 0.14em;">+</span>186<span data-dc-tpl="148" style="font-size: 0.8em;">%</span></div>
+            <div data-dc-tpl="149" style="font-size: 13px; color: rgba(250, 248, 244, 0.6); margin-top: 8px;">Free-to-paid lift in Adobe Express, Adobe's freemium design app, from redesigned font recommendations (2025)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section data-dc-tpl="150" id="start" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="151" class="mil-section" style="max-width: 1160px; margin: 0px auto; padding: 120px 40px; text-align: center;">
+      <h2 data-dc-tpl="152" class="mil-cta-h2" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 52px; line-height: 1.1; margin: 0px 0px 20px;">What are you trying to land?</h2>
+      <p data-dc-tpl="153" style="font-size: 18px; line-height: 1.55; color: rgba(250, 248, 244, 0.85); margin: 0px auto 40px; max-width: 560px;">A short, direct conversation about the decision you are trying to win. We take on a small number of engagements and will tell you honestly whether we are the right partner for it.</p>
+      <div data-dc-tpl="154" style="display: inline-flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
+        <a data-dc-tpl="155" href="https://calendly.com/makeitland/30min?month=2026-07" target="_blank" rel="noopener" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-size: 16px; font-weight: 600; padding: 16px 34px; white-space: nowrap;">Start a fit call</a>
+        <span data-dc-tpl="156" style="font-size: 16px; color: rgba(250, 248, 244, 0.9); font-weight: 500;">hello@makeitland.studio</span>
+      </div>
+      <p data-dc-tpl="157" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); margin: 32px 0px 0px;">Select engagements. Strategy through production, in weeks.</p>
+    </div>
+  </section>
+
+  
+  <footer data-dc-tpl="158" style="background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="159" style="max-width: 1160px; margin: 0px auto; padding: 72px 40px 40px;">
+      <div data-dc-tpl="160" class="mil-approach" style="display: grid; grid-template-columns: 1fr auto; gap: 48px; align-items: start; padding-bottom: 48px; border-bottom: 1px solid rgba(250, 248, 244, 0.12);">
+        <div data-dc-tpl="161">
+          <div data-dc-tpl="162" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 34px;">Make It Land<span data-dc-tpl="163" style="color: rgb(200, 73, 46);">.</span></div>
+        </div>
+        <div data-dc-tpl="164" style="display: flex; gap: 64px; flex-wrap: wrap;">
+          <div data-dc-tpl="165" style="display: flex; flex-direction: column; gap: 12px;">
+            <div data-dc-tpl="166" style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250, 248, 244, 0.45); font-weight: 600; margin-bottom: 4px;">Explore</div>
+            <a data-dc-tpl="167" href="#work" style="font-size: 15px; color: rgba(250, 248, 244, 0.8); font-weight: 500;">Work</a>
+            <a data-dc-tpl="168" href="#point-of-view" style="font-size: 15px; color: rgba(250, 248, 244, 0.8); font-weight: 500;">Thesis</a>
+            <a data-dc-tpl="169" href="#about" style="font-size: 15px; color: rgba(250, 248, 244, 0.8); font-weight: 500;">About</a>
+          </div>
+          <div data-dc-tpl="170" style="display: flex; flex-direction: column; gap: 12px;">
+            <div data-dc-tpl="171" style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(250, 248, 244, 0.45); font-weight: 600; margin-bottom: 4px;">Connect</div>
+            <a data-dc-tpl="172" href="mailto:hello@makeitland.studio" style="font-size: 15px; color: rgba(250, 248, 244, 0.8); font-weight: 500;">hello@makeitland.studio</a>
+            <a data-dc-tpl="173" href="https://www.instagram.com/makeitlandstudio/" target="_blank" rel="noopener" style="font-size: 15px; color: rgba(250, 248, 244, 0.8); font-weight: 500;">Instagram</a>
+            <a data-dc-tpl="174" href="https://linkedin.com/company/make-it-land-studio" target="_blank" rel="noopener" style="font-size: 15px; color: rgba(250, 248, 244, 0.8); font-weight: 500;">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div data-dc-tpl="175" style="padding-top: 28px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
+        <div data-dc-tpl="176" style="font-size: 13px; color: rgba(250, 248, 244, 0.5);">© 2026 Make It Land Studio</div>
+      </div>
+    </div>
+  </footer></div></div></div>
+
+
+
+</body></html>
