@@ -1,35 +1,46 @@
 # Make It Land Studio — all crawlers welcome, including AI.
 User-agent: *
 Allow: /
+Disallow: /for/
 
 User-agent: GPTBot
 Allow: /
+Disallow: /for/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /for/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /for/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /for/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /for/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /for/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /for/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /for/
 
 User-agent: CCBot
 Allow: /
+Disallow: /for/
 
 User-agent: Applebot-Extended
 Allow: /
+Disallow: /for/
 
 Sitemap: https://makeitland.studio/sitemap.xml
