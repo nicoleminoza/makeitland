@@ -1,0 +1,285 @@
+/* My Camino Financial, shared design tokens
+   Palette: official 5-color palette from Leslie's context doc.
+   Type: Lato (headings, per Leslie's own Futura substitute) / Montserrat (body).
+   Leslie explicitly deferred the exact web font to Nicole's judgment (July 16
+   working session): "if you feel like something is gonna resonate more, I'm
+   totally open... I know what I know, and this is not it." Defaulting to her
+   own substitute pair rather than hunting for a new match. */
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700;800&display=swap');
+/* Headline/quote serif: Newsreader, for the warm serif-vs-sans contrast
+   saminabari.com uses, with genuinely excellent italics for the testimonials
+   and pull-quotes that lean on italic display type throughout the site.
+   Everything else (nav, buttons, labels, prices, body) runs on Montserrat's
+   weight range alone; consolidated off the earlier two-sans (Lato+Montserrat)
+   system down to one workhorse sans plus the serif, a cleaner two-typeface
+   pairing closer to the reference site. */
+
+:root {
+  --navy-teal: #0A597C;
+  --cyan-teal: #099AAC;
+  --pale-blue-gray: #E2EBEE;
+  --cream: #F4F2EA;
+  --coral: #F47963;
+  --ink: #1F2A2E;
+  --max-width: 1120px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Newsreader', serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  color: var(--navy-teal);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2.25rem, 4vw, 3.4rem); }
+h2 { font-size: clamp(1.75rem, 3vw, 2.4rem); }
+h3 { font-size: 1.45rem; }
+
+p { margin: 0 0 1.1em; }
+
+a { color: var(--cyan-teal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* --- Nav --- */
+.site-nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--cream);
+  border-bottom: 1px solid var(--pale-blue-gray);
+}
+.site-nav .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.site-nav img.logo { height: 40px; display: block; }
+.site-nav .links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-shrink: 0;
+}
+.site-nav .links a {
+  color: var(--ink);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.site-nav .links a.current { color: var(--cyan-teal); }
+.site-nav .links a.btn { color: #fff; }
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  white-space: nowrap;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 14px 30px;
+  border-radius: 999px;
+  text-decoration: none !important;
+  transition: opacity 0.15s ease;
+}
+.btn:hover { opacity: 0.88; }
+.btn-primary { background: var(--navy-teal); color: #fff; }
+.bg-navy .btn-primary { background: #fff; color: var(--navy-teal); }
+.btn-outline {
+  background: transparent;
+  border: 1.5px solid var(--navy-teal);
+  color: var(--navy-teal);
+}
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.stat { }
+.stat .num {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--coral);
+  display: block;
+}
+.stat .label { font-size: 0.85rem; color: #3a4a4f; }
+.cta-secondary {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--navy-teal);
+  text-decoration: underline;
+  margin: 6px;
+}
+.cta-secondary:hover { color: var(--coral); }
+
+/* --- Sections --- */
+section { padding: 88px 0; }
+section.tight { padding: 56px 0; }
+.bg-pale { background: var(--pale-blue-gray); }
+.bg-navy { background: var(--navy-teal); color: var(--cream); }
+.bg-navy h1, .bg-navy h2, .bg-navy h3 { color: var(--cream); }
+.bg-navy p { color: #d9e6ea; }
+.bg-navy a { color: var(--coral); }
+.bg-navy a.btn-outline { color: #fff; }
+.bg-navy a.btn-primary { color: var(--navy-teal); }
+
+.eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: var(--navy-teal);
+  margin-bottom: 14px;
+  display: block;
+}
+
+.center { text-align: center; }
+.narrow { max-width: 680px; margin-left: auto; margin-right: auto; }
+
+/* --- Hero --- */
+.hero {
+  padding: 96px 0 80px;
+  text-align: center;
+}
+.hero .btn { margin: 6px; }
+
+/* --- Cards --- */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 48px;
+}
+@media (max-width: 860px) {
+  .grid-3 { grid-template-columns: 1fr; }
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--pale-blue-gray);
+  border-radius: 4px;
+  padding: 32px 28px;
+}
+.card h3 { margin-bottom: 10px; }
+.card .price {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--cyan-teal);
+  margin-bottom: 6px;
+}
+.card.featured {
+  border: 2px solid var(--coral);
+  position: relative;
+}
+.card .tag {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: var(--coral);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 14px;
+}
+
+/* --- Testimonials --- */
+.testimonial {
+  border-left: 3px solid var(--coral);
+  padding-left: 24px;
+  margin: 0 0 32px;
+}
+.testimonial p.quote {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--navy-teal);
+}
+.testimonial .who {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+/* --- Pull quote (Meet Her speech) --- */
+.pull-quote {
+  font-family: 'Newsreader', serif;
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  font-weight: 400;
+  color: var(--navy-teal);
+  line-height: 1.45;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.pull-quote .heavy { font-weight: 500; font-style: normal; color: var(--coral); }
+
+/* --- Footer --- */
+.site-footer {
+  background: var(--navy-teal);
+  color: var(--cream);
+  padding: 56px 0 32px;
+}
+.site-footer img.icon { height: 44px; margin-bottom: 24px; }
+.site-footer .links { display: flex; gap: 24px; margin-bottom: 16px; flex-wrap: wrap; }
+.site-footer .links a { color: var(--cream); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.9rem; }
+.site-footer .links.muted a { color: #a9c3cd; font-weight: 600; }
+.site-footer .fine { font-size: 0.8rem; color: #a9c3cd; }
+
+.photo-frame {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.photo-frame img { display: block; width: 100%; height: auto; }
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+.badge-note {
+  font-size: 0.85rem;
+  color: var(--navy-teal);
+  background: var(--pale-blue-gray);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-top: 10px;
+}

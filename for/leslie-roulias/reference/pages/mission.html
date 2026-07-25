@@ -1,0 +1,123 @@
+<!-- @dsCard group="My Camino Financial" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+<title>My Camino Financial: Mission</title>
+<link rel="stylesheet" href="../css/shared.css">
+<script src="../image-slot.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0a3d3a"><svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg"><rect width="1200" height="800" fill="#0a3d3a"/><text x="600" y="420" font-family="Georgia,serif" font-size="90" fill="#f5efe6" text-anchor="middle">My Camino</text></svg></template>
+<style>
+  /* Mission-specific: the #1 frustration was "looks like a bunch of words."
+     Every block below is capped at one short line or two. No paragraphs
+     longer than 2 sentences on this page, on purpose. */
+  .big-line {
+    font-family: 'Newsreader', serif;
+    font-weight: 600;
+    color: var(--navy-teal);
+    font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+    line-height: 1.25;
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  .pillar {
+    text-align: center;
+    padding: 8px 20px;
+  }
+  .pillar .word {
+    font-family: 'Newsreader', serif;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: var(--coral);
+    margin-bottom: 8px;
+    display: block;
+  }
+  .pillar p { font-size: 0.98rem; color: #3a4a4f; margin: 0; }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <img class="logo" src="../assets/logo-horizontal.png" alt="My Camino Financial">
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="packages.html">Packages</a>
+      <a href="mission.html" class="current">Mission</a>
+      <a href="#book" class="btn btn-primary">Book your free call</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom: 40px;">
+  <div class="wrap">
+    <h1 class="big-line">Every woman has the power to lead her own financial life, and the ripple reaches everyone she loves.</h1>
+  </div>
+</header>
+
+<section class="tight bg-pale">
+  <div class="wrap two-col" style="align-items:center;">
+    <div style="text-align:center;">
+      <img src="../assets/logo-icon.png" alt="" style="height:360px;">
+    </div>
+    <div style="display:flex; flex-direction:column; gap:20px;">
+      <div class="pillar" style="text-align:left; padding:0;">
+        <span class="word">Clarity</span>
+        <p>See your money clearly, without the jargon built to keep you out.</p>
+      </div>
+      <div class="pillar" style="text-align:left; padding:20px 0 0; border-top:1px solid var(--pale-blue-gray);">
+        <span class="word">Agency</span>
+        <p>Make the decision yourself. We mentor, we don't manage your money for you.</p>
+      </div>
+      <div class="pillar" style="text-align:left; padding:20px 0 0; border-top:1px solid var(--pale-blue-gray);">
+        <span class="word">Support</span>
+        <p>A partner who sees you as a whole person, not a balance sheet.</p>
+      </div>
+    </div>
+  </div>
+  <p class="center" style="margin-top: 24px;"><a href="#book" class="cta-secondary">Book your free call &rarr;</a></p>
+</section>
+
+<section class="tight">
+  <div class="wrap two-col">
+    <div class="photo-frame" style="aspect-ratio:4/5;">
+      <image-slot id="mission-photo" shape="rect" placeholder="walking, not another headshot."></image-slot>
+    </div>
+    <div>
+      <span class="eyebrow">Who we serve</span>
+      <h2 class="big-line" style="text-align:left; font-size: clamp(1.3rem, 2.2vw, 1.8rem); margin-top: 8px;">Women and non-binary people investing for the first time, and anyone the traditional advisor world was never built for.</h2>
+      <span class="badge-note" style="margin-top: 24px;">Most clients don't meet the account minimum a typical advisor requires. That's exactly who we're here for.</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight bg-navy">
+  <div class="wrap center">
+    <span class="eyebrow" style="color: var(--coral);">Why it matters</span>
+    <h2 class="big-line" style="color: var(--cream);">When women have clarity and agency over their money, research on microfinance shows the effect doesn't stop with them: it reaches their families, and their communities, too.</h2>
+    <a href="#book" class="btn btn-primary" style="margin-top: 24px;">Book your free call</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="mailto:leslie@mycaminofinancial.org">Email</a>
+      <a href="https://www.instagram.com/mycaminofinancial" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.linkedin.com/in/leslie-roulias" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; margin-top: 20px;">
+      <img class="icon" src="../assets/logo-icon-onmark.png" alt="" style="height:22px; margin:0;">
+      <p class="fine" style="margin:0;">My Camino Financial &middot; Rooted in Clarity, Agency &amp; Support</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!-- @dsCard group="My Camino Financial" name="Logo Typography Study" subtitle="Tracking, small size, alignment" viewport="1280x1000" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+<title>My Camino Financial: Logo Typography Study</title>
+<link rel="stylesheet" href="../css/shared.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:32px}
+@media(max-width:900px){.pair{grid-template-columns:1fr}}
+.panel{background:#fff;border:1px solid var(--pale-blue-gray);border-radius:4px;padding:34px 32px}
+.panel.now{border-top:3px solid var(--pale-blue-gray)}
+.panel.next{border-top:3px solid var(--coral)}
+.plabel{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;margin:0 0 22px}
+.panel.now .plabel{color:#7d8f95}
+.panel.next .plabel{color:var(--coral)}
+.stage{display:flex;align-items:center;justify-content:center;min-height:200px}
+.note{font-size:.85rem;line-height:1.6;color:#3a4a4f;margin:22px 0 0;border-top:1px solid var(--pale-blue-gray);padding-top:16px}
+.note b{color:var(--navy-teal);font-weight:700}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.78rem;color:var(--navy-teal)}
+.lede{max-width:640px;color:#3a4a4f}
+.wm{font-family:'Jost',sans-serif;color:#0F9DAF;line-height:1}
+.wm .name{font-weight:400;font-size:54px;letter-spacing:-0.005em;display:block}
+.wm .desc{font-weight:400;font-size:19.5px;letter-spacing:.24em;display:block;margin-top:9px}
+.wm.old .desc{letter-spacing:.46em}
+.lock-h{display:flex;align-items:center;gap:22px}
+.lock-h img{height:92px;display:block}
+.sizes{display:flex;align-items:flex-end;gap:40px;flex-wrap:wrap}
+.sizes figure{margin:0;text-align:center}
+.sizes img{display:block;margin:0 auto 10px}
+.sizes figcaption{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.68rem;color:#3a4a4f}
+.faceRow{display:grid;grid-template-columns:120px 1fr;gap:28px;align-items:center;border-top:1px solid var(--pale-blue-gray);padding:24px 0}
+.faceRow .tag{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.72rem;color:#3a4a4f;line-height:1.6}
+.faceRow img.lockup{height:157px;display:block}
+.faceRow .lock-h img{height:129px}
+.rec{background:var(--pale-blue-gray);border-radius:4px;padding:30px 34px;margin-top:36px}
+.rec ol{margin:16px 0 0;padding-left:20px}
+.rec li{font-size:.92rem;line-height:1.65;margin-bottom:12px;color:#3a4a4f}
+.rec li b{color:var(--navy-teal)}
+.flagline{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.7rem;color:var(--coral);margin:14px 0 0}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <img class="logo" src="../assets/logo-horizontal.png" alt="My Camino Financial">
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="packages.html">Packages</a>
+      <a href="mission.html">Mission</a>
+      <a href="brand-guidelines.html">Guidelines</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:40px;">
+  <div class="wrap narrow">
+    <span class="eyebrow">Logo study</span>
+    <h1 style="font-size:clamp(2rem,3.2vw,2.8rem);">Keep the typeface. Fix the spacing and the small sizes.</h1>
+    <p style="color:#3a4a4f;font-size:1.05rem;">The geometric sans against the site's serif is the strongest decision in this identity. Nothing below changes it. Two problems are worth fixing, one is a nitpick, and one popular recommendation is not worth the money. Every measurement below was read from the pixels of <span class="mono">logo-horizontal.png</span> at 500x219 and <span class="mono">logo-icon.png</span> at 200x288.</p>
+  </div>
+</header>
+
+<section class="tight bg-pale">
+  <div class="wrap">
+    <span class="eyebrow">Fix 01, worth doing</span>
+    <h2>Tighten the descriptor</h2>
+    <p class="lede">At 0.46em the gaps between letters measure 27.7px, wider than any letter in the word: the widest, A, is 22px and the I is 4px. When the space between forms beats the forms themselves, the eye groups on the gaps and FINANCIAL reads as nine separate letters. Half the tracking still reads as a deliberate spaced descriptor and holds together as a word.</p>
+    <div class="pair">
+      <div class="panel now">
+        <p class="plabel">Current, measured 0.46em</p>
+        <div class="stage"><div class="wm old"><span class="name">My Camino</span><span class="desc">FINANCIAL</span></div></div>
+        <p class="note">Falls apart first in the nav bar. At 40px tall the lockup is scaled to 0.18, putting the descriptor's cap height under 5px.</p>
+      </div>
+      <div class="panel next">
+        <p class="plabel">Proposed, 0.24em</p>
+        <div class="stage"><div class="wm"><span class="name">My Camino</span><span class="desc">FINANCIAL</span></div></div>
+        <p class="note"><b>One word, still clearly a descriptor.</b> A spacing change to the existing artwork. No redraw, no new licence.</p>
+      </div>
+    </div>
+    <p class="flagline">Panels reset in Jost to demonstrate tracking. The unmodified mark is shown in the nav above and in section 04.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <span class="eyebrow">Fix 02, the one that matters</span>
+    <h2>Give the mark a small size version</h2>
+    <p class="lede">This is the real cost, and it is not a typography problem. The poppy is drawn with a stem, leaves, and root filaments, all rendered as hairlines. The stem runs 4px wide in the 200px icon and the root filaments 2px, so at a 32px favicon the stem is 0.6px. Below roughly 48px those strokes fall under a pixel and the silhouette stops being a flower. Cropping to the bloom gives a small size mark with no redraw and no loss of recognition.</p>
+    <div class="pair">
+      <div class="panel now">
+        <p class="plabel">Current icon, scaled down</p>
+        <div class="stage">
+          <div class="sizes">
+            <figure><img src="../assets/logo-icon.png" width="88" alt="icon at 88px"><figcaption>88px</figcaption></figure>
+            <figure><img src="../assets/logo-icon.png" width="44" alt="icon at 44px"><figcaption>44px</figcaption></figure>
+            <figure><img src="../assets/logo-icon.png" width="22" alt="icon at 22px"><figcaption>22px, favicon</figcaption></figure>
+          </div>
+        </div>
+        <p class="note">By 44px the roots are grey haze. At favicon size the mark is a smudge that could be anything.</p>
+      </div>
+      <div class="panel next">
+        <p class="plabel">Proposed, bloom only on navy</p>
+        <div class="stage">
+          <div class="sizes">
+            <figure><img src="../assets/favicon-180.png" width="88" height="88" alt="app icon 88px"><figcaption>88px, app icon</figcaption></figure>
+            <figure><img src="../assets/favicon-64.png" width="44" height="44" alt="bloom mark 44px"><figcaption>44px, avatar</figcaption></figure>
+            <figure><img src="../assets/favicon-32.png" width="32" height="32" alt="bloom mark 32px"><figcaption>32px, favicon</figcaption></figure>
+          </div>
+        </div>
+        <p class="note"><b>Full poppy at 48px and up. Bloom only below.</b> Same flower, cropped. Files are already in this project.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tight bg-pale">
+  <div class="wrap">
+    <span class="eyebrow">Fix 03, a nitpick</span>
+    <h2>The two lines sit on different left edges</h2>
+    <p class="lede">The descriptor is flush right with the name and 5px short on the left, because it was scaled to match the name's width rather than set to a shared axis. Five pixels in a 500px export is one percent of the lockup, visible on a billboard and nowhere else. Correct it the next time the file is open. Do not commission it.</p>
+    <div class="panel" style="margin-top:28px;max-width:560px;">
+      <p class="plabel" style="color:#7d8f95;">Measured left edges</p>
+      <table class="token-table" style="width:100%;border-collapse:collapse;font-size:.85rem;">
+        <tr><td style="padding:8px 0;border-bottom:1px solid var(--pale-blue-gray);font-family:ui-monospace,Menlo,Consolas,monospace;">M, left edge</td><td style="padding:8px 0;border-bottom:1px solid var(--pale-blue-gray);color:#3a4a4f;">x = 119</td></tr>
+        <tr><td style="padding:8px 0;border-bottom:1px solid var(--pale-blue-gray);font-family:ui-monospace,Menlo,Consolas,monospace;">F, left edge</td><td style="padding:8px 0;border-bottom:1px solid var(--pale-blue-gray);color:#3a4a4f;">x = 124</td></tr>
+        <tr><td style="padding:8px 0;font-family:ui-monospace,Menlo,Consolas,monospace;">right edges</td><td style="padding:8px 0;color:#3a4a4f;">481 and 482, within 1px</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap">
+    <span class="eyebrow">Not recommended</span>
+    <h2>Resetting the wordmark in a new typeface</h2>
+    <p class="lede">The obvious suggestion is to replace what looks like a system geometric sans with a properly drawn one. Here is that option, honestly presented, and the reason to decline it.</p>
+    <div style="margin-top:28px;">
+      <div class="faceRow"><div class="tag">Current<br>unmodified file<br>cap height 39px</div><div><img class="lockup" src="../assets/logo-horizontal.png" alt="Current horizontal lockup"></div></div>
+      <div class="faceRow"><div class="tag">Jost 400<br>open licence<br>cap height 39px</div><div class="lock-h"><img src="../assets/logo-icon.png" alt="poppy mark"><div class="wm"><span class="name">My Camino</span><span class="desc">FINANCIAL</span></div></div></div>
+    </div>
+    <p class="lede" style="margin-top:24px;">The difference lives in the M apex and the bowl of the a, at sizes almost no client will see. Against that: every export, every social template, and every printed piece has to be regenerated, and the lockup's proportions shift enough to need re-approval. Spend the round on the small size mark instead. If the logo file is ever reopened for other reasons, reset it then.</p>
+  </div>
+</section>
+
+<section class="tight bg-pale">
+  <div class="wrap">
+    <span class="eyebrow">One thing outside typography</span>
+    <h2>The wordmark's teal is not a brand token</h2>
+    <p class="lede">The logo's teal reads close to cyan teal, the color the guidelines reserve for links and prices. The logo predates the token system and should be exempt from it, not corrected to match it. Add that exemption to the guidelines so nobody recolors the mark to navy for consistency.</p>
+    <div class="rec">
+      <h3 style="margin:0;">Recommended order</h3>
+      <ol>
+        <li><b>Adopt the bloom mark below 48px.</b> The files exist. This fixes the only problem a client actually sees.</li>
+        <li><b>Tighten the descriptor to 0.24em.</b> One spacing change to existing artwork, biggest legibility gain per hour.</li>
+        <li><b>Exempt the logo from the color tokens</b> in the brand guidelines, in writing.</li>
+        <li><b>Align the two left edges</b> only when the file is already open for something else.</li>
+        <li><b>Leave the typeface alone.</b> The geometric sans against Newsreader is the identity's best decision. Changing category, weight, or face would cost recognition and buy nothing.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="brand-guidelines.html">Brand guidelines</a>
+      <a href="home.html">Home</a>
+    </div>
+    <p class="fine">Logo typography study, internal. My Camino Financial.</p>
+  </div>
+</footer>
+
+</body>
+</html>

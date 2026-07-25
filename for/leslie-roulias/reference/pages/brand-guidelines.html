@@ -1,0 +1,265 @@
+<!-- @dsCard group="My Camino Financial" name="Brand Guidelines" subtitle="Logo, color, type, components, voice" viewport="1280x900" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="../assets/favicon-64.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon-180.png">
+<title>My Camino Financial: Brand Guidelines</title>
+<link rel="stylesheet" href="../css/shared.css">
+<style>
+.rule{border:0;border-top:1px solid var(--pale-blue-gray);margin:0}
+.spec{display:grid;grid-template-columns:200px 1fr;gap:40px;align-items:start;margin-bottom:44px}
+.spec .note{font-size:.85rem;line-height:1.6;color:#3a4a4f}
+.spec .note strong{color:var(--navy-teal);display:block;font-weight:700;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;margin-bottom:6px}
+.swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.swatches{grid-template-columns:1fr}.spec{grid-template-columns:1fr;gap:16px}}
+.sw{border:1px solid var(--pale-blue-gray);border-radius:4px;overflow:hidden;background:#fff}
+.sw .chip{height:112px}
+.sw .meta{padding:14px 16px}
+.sw .name{font-weight:700;font-size:.95rem;color:var(--ink);margin:0 0 2px}
+.sw .hex{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.8rem;color:#3a4a4f;margin:0 0 8px}
+.sw .use{font-size:.8rem;line-height:1.5;color:#3a4a4f;margin:0}
+.logo-box{background:#fff;border:1px solid var(--pale-blue-gray);border-radius:4px;padding:32px;display:flex;align-items:center;justify-content:center;min-height:180px}
+.logo-box.navy{background:var(--navy-teal);border-color:var(--navy-teal)}
+.logo-box.pale{background:var(--pale-blue-gray)}
+.logo-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:20px}
+@media(max-width:860px){.logo-grid{grid-template-columns:1fr}}
+.cap{font-size:.78rem;color:#3a4a4f;margin:10px 0 0;line-height:1.5}
+.cap b{color:var(--navy-teal);font-weight:700}
+.type-row{border-top:1px solid var(--pale-blue-gray);padding:22px 0;display:grid;grid-template-columns:150px 1fr;gap:32px;align-items:baseline}
+@media(max-width:860px){.type-row{grid-template-columns:1fr;gap:8px}}
+.type-row .tag{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.75rem;color:#3a4a4f;line-height:1.7}
+.do-dont{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:700px){.do-dont{grid-template-columns:1fr}}
+.dd{background:#fff;border:1px solid var(--pale-blue-gray);border-radius:4px;padding:24px 26px}
+.dd h4{font-family:'Montserrat',sans-serif;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;margin:0 0 14px}
+.dd.yes h4{color:var(--cyan-teal)}
+.dd.no h4{color:var(--coral)}
+.dd ul{margin:0;padding-left:18px}
+.dd li{font-size:.9rem;line-height:1.6;margin-bottom:9px;color:#3a4a4f}
+.voice{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+@media(max-width:860px){.voice{grid-template-columns:1fr}}
+.said{background:#fff;border:1px solid var(--pale-blue-gray);border-left:3px solid var(--coral);border-radius:4px;padding:22px 24px}
+.said p{font-family:'Newsreader',serif;font-size:1.05rem;line-height:1.5;color:var(--navy-teal);margin:0 0 10px}
+.said span{font-size:.8rem;color:#3a4a4f}
+.token-table{width:100%;border-collapse:collapse;font-size:.85rem}
+.token-table th{text-align:left;font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy-teal);border-bottom:1px solid var(--pale-blue-gray);padding:0 16px 10px 0}
+.token-table td{border-bottom:1px solid var(--pale-blue-gray);padding:11px 16px 11px 0;color:#3a4a4f;vertical-align:top}
+.token-table td.k{font-family:ui-monospace,Menlo,Consolas,monospace;color:var(--ink);white-space:nowrap}
+.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.toc a{font-family:'Montserrat',sans-serif;font-weight:600;font-size:.85rem;color:var(--navy-teal);background:#fff;border:1px solid var(--pale-blue-gray);border-radius:999px;padding:8px 18px;text-decoration:none}
+.toc a:hover{border-color:var(--cyan-teal);color:var(--cyan-teal);text-decoration:none}
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <img class="logo" src="../assets/logo-horizontal.png" alt="My Camino Financial">
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="packages.html">Packages</a>
+      <a href="mission.html">Mission</a>
+      <a href="#book" class="btn btn-primary">Book your free call</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:56px;">
+  <div class="wrap narrow">
+    <span class="eyebrow">Brand guidelines</span>
+    <h1>How My Camino Financial looks and sounds</h1>
+    <p style="font-size:1.1rem; color:#3a4a4f; line-height:1.55;">One reference for the logo, palette, type, components, and voice used across the site. Anything not covered here should follow the closest example on a live page rather than a new invention.</p>
+    <div class="toc">
+      <a href="#logo">Logo</a>
+      <a href="#color">Color</a>
+      <a href="#type">Typography</a>
+      <a href="#components">Components</a>
+      <a href="#voice">Voice</a>
+      <a href="#tokens">Tokens</a>
+      <a href="logo-typography-study.html">Logo study</a>
+    </div>
+  </div>
+</header>
+
+<section id="logo" class="tight bg-pale">
+  <div class="wrap">
+    <span class="eyebrow">01</span>
+    <h2>Logo</h2>
+    <p class="narrow" style="margin-left:0;">The stacked mark is primary. The horizontal lockup is for navigation bars and any space under 60px tall. The icon alone is for favicons, social avatars, and the footer, never as a substitute for the full name on a first impression.</p>
+    <p class="narrow" style="margin-left:0;"><a href="logo-typography-study.html">See the logo typography study &rarr;</a> for open questions on descriptor tracking and small size behavior.</p>
+    <div class="logo-grid" style="margin-top:36px;">
+      <div>
+        <div class="logo-box"><img src="../assets/logo-main.png" alt="Stacked primary logo" style="max-height:130px;"></div>
+        <p class="cap"><b>Primary, stacked.</b> Hero areas, decks, print. Minimum width 140px.</p>
+      </div>
+      <div>
+        <div class="logo-box"><img src="../assets/logo-horizontal.png" alt="Horizontal lockup" style="max-width:100%;max-height:64px;"></div>
+        <p class="cap"><b>Horizontal lockup.</b> Site nav at 40px tall. Minimum width 120px.</p>
+      </div>
+      <div>
+        <div class="logo-box navy"><img src="../assets/logo-icon-onmark.png" alt="Icon on navy" style="max-height:96px;"></div>
+        <p class="cap"><b>Icon, on color.</b> Footer, avatars, favicon. Use the on-mark version over navy or coral.</p>
+      </div>
+    </div>
+    <div class="do-dont" style="margin-top:36px;">
+      <div class="dd yes">
+        <h4>Do</h4>
+        <ul>
+          <li>Keep clear space equal to the height of the leaf on all four sides.</li>
+          <li>Place the standard logo on cream, white, or pale blue gray.</li>
+          <li>Place the on-mark icon on navy teal or coral.</li>
+          <li>Scale proportionally, always.</li>
+        </ul>
+      </div>
+      <div class="dd no">
+        <h4>Do not</h4>
+        <ul>
+          <li>Recolor, outline, or add effects to the mark.</li>
+          <li>Set the standard logo over photography or a busy field.</li>
+          <li>Stretch, rotate, or crop the lockup.</li>
+          <li>Rebuild the wordmark in a different typeface.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="color" class="tight">
+  <div class="wrap">
+    <span class="eyebrow">02</span>
+    <h2>Color</h2>
+    <p class="narrow" style="margin-left:0;">Five colors, no additions. Navy teal carries authority, cyan teal carries action, coral is the accent that never becomes a background for long text, and cream is the default page.</p>
+    <div class="swatches" style="margin-top:36px;">
+      <div class="sw"><div class="chip" style="background:var(--navy-teal);"></div><div class="meta"><p class="name">Navy Teal</p><p class="hex">#0A597C</p><p class="use">Headings, primary buttons, footer, full bleed sections. The brand's anchor.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--cyan-teal);"></div><div class="meta"><p class="name">Cyan Teal</p><p class="hex">#099AAC</p><p class="use">Links, prices, current nav state. Reserved for things that are live or clickable.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--coral);"></div><div class="meta"><p class="name">Coral</p><p class="hex">#F47963</p><p class="use">Accent only: stat numbers, quote rules, featured badge, eyebrows on navy. Never body text.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--pale-blue-gray);"></div><div class="meta"><p class="name">Pale Blue Gray</p><p class="hex">#E2EBEE</p><p class="use">Alternating section bands, card borders, badges. The quiet separator.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--cream);"></div><div class="meta"><p class="name">Cream</p><p class="hex">#F4F2EA</p><p class="use">Default page background, and all text set on navy teal.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--ink);"></div><div class="meta"><p class="name">Ink</p><p class="hex">#1F2A2E</p><p class="use">Body copy and nav labels. Softer than black so cream never glares.</p></div></div>
+    </div>
+    <p class="cap" style="margin-top:24px;max-width:680px;">Proportion matters more than the swatches: roughly 70 percent cream and white, 20 percent navy teal and pale blue gray, 10 percent cyan teal and coral combined. If a page reads as colorful, the accents have grown too far.</p>
+  </div>
+</section>
+
+<section id="type" class="tight bg-pale">
+  <div class="wrap">
+    <span class="eyebrow">03</span>
+    <h2>Typography</h2>
+    <p class="narrow" style="margin-left:0;">Two typefaces. Newsreader, a warm serif with real italics, carries every heading, pull quote, and testimonial. Montserrat carries everything functional: nav, buttons, labels, prices, body copy.</p>
+    <div style="margin-top:36px;">
+      <div class="type-row"><div class="tag">Newsreader 600<br>clamp 2.25 to 3.4rem<br>line height 1.15</div><div><h1 style="margin:0;">Your money mentor, wherever you're starting from</h1></div></div>
+      <div class="type-row"><div class="tag">Newsreader 600<br>clamp 1.75 to 2.4rem<br>line height 1.15</div><div><h2 style="margin:0;">You don't need to already know everything about money</h2></div></div>
+      <div class="type-row"><div class="tag">Newsreader 600<br>1.45rem</div><div><h3 style="margin:0;">Recent grads and career starters</h3></div></div>
+      <div class="type-row"><div class="tag">Newsreader 400 italic<br>clamp 1.4 to 1.9rem</div><div><p class="pull-quote" style="margin:0;">Every woman has the power to lead her own financial life.</p></div></div>
+      <div class="type-row"><div class="tag">Montserrat 400<br>1rem, line height 1.65</div><div><p style="margin:0;max-width:56ch;">You already have the capacity to make good decisions with your money. My Camino Financial gives you the clarity, confidence, and support to actually do it, on your terms.</p></div></div>
+      <div class="type-row"><div class="tag">Montserrat 600<br>0.78rem, uppercase<br>tracking 0.06em</div><div><span class="eyebrow" style="margin:0;">Who this is for</span></div></div>
+      <div class="type-row"><div class="tag">Montserrat 800<br>2rem, coral</div><div><span class="stat"><span class="num">15+</span><span class="label">Years in finance</span></span></div></div>
+    </div>
+    <p class="cap" style="margin-top:28px;max-width:680px;">Measure: body copy stays inside 680px, display headings inside roughly 620px. Centered headings get a max width and a deliberate break so the line never runs the full column.</p>
+  </div>
+</section>
+
+<section id="components" class="tight">
+  <div class="wrap">
+    <span class="eyebrow">04</span>
+    <h2>Components</h2>
+    <div class="spec" style="margin-top:36px;">
+      <div class="note"><strong>Buttons</strong>Fully rounded, Montserrat 600, 14px by 30px. Primary navy for the one real action on a section. Outline for the alternative. On navy sections the primary flips to white.</div>
+      <div><a href="#book" class="btn btn-primary">Book your free call</a> <a href="packages.html" class="btn btn-outline" style="margin-left:10px;">See the packages</a><br><a href="about.html" class="cta-secondary" style="margin-top:18px;">Read Leslie's story &rarr;</a></div>
+    </div>
+    <hr class="rule">
+    <div class="spec" style="margin-top:36px;">
+      <div class="note"><strong>Cards</strong>White on cream or pale, 1px pale blue gray border, 4px radius, 32px by 28px padding. The featured card takes a 2px coral border and a coral tag. Radius stays at 4px everywhere.</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+        <div class="card"><h3 style="font-size:1.2rem;">Foundations</h3><p class="price">$450</p><p style="font-size:.9rem;margin:0;">Standard card. Border, radius, and padding are fixed.</p></div>
+        <div class="card featured"><span class="tag">Most popular</span><h3 style="font-size:1.2rem;">Momentum</h3><p class="price">$1,200</p><p style="font-size:.9rem;margin:0;">Featured card. One per group, never two.</p></div>
+      </div>
+    </div>
+    <hr class="rule">
+    <div class="spec" style="margin-top:36px;">
+      <div class="note"><strong>Quotes and testimonials</strong>Client words get a 3px coral left rule and italic Newsreader in navy. The attribution runs in Montserrat 700 at 0.9rem. Never set a testimonial in the sans.</div>
+      <div><div class="testimonial" style="margin-bottom:0;"><p class="quote">She made the numbers feel like mine for the first time.</p><p class="who" style="margin:0;">Client, first year with My Camino</p></div></div>
+    </div>
+    <hr class="rule">
+    <div class="spec" style="margin-top:36px;">
+      <div class="note"><strong>Section rhythm</strong>88px vertical padding, 56px for tight sections, 1120px max width with 32px gutters. Backgrounds alternate cream, pale blue gray, and navy teal. Never place two colored bands back to back.</div>
+      <div><div style="background:var(--cream);border:1px solid var(--pale-blue-gray);height:52px;border-radius:4px 4px 0 0;"></div><div style="background:var(--pale-blue-gray);height:52px;"></div><div style="background:var(--cream);border:1px solid var(--pale-blue-gray);border-top:0;height:52px;"></div><div style="background:var(--navy-teal);height:52px;border-radius:0 0 4px 4px;"></div></div>
+    </div>
+    <hr class="rule">
+    <div class="spec" style="margin-top:36px;">
+      <div class="note"><strong>Photography</strong>Real photographs of Leslie and of clients, warm daylight, no stock handshakes or chart overlays. 4px radius, no drop shadow, no color filter. Faces read best cropped above the waist.</div>
+      <div class="photo-frame" style="max-width:320px;"><img src="../assets/headshot-1.jpg" alt="Leslie Roulias"></div>
+    </div>
+  </div>
+</section>
+
+<section id="voice" class="tight bg-pale">
+  <div class="wrap">
+    <span class="eyebrow">05</span>
+    <h2>Voice</h2>
+    <p class="narrow" style="margin-left:0;">Leslie speaks to a woman who is capable but has been talked down to about money. Assume competence, name the feeling, then give the next step. Warm, plain, never precious.</p>
+    <div class="voice" style="margin-top:36px;">
+      <div class="dd yes">
+        <h4>Sounds like us</h4>
+        <ul>
+          <li>Second person, present tense, contractions welcome.</li>
+          <li>Plain words for money things. Explain a term the first time it appears.</li>
+          <li>Credentials stated once, factually, then set aside.</li>
+          <li>Sentences that end on the reader, not on the firm.</li>
+        </ul>
+      </div>
+      <div class="dd no">
+        <h4>Not us</h4>
+        <ul>
+          <li>Hustle language, urgency, or fear of missing out.</li>
+          <li>Jargon as shorthand for expertise.</li>
+          <li>Shame about past decisions, debt, or late starts.</li>
+          <li>Em dashes, exclamation points, and emoji.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="voice" style="margin-top:28px;">
+      <div class="said"><p>You already have the capacity to make good decisions with your money.</p><span>Home, hero. Competence first.</span></div>
+      <div class="said"><p>Most clients don't meet the account minimum a typical advisor requires. That's exactly who we're here for.</p><span>Mission. Names the gatekeeping, then takes a side.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="tokens" class="tight">
+  <div class="wrap">
+    <span class="eyebrow">06</span>
+    <h2>Tokens</h2>
+    <p class="narrow" style="margin-left:0;">Everything above is defined once in <code style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;">css/shared.css</code>. Reference the variable, not the hex.</p>
+    <table class="token-table" style="margin-top:32px;">
+      <tr><th>Token</th><th>Value</th><th>Used for</th></tr>
+      <tr><td class="k">--navy-teal</td><td>#0A597C</td><td>Headings, primary button, navy sections, footer</td></tr>
+      <tr><td class="k">--cyan-teal</td><td>#099AAC</td><td>Links, prices, current nav item</td></tr>
+      <tr><td class="k">--coral</td><td>#F47963</td><td>Stat numbers, quote rule, featured border, tags</td></tr>
+      <tr><td class="k">--pale-blue-gray</td><td>#E2EBEE</td><td>Section band, card border, badges</td></tr>
+      <tr><td class="k">--cream</td><td>#F4F2EA</td><td>Page background, text on navy</td></tr>
+      <tr><td class="k">--ink</td><td>#1F2A2E</td><td>Body copy, nav labels</td></tr>
+      <tr><td class="k">--max-width</td><td>1120px</td><td>Content column, with 32px gutters</td></tr>
+    </table>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="packages.html">Packages</a>
+      <a href="mission.html">Mission</a>
+    </div>
+    <p class="fine">Brand guidelines, internal reference. My Camino Financial.</p>
+  </div>
+</footer>
+
+</body>
+</html>
