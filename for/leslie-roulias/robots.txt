@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://makeitland.studio/for/leslie-roulias/sitemap-index.xml
