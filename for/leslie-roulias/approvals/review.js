@@ -1,6 +1,7 @@
 (function(){
 var KEY='mil-review-leslie-2026-07';
-var ORDER=['fav-01','logo-01','logo-02','logo-03','brand-01','brand-03','copy-01','copy-02','copy-03','copy-04','acc-all'];
+var ORDER=window.REVIEW_ORDER||['fav-01','logo-01','logo-02','logo-03','brand-01','brand-03','copy-01','copy-02','copy-03','copy-04','acc-all'];
+var HEADING=window.REVIEW_HEADING||'Review answers, Leslie Roulias';
 var TITLES={
  'fav-01':'Favicon: use the C from your own logo',
  'logo-01':'Logo: tighten the word FINANCIAL',
@@ -12,7 +13,8 @@ var TITLES={
  'copy-02':'Copy: start now, so it compounds in your favor',
  'copy-03':'Copy: microfinance as pioneered by Dr. Yunus',
  'copy-04':'Copy: crises sentence, trusted with more responsibility',
- 'acc-all':'Contrast: approve all five fixes as one pass'
+ 'acc-all':'Contrast: approve all five fixes as one pass',
+ 'acc-01b':'Contrast follow up: which coral on the navy sections'
 };
 var EMAIL='nicole@makeitland.studio';
 var ASKS={booking:'The booking link',logofiles:'The editable logo files'};
@@ -23,6 +25,7 @@ function label(v){if(!v)return'Not answered yet.';if(v.choice==='approve')return
 function answered(){var n=0;ORDER.forEach(function(id){var v=state[id];if(v&&(v.choice||(v.note||'').trim()))n++});return n}
 function askLines(){
  var out=[];
+ if(window.REVIEW_ORDER)return out;
  Object.keys(ASKS).forEach(function(k){
   var v=((state['ask-'+k]||{}).note||'').trim();
   if(v)out.push(ASKS[k]+': '+v.replace(/\s+/g,' '));
@@ -30,7 +33,7 @@ function askLines(){
  return out;
 }
 function transcript(){
- var lines=['Review answers, Leslie Roulias','Prepared by Make It Land Studio, July 2026','',answered()+' of '+ORDER.length+' answered','',''];
+ var lines=[HEADING,'Prepared by Make It Land Studio, July 2026','',answered()+' of '+ORDER.length+' answered','',''];
  ORDER.forEach(function(id,i){
   var v=state[id]||{};
   var d=v.choice==='approve'?'APPROVED':v.choice==='hold'?'ON HOLD':'no answer';
@@ -73,12 +76,12 @@ document.querySelectorAll('[data-ask]').forEach(function(el){
 var send=document.querySelector('.send');
 function mailHref(){
  var body=encodeURIComponent(transcript());
- var subj=encodeURIComponent('Review answers, Leslie Roulias');
+ var subj=encodeURIComponent(HEADING);
  return 'mailto:'+EMAIL+'?subject='+subj+'&body='+body;
 }
 function gmailHref(){
  var body=encodeURIComponent(transcript());
- var subj=encodeURIComponent('Review answers, Leslie Roulias');
+ var subj=encodeURIComponent(HEADING);
  return 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to='+encodeURIComponent(EMAIL)+'&su='+subj+'&body='+body;
 }
 function sync(){
