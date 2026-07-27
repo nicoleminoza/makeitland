@@ -92,7 +92,7 @@
     <span class="eyebrow">01</span>
     <h2>Logo</h2>
     <p class="narrow" style="margin-left:0;">The stacked mark is primary. The horizontal lockup is for navigation bars and any space under 60px tall. The icon alone is for favicons, social avatars, and the footer, never as a substitute for the full name on a first impression.</p>
-    <p class="narrow" style="margin-left:0;"><a href="logo-typography-study.html">See the logo typography study &rarr;</a> for open questions on descriptor tracking and small size behavior.</p>
+    <p class="narrow" style="margin-left:0;"><a href="logo-typography-study.html">See the logo typography study &rarr;</a> for the measured record. Its two questions, descriptor tracking and small size behavior, are settled. The decisions are recorded below.</p>
     <div class="logo-grid" style="margin-top:36px;">
       <div>
         <div class="logo-box"><img src="../assets/logo-main.png" alt="Stacked primary logo" style="max-height:130px;"></div>
@@ -124,8 +124,16 @@
           <li>Set the standard logo over photography or a busy field.</li>
           <li>Stretch, rotate, or crop the lockup.</li>
           <li>Rebuild the wordmark in a different typeface.</li>
+          <li>Never set coral text on navy teal: that pairing measures 2.84:1 and fails the reading standard. Use coral light, which measures 4.77:1.</li>
         </ul>
       </div>
+    </div>
+    <div class="dd" style="margin-top:28px;">
+      <h4 style="color:var(--navy-teal);">Settled, do not revisit</h4>
+      <ul>
+        <li><strong>The letter spacing on FINANCIAL is intentional.</strong> Leslie specified it during logo design. The wide tracking makes FINANCIAL the terra that grounds "My Camino", and the poppy stem passes through both words down to the roots. It is symbolic, not a spacing error, and tightening it destroys the symbolism. A tightening was recommended as a correction in July 2026; the client explained the intent and the recommendation was withdrawn. Do not tighten it. Do not raise it again.</li>
+        <li><strong>Below roughly 120px wide, drop FINANCIAL rather than tighten it.</strong> The legibility problem at small sizes is real: the letters get too small to hold the gaps and the tracking reads as noise. The approved solution is a second lockup, the poppy with "My Camino" only, for the site's top bar, social avatars, and anything under about an inch and a half wide. The full lockup is used everywhere it is legible. Approved July 27, 2026. Artwork pending from the logo designer.</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -134,11 +142,12 @@
   <div class="wrap">
     <span class="eyebrow">02</span>
     <h2>Color</h2>
-    <p class="narrow" style="margin-left:0;">Five colors, no additions. Navy teal carries authority, cyan teal carries action, coral is the accent that never becomes a background for long text, and cream is the default page.</p>
+    <p class="narrow" style="margin-left:0;">Five brand colors, closed to additions, plus one contrast variant. Navy teal carries authority, cyan teal carries action, coral is the accent that never becomes a background for long text, and cream is the default page. Coral light is not a sixth color: it is the shade coral takes when it must sit as text on navy and still be read.</p>
     <div class="swatches" style="margin-top:36px;">
       <div class="sw"><div class="chip" style="background:var(--navy-teal);"></div><div class="meta"><p class="name">Navy Teal</p><p class="hex">#0A597C</p><p class="use">Headings, primary buttons, footer, full bleed sections. The brand's anchor.</p></div></div>
       <div class="sw"><div class="chip" style="background:var(--cyan-teal);"></div><div class="meta"><p class="name">Cyan Teal</p><p class="hex">#099AAC</p><p class="use">Links, prices, current nav state. Reserved for things that are live or clickable.</p></div></div>
-      <div class="sw"><div class="chip" style="background:var(--coral);"></div><div class="meta"><p class="name">Coral</p><p class="hex">#F47963</p><p class="use">Accent only: stat numbers, quote rules, featured badge, eyebrows on navy. Never body text.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--coral);"></div><div class="meta"><p class="name">Coral</p><p class="hex">#F47963</p><p class="use">Accent only: stat numbers, quote rules, featured badge, tags, on cream, white, or pale blue gray. Never body text, and never text on navy: use coral light there.</p></div></div>
+      <div class="sw"><div class="chip" style="background:var(--coral-light);"></div><div class="meta"><p class="name">Coral Light</p><p class="hex">#FFBCAC</p><p class="use">Coral text on navy backgrounds only, where the standard coral fails contrast. A variant of coral, not a new color.</p></div></div>
       <div class="sw"><div class="chip" style="background:var(--pale-blue-gray);"></div><div class="meta"><p class="name">Pale Blue Gray</p><p class="hex">#E2EBEE</p><p class="use">Alternating section bands, card borders, badges. The quiet separator.</p></div></div>
       <div class="sw"><div class="chip" style="background:var(--cream);"></div><div class="meta"><p class="name">Cream</p><p class="hex">#F4F2EA</p><p class="use">Default page background, and all text set on navy teal.</p></div></div>
       <div class="sw"><div class="chip" style="background:var(--ink);"></div><div class="meta"><p class="name">Ink</p><p class="hex">#1F2A2E</p><p class="use">Body copy and nav labels. Softer than black so cream never glares.</p></div></div>
@@ -240,7 +249,8 @@
       <tr><th>Token</th><th>Value</th><th>Used for</th></tr>
       <tr><td class="k">--navy-teal</td><td>#0A597C</td><td>Headings, primary button, navy sections, footer</td></tr>
       <tr><td class="k">--cyan-teal</td><td>#099AAC</td><td>Links, prices, current nav item</td></tr>
-      <tr><td class="k">--coral</td><td>#F47963</td><td>Stat numbers, quote rule, featured border, tags</td></tr>
+      <tr><td class="k">--coral</td><td>#F47963</td><td>Stat numbers, quote rule, featured border, tags. Never text on navy</td></tr>
+      <tr><td class="k">--coral-light</td><td>#FFBCAC</td><td>Coral text on navy only, where standard coral fails contrast</td></tr>
       <tr><td class="k">--pale-blue-gray</td><td>#E2EBEE</td><td>Section band, card border, badges</td></tr>
       <tr><td class="k">--cream</td><td>#F4F2EA</td><td>Page background, text on navy</td></tr>
       <tr><td class="k">--ink</td><td>#1F2A2E</td><td>Body copy, nav labels</td></tr>
