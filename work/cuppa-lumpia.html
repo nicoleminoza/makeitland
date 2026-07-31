@@ -1,53 +1,9 @@
-<!DOCTYPE html><html><head><style>
-    .sc-placeholder{background:color-mix(in srgb,currentColor 8%,transparent);
-      border:1px solid color-mix(in srgb,currentColor 50%,transparent);
-      border-radius:2px;box-sizing:border-box;overflow:hidden}
-    @keyframes sc-shine{0%{background-position:100% 50%}100%{background-position:0% 50%}}
-    html.sc-dc-streaming .sc-placeholder,
-    html.sc-dc-streaming .sc-interp.sc-missing{position:relative;
-      background:color-mix(in srgb,currentColor 5%,transparent);
-      border-color:transparent}
-    html.sc-dc-streaming .sc-placeholder::before,
-    html.sc-dc-streaming .sc-interp.sc-missing::before{content:'';
-      position:absolute;inset:0;pointer-events:none;
-      background:linear-gradient(90deg,rgba(217,119,87,0) 25%,rgba(247,225,211,.95) 37%,rgba(217,119,87,0) 63%);
-      background-size:400% 100%;animation:sc-shine 1.4s ease infinite}
-    html.sc-dc-streaming .sc-placeholder:nth-child(n+9 of .sc-placeholder)::before,
-    html.sc-dc-streaming .sc-interp.sc-missing:nth-child(n+9 of .sc-interp.sc-missing)::before{animation:none;
-      background:color-mix(in srgb,currentColor 8%,transparent)}
-    .sc-placeholder-error{padding:4px 8px;font:11px/1.4 ui-monospace,monospace;
-      color:color-mix(in srgb,currentColor 70%,transparent);word-break:break-word}
-    .sc-interp.sc-missing{display:inline-block;width:2em;height:1em;overflow:hidden;
-      vertical-align:text-bottom;background:rgba(255,255,255,.3);border:1px solid rgba(0,0,0,.5);
-      border-radius:2px;box-sizing:border-box;color:transparent;
-      user-select:none}
-    .sc-interp.sc-unresolved{font-family:ui-monospace,monospace;font-size:.85em;
-      color:color-mix(in srgb,currentColor 50%,transparent);
-      background:color-mix(in srgb,currentColor 10%,transparent);border-radius:3px;
-      padding:0 3px}
-    .sc-host.sc-has-error{position:relative}
-    .sc-logic-error{position:absolute;top:8px;left:8px;z-index:2147483647;max-width:60ch;
-      padding:6px 10px;background:#b00020;color:#fff;font:12px/1.4 ui-monospace,monospace;
-      border-radius:4px;white-space:pre-wrap;pointer-events:none}
-    /* Mirrors PRINT_BASELINE_CSS in apps/web deck-stage-export.ts — keep both
-       in sync until dc-runtime regains a build step. */
-    @media print {
-      @page { margin: 0.5cm; }
-      figure, table { break-inside: avoid; }
-      #dc-root, #dc-root > .sc-host { height: auto; }
-      *, *::before, *::after {
-        print-color-adjust: exact; -webkit-print-color-adjust: exact;
-        backdrop-filter: none !important; -webkit-backdrop-filter: none !important;
-        animation-delay: -99s !important; animation-duration: .001s !important;
-        animation-iteration-count: 1 !important; animation-fill-mode: both !important;
-        animation-play-state: running !important; transition-duration: 0s !important;
-      }
-    }
-  </style>
+<!DOCTYPE html>
+<html><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="5">Cuppa Lumpia · Make It Land</title><meta name="description" content="A 50-year family lumpia recipe built like a brand you would cross the island for. Naming, identity, packaging, and site by Make It Land." data-dc-tpl="6"><meta name="author" content="Nicole Miñoza" data-dc-tpl="7"><meta name="theme-color" content="#201d19" data-dc-tpl="8"><link rel="canonical" href="https://makeitland.studio/work/cuppa-lumpia.html" data-dc-tpl="9"><meta property="og:type" content="article" data-dc-tpl="10"><meta property="og:site_name" content="Make It Land Studio" data-dc-tpl="11"><meta property="og:title" content="Cuppa Lumpia · A brand built from the ground up" data-dc-tpl="12"><meta property="og:description" content="A 50-year family recipe, run as a weekend driveway stand and built like a brand you would cross the island for." data-dc-tpl="13"><meta property="og:url" content="https://makeitland.studio/work/cuppa-lumpia.html" data-dc-tpl="14"><meta property="og:image" content="https://makeitland.studio/og-cuppa-lumpia.png" data-dc-tpl="15"><meta property="og:image:alt" content="Cuppa Lumpia. A brand built from the ground up." data-dc-tpl="16"><meta property="og:image:width" content="1200" data-dc-tpl="17"><meta property="og:image:height" content="630" data-dc-tpl="18"><meta name="twitter:card" content="summary_large_image" data-dc-tpl="19"><meta name="twitter:title" content="Cuppa Lumpia · A brand built from the ground up" data-dc-tpl="20"><meta name="twitter:description" content="A 50-year family recipe, built like a brand you would cross the island for." data-dc-tpl="21"><meta name="twitter:image" content="https://makeitland.studio/og-cuppa-lumpia.png" data-dc-tpl="22"><meta name="twitter:image:alt" content="Cuppa Lumpia. A brand built from the ground up." data-dc-tpl="23"><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="25"><link rel="preconnect" href="https://fonts.gstatic.com" data-dc-tpl="26"><style data-dc-tpl="27">/* vietnamese */
+<style>x-dc{display:none!important}</style><style></style><style>html,body{height:100%;margin:0}#dc-root,#dc-root>.sc-host{height:100%}</style><title data-dc-tpl="5">Cuppa Lumpia · Make It Land</title><meta name="description" content="A 50-year family lumpia recipe built like a brand you would cross the island for. Naming, identity, packaging, and site by Make It Land." data-dc-tpl="6"><meta name="author" content="Nicole Miñoza" data-dc-tpl="7"><meta name="theme-color" content="#201d19" data-dc-tpl="8"><link rel="canonical" href="https://makeitland.studio/work/cuppa-lumpia.html" data-dc-tpl="9"><meta property="og:type" content="article" data-dc-tpl="10"><meta property="og:site_name" content="Make It Land Studio" data-dc-tpl="11"><meta property="og:title" content="Cuppa Lumpia · A brand built from the ground up" data-dc-tpl="12"><meta property="og:description" content="A 50-year family recipe, run as a weekend driveway stand and built like a brand you would cross the island for." data-dc-tpl="13"><meta property="og:url" content="https://makeitland.studio/work/cuppa-lumpia.html" data-dc-tpl="14"><meta property="og:image" content="https://makeitland.studio/og-cuppa-lumpia.png" data-dc-tpl="15"><meta property="og:image:alt" content="Cuppa Lumpia. A brand built from the ground up." data-dc-tpl="16"><meta property="og:image:width" content="1200" data-dc-tpl="17"><meta property="og:image:height" content="630" data-dc-tpl="18"><meta name="twitter:card" content="summary_large_image" data-dc-tpl="19"><meta name="twitter:title" content="Cuppa Lumpia · A brand built from the ground up" data-dc-tpl="20"><meta name="twitter:description" content="A 50-year family recipe, built like a brand you would cross the island for." data-dc-tpl="21"><meta name="twitter:image" content="https://makeitland.studio/og-cuppa-lumpia.png" data-dc-tpl="22"><meta name="twitter:image:alt" content="Cuppa Lumpia. A brand built from the ground up." data-dc-tpl="23"><link rel="preconnect" href="https://fonts.googleapis.com" data-dc-tpl="25"><link rel="preconnect" href="https://fonts.gstatic.com" data-dc-tpl="26"><style>/* vietnamese */
 
 /* latin-ext */
 
@@ -89,38 +45,29 @@
 
 /* latin */
 
-</style><style data-dc-tpl="28">
+</style><style>
     body { margin:0; background:#FAF8F4; }
+    .cl-next:hover h2 { color:#B23E26 !important; }
+    .cl-next:hover span { color:#B23E26 !important; }
     * { box-sizing:border-box; }
     a { text-decoration:none; color:inherit; }
     h1, h2, h3 { text-wrap: balance; }
     .cl-display { text-wrap: pretty; hanging-punctuation: first last; }
-    @media (max-width:760px){ [style*="px 40px"]{ padding-left:24px !important; padding-right:24px !important; } 
+    @media (max-width:760px){
       .cl-row { grid-template-columns:1fr !important; gap:16px !important; }
       .cl-cards { grid-template-columns:1fr !important; }
       .cl-h1 { font-size:60px !important; }
       .cl-hero { height:380px !important; }
       .cl-pad { padding-left:24px !important; padding-right:24px !important; }
     }
-  </style><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png"><link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Cuppa Lumpia",
-    "description": "A 50-year family lumpia recipe built like a brand you would cross the island for. Naming, identity, packaging, and site.",
-    "author": { "@type": "Person", "name": "Nicole Miñoza" },
-    "publisher": { "@type": "Organization", "name": "Make It Land Studio", "url": "https://makeitland.studio" },
-    "image": "https://makeitland.studio/og-cuppa-lumpia.png",
-    "url": "https://makeitland.studio/work/cuppa-lumpia.html",
-    "mainEntityOfPage": "https://makeitland.studio/work/cuppa-lumpia.html"
-  }
-</script>  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..720&family=Hanken+Grotesk:wght@300..700&display=swap">
+  </style><link rel="icon" href="/favicon.png" type="image/png"><link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png"><link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..720&family=Hanken+Grotesk:wght@300..700&display=swap">
 </head>
 <body>
 <div id="dc-root"><div class="sc-host" data-sc-name="cuppa-lumpia"><div data-dc-tpl="29" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-family: &quot;Hanken Grotesk&quot;, sans-serif; -webkit-font-smoothing: antialiased;">
 
   <header data-dc-tpl="30" style="border-bottom: 1px solid rgb(231, 226, 217);">
-    <div data-dc-tpl="31" class="cl-pad" style="max-width: 1160px; margin: 0px auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
+    <div data-dc-tpl="31" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 22px 40px; display: flex; align-items: center; justify-content: space-between;">
       <a data-dc-tpl="32" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 23px; white-space: nowrap;">Make It Land<span data-dc-tpl="33" style="color: rgb(200, 73, 46);">.</span></a>
       <a data-dc-tpl="34" href="/#work" style="font-size: 15px; color: rgb(107, 102, 97); font-weight: 500;">← All work</a>
     </div>
@@ -128,7 +75,7 @@
 
   
   <div data-dc-tpl="35" class="cl-hero" style="width: 100%; height: 620px; background: rgb(26, 26, 26); border-bottom: 1px solid rgb(224, 217, 205); display: flex; align-items: center; justify-content: center; padding: 0px; overflow: hidden;">
-    <img data-dc-tpl="36" src="/cuppa-lumpia-img1.png" alt="Cuppa Lumpia, Filipino family recipe. The brand logo: a kraft cup of lumpia standing up, with a rising steam mark." style="width: 100%; height: 100%; object-fit: contain;">
+    <img src="/assets/work/cuppa-lumpia/cuppa-lumpia-filipino-family-recipe-the-brand-lo.png" width="2888" height="2116" data-dc-tpl="36" alt="Cuppa Lumpia, Filipino family recipe. The brand logo: a kraft cup of lumpia standing up, with a rising steam mark." style="width: 100%; height: 100%; object-fit: contain;">
   </div>
 
   
@@ -148,99 +95,172 @@
 
   
   <div data-dc-tpl="45" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 0px 40px;">
-    <img data-dc-tpl="46" src="/cuppa-family-at-stand.jpeg" alt="Nicole and her two daughters at the weekend driveway stand" style="width: 100%; height: 460px; object-fit: cover; object-position: 22% 30%; display: block; border: 1px solid rgb(231, 226, 217);">
+    <img src="/assets/work/cuppa-lumpia/nicole-and-her-two-daughters-at-the-weekend-driv.jpg" width="960" height="1280" loading="lazy" decoding="async" data-dc-tpl="46" alt="Nicole and her two daughters at the weekend driveway stand" style="width: 100%; height: 460px; object-fit: cover; object-position: 22% 30%; display: block;">
   </div>
 
   
-  <section data-dc-tpl="49" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 96px 40px;">
-    <div data-dc-tpl="50" style="display: flex; flex-direction: column; gap: 72px;">
+  <section data-dc-tpl="47" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 96px 40px;">
+    <div data-dc-tpl="48" style="display: flex; flex-direction: column; gap: 72px;">
 
       
-      <div data-dc-tpl="51" style="display: flex; flex-direction: column; gap: 56px;">
+      <div data-dc-tpl="49" style="display: flex; flex-direction: column; gap: 56px;">
 
-        <div data-dc-tpl="52" style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(178, 62, 38); font-weight: 700;">The method</div>
+        <div data-dc-tpl="50" style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgb(178, 62, 38); font-weight: 700;">The method</div>
 
-        <div data-dc-tpl="53" class="cl-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
-          <h2 data-dc-tpl="54" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin: 0px; padding-top: 8px;">The overlooked thing</h2>
-          <p data-dc-tpl="55" class="cl-display" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 27px; line-height: 1.34; margin: 0px;">The recipe was never the question. It is fifty years old and it belongs to family. The question was whether a weekend driveway stand could carry it with the dignity it deserved: packaging worthy of its history, and legible to a new generation of islanders. Not a folding table and a paper plate.</p>
+        <div data-dc-tpl="51" class="cl-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+          <h2 data-dc-tpl="52" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin: 0px; padding-top: 8px;">The overlooked thing</h2>
+          <p data-dc-tpl="53" class="cl-display" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; font-size: 27px; line-height: 1.34; margin: 0px;">The recipe was never the question. It is fifty years old and it belongs to family. The question was whether a weekend driveway stand could carry it with the dignity it deserved: packaging worthy of its history, and legible to a new generation of islanders. Not a folding table and a paper plate.</p>
         </div>
 
-        <div data-dc-tpl="56" class="cl-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
-          <h2 data-dc-tpl="57" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin: 0px; padding-top: 8px;">The move</h2>
-          <p data-dc-tpl="58" class="cl-display" style="font-size: 18px; line-height: 1.65; color: rgb(26, 26, 26); margin: 0px;">We treated a three-hours-a-weekend driveway stand with the same care as a brand built to last. The name led the way: Cuppa Lumpia made the kraft cup the hero, lumpia served standing up, like a cuppa, taking something deeply personal and making it legible to the island. From there, one system carried it: the logo and label, the "Open Today" and "Frozen and Catering" signage, the "Lumpia Ahead" wayfinding, a full brand guidelines set, and a QR-to-order site. Every touchpoint honors the recipe.</p>
+        <div data-dc-tpl="54" class="cl-row" style="display: grid; grid-template-columns: 200px 1fr; gap: 40px;">
+          <h2 data-dc-tpl="55" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin: 0px; padding-top: 8px;">The move</h2>
+          <p data-dc-tpl="56" class="cl-display" style="font-size: 18px; line-height: 1.65; color: rgb(26, 26, 26); margin: 0px;">We treated a three-hours-a-weekend driveway stand with the same care as a brand built to last. The name led the way: Cuppa Lumpia made the kraft cup the hero, lumpia served standing up, like a cuppa, taking something deeply personal and making it legible to the island. From there, one system carried it: the logo and label, the "Open Today" and "Frozen and Catering" signage, the "Lumpia Ahead" wayfinding, a full brand guidelines set, and a QR-to-order site. Every touchpoint honors the recipe.</p>
         </div>
 
       </div>
 
       
-      <img data-dc-tpl="59" src="/cuppa-system-basket.jpeg" alt="The Cuppa Lumpia system in the field: kraft cups and an iced drink carrying the label, dipping sauces, and the scan-to-order card" style="width: 100%; height: 520px; object-fit: cover; object-position: center 55%; display: block; border: 1px solid rgb(231, 226, 217);">
+      <img src="/assets/work/cuppa-lumpia/the-cuppa-lumpia-brand-system-in-use-labeled-kra.jpg" width="1200" height="1600" loading="lazy" decoding="async" data-dc-tpl="57" alt="The Cuppa Lumpia brand system in use: labeled kraft cups, an order-ahead card, and iced tea in a driveway-stand basket" style="width: 100%; height: 520px; object-fit: cover; object-position: center 55%; display: block;">
 
       
-      <div data-dc-tpl="62">
-        <h2 data-dc-tpl="63" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin: 0px 0px 44px;">The result</h2>
+      <div data-dc-tpl="58">
+        <h2 data-dc-tpl="59" style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; margin: 0px 0px 44px;">The result</h2>
 
-        <div data-dc-tpl="64" class="cl-cards" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
+        <div data-dc-tpl="60" class="cl-cards" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;">
 
-          <div data-dc-tpl="65" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px; display: flex; flex-direction: column;">
-            <div data-dc-tpl="66" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 31px; line-height: 1.12; margin-bottom: 20px;">Sold out before opening.</div>
-            <p data-dc-tpl="67" style="font-size: 16px; line-height: 1.62; color: rgb(107, 102, 97); margin: 0px;">Neighbors pre-ordered the first weekend, before the stand ever opened.</p>
+          <div data-dc-tpl="61" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px 40px;">
+            <div data-dc-tpl="62" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 31px; line-height: 1.12; margin-bottom: 20px;">Sold out before opening.</div>
+            <p data-dc-tpl="63" style="font-size: 16px; line-height: 1.62; color: rgb(107, 102, 97); margin: 0px;">Neighbors pre-ordered the first weekend, before the stand ever opened.</p>
           </div>
 
-          <div data-dc-tpl="69" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px; display: flex; flex-direction: column;">
-            <div data-dc-tpl="70" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 31px; line-height: 1.12; margin-bottom: 20px;">Boutique prices, paid without blinking.</div>
-            <p data-dc-tpl="71" style="font-size: 16px; line-height: 1.62; color: rgb(107, 102, 97); margin: 0px;">A driveway stand priced and treated like a shop worth returning to.</p>
+          <div data-dc-tpl="64" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px 40px;">
+            <div data-dc-tpl="65" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 31px; line-height: 1.12; margin-bottom: 20px;">Boutique prices, paid without blinking.</div>
+            <p data-dc-tpl="66" style="font-size: 16px; line-height: 1.62; color: rgb(107, 102, 97); margin: 0px;">A driveway stand priced and treated like a shop worth returning to.</p>
           </div>
 
-          <div data-dc-tpl="73" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px; display: flex; flex-direction: column;">
-            <div data-dc-tpl="74" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 31px; line-height: 1.12; margin-bottom: 20px;">Franchise interest, unprompted.</div>
-            <p data-dc-tpl="75" style="font-size: 16px; line-height: 1.62; color: rgb(107, 102, 97); margin: 0px;">Requests to replicate it arrived before the first summer was out.</p>
+          <div data-dc-tpl="67" style="background: rgb(250, 248, 244); border: 1px solid rgb(231, 226, 217); padding: 44px 40px;">
+            <div data-dc-tpl="68" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.01em; font-size: 31px; line-height: 1.12; margin-bottom: 20px;">Franchise interest, unprompted.</div>
+            <p data-dc-tpl="69" style="font-size: 16px; line-height: 1.62; color: rgb(107, 102, 97); margin: 0px;">Requests to replicate it arrived before the first summer was out.</p>
           </div>
 
         </div>
 
-        <p data-dc-tpl="77" class="cl-display" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 42px; line-height: 1.2; color: rgb(26, 26, 26); max-width: 840px; margin: 88px 0px 0px;">And two teenagers learned to build and run a brand of their own.</p>
+        <p data-dc-tpl="70" class="cl-display" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 42px; line-height: 1.2; color: rgb(26, 26, 26); max-width: 840px; margin: 88px 0px 0px;">And two teenagers learned to build and run a brand of their own.</p>
       </div>
 
     </div>
   </section>
 
   
-  <section data-dc-tpl="78" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 0px 40px 96px;">
-    <div data-dc-tpl="79" class="cl-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px;">
-      <img data-dc-tpl="80" src="/cuppa-ig-grid.png" alt="The Cuppa Lumpia Instagram profile: bio, story highlights, and the opening-weekend post grid" style="grid-column: 1 / -1; width: 100%; height: 420px; object-fit: cover; object-position: center top; display: block; border: 1px solid rgb(231, 226, 217);">
-      <img data-dc-tpl="81" src="/cuppa-open-today.jpeg" alt="The Open Today A-frame board at the end of the driveway" style="width: 100%; height: 380px; object-fit: cover; object-position: center; display: block; border: 1px solid rgb(231, 226, 217);">
-      <img data-dc-tpl="82" src="/cuppa-venmo-card.png" alt="The Cuppa Lumpia Venmo card for tap-to-pay ordering" style="width: 100%; height: 380px; object-fit: cover; object-position: center top; display: block; border: 1px solid rgb(231, 226, 217);">
-    </div>
-  </section>
-
-  
-  <section data-dc-tpl="100" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244);">
-    <div data-dc-tpl="101" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 100px 40px; text-align: center;">
-      <h2 data-dc-tpl="102" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 44px; line-height: 1.1; margin: 0px 0px 24px;">Want proof like this for your brand?</h2>
-      <p data-dc-tpl="103" style="font-size: 15px; line-height: 1.6; color: rgba(250, 248, 244, 0.82); margin: 0px 0px 32px;">Make It Land takes on one or two engagements at a time.</p>
-      <div data-dc-tpl="104" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
-        <a data-dc-tpl="105" href="https://calendly.com/make-it-land/intro-fit-call?primary_color=B23E26" target="_blank" rel="noopener" class="scp0" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-size: 16px; font-weight: 600; padding: 16px 34px; display: inline-block;">Schedule a fit call</a>
-        <div data-dc-tpl="106" style="font-size: 14px; font-weight: 400; color: rgba(250, 248, 244, 0.78);">Prefer email? <a data-dc-tpl="107" href="mailto:hello@makeitland.studio?subject=Fit%20call" class="scp1" style="color: rgb(250, 248, 244); font-weight: 500; text-decoration: underline 1px rgba(250, 248, 244, 0.45); text-underline-offset: 3px;">hello@makeitland.studio</a></div>
+  <section data-dc-tpl="71" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 0px 40px 96px;">
+    <div data-dc-tpl="72" style="display: flex; flex-direction: column; gap: 2px;">
+      <img src="/assets/work/cuppa-lumpia/the-cuppa-lumpia-instagram-profile-five-posts-of.png" width="2352" height="1306" loading="lazy" decoding="async" data-dc-tpl="73" alt="The Cuppa Lumpia Instagram profile, five posts of the brand system in the wild" style="width: 100%; height: 420px; object-fit: cover; object-position: center top; display: block;">
+      <div data-dc-tpl="74" class="cl-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+        <img src="/assets/work/cuppa-lumpia/the-open-today-a-frame-board-at-the-end-of-the-d.jpg" width="960" height="1280" loading="lazy" decoding="async" data-dc-tpl="75" alt="The Open Today A-frame board at the end of the driveway" style="width: 100%; height: 380px; object-fit: cover; display: block;">
+        <img src="/assets/work/cuppa-lumpia/the-cuppa-lumpia-venmo-taking-payment-like-a-rea.png" width="666" height="912" loading="lazy" decoding="async" data-dc-tpl="76" alt="The Cuppa Lumpia Venmo, taking payment like a real business" style="width: 100%; height: 380px; object-fit: cover; object-position: center top; display: block;">
       </div>
     </div>
   </section>
 
-  <footer data-dc-tpl="108" style="background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
-    <div data-dc-tpl="109" class="cl-pad" style="max-width: 1160px; margin: 0px auto; padding: 46px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
-      <a data-dc-tpl="110" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 22px; color: rgb(250, 248, 244);">Make It Land<span data-dc-tpl="111" style="color: rgb(200, 73, 46);">.</span></a>
-      <nav data-dc-tpl="112" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
-        <a data-dc-tpl="113" href="/#work" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Work</a>
-        <a data-dc-tpl="114" href="/thesis.html" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Thesis</a>
-        <a data-dc-tpl="115" href="/" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Home</a>
-        <span data-dc-tpl="116" style="width: 1px; height: 14px; background: rgba(250, 248, 244, 0.2);"></span>
-        <a data-dc-tpl="117" href="https://www.instagram.com/makeitlandstudio/" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Instagram</a>
-        <a data-dc-tpl="118" href="https://linkedin.com/company/make-it-land-studio" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">LinkedIn</a>
+  
+  <section data-dc-tpl="77" style="background: rgb(178, 62, 38); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="78" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 100px 40px; text-align: center;">
+      <h2 data-dc-tpl="79" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 44px; line-height: 1.1; margin: 0px 0px 24px;">Want proof like this for your brand?</h2>
+      <p data-dc-tpl="80" style="font-size: 15px; line-height: 1.6; color: rgb(250, 248, 244); margin: 0px 0px 32px;">Make It Land takes on one or two engagements at a time.</p>
+      <div data-dc-tpl="81" style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
+        <a data-dc-tpl="82" href="https://calendly.com/make-it-land/intro-fit-call?primary_color=B23E26" target="_blank" rel="noopener" class="scp0" style="background: rgb(250, 248, 244); color: rgb(26, 26, 26); font-size: 16px; font-weight: 600; padding: 16px 34px; display: inline-block; white-space: nowrap;">Schedule a fit call</a>
+        <div data-dc-tpl="83" style="font-size: 14px; font-weight: 400; color: rgb(250, 248, 244);">Prefer email? <a data-dc-tpl="84" href="mailto:hello@makeitland.studio?subject=Fit%20call" class="scp1" style="color: rgb(250, 248, 244); font-weight: 500; text-decoration: underline 1px rgba(250, 248, 244, 0.62); text-underline-offset: 3px;">hello@makeitland.studio</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section data-dc-tpl="85" style="background: rgb(250, 248, 244); border-top: 1px solid rgb(231, 226, 217);">
+    <div data-dc-tpl="86" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 72px 40px;">
+      <div data-dc-tpl="87" style="font-size: 12px; line-height: 1.1; letter-spacing: 0.18em; text-transform: uppercase; color: rgb(107, 102, 97); font-weight: 600; white-space: nowrap; margin-bottom: 26px;">Next case study</div>
+      <a data-dc-tpl="88" href="/work/my-camino-financial.html" class="cl-next" style="display: flex; align-items: baseline; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+        <div data-dc-tpl="89" style="max-width: 700px;">
+          <h2 data-dc-tpl="90" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 34px; line-height: 1.14; text-wrap: balance; margin: 0px 0px 12px; color: rgb(26, 26, 26);">The same method, for a client.</h2>
+          <p data-dc-tpl="91" style="font-size: 16px; line-height: 1.55; text-wrap: pretty; color: rgb(107, 102, 97); margin: 0px;">My Camino Financial had fifteen years of track record and none of it on the page. Positioning, copy, and a new site for a money mentor.</p>
+        </div>
+        <span data-dc-tpl="92" style="font-size: 15px; line-height: 1.5; color: rgb(26, 26, 26); font-weight: 600; white-space: nowrap;">View the case study →</span>
+      </a>
+    </div>
+  </section>
+
+  <footer data-dc-tpl="93" style="background: rgb(26, 26, 26); color: rgb(250, 248, 244);">
+    <div data-dc-tpl="94" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 46px 40px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
+      <a data-dc-tpl="95" href="/" style="font-family: Fraunces, serif; font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 22px; color: rgb(250, 248, 244); white-space: nowrap; flex-shrink: 0;">Make It Land<span data-dc-tpl="96" style="color: rgb(200, 73, 46);">.</span></a>
+      <nav data-dc-tpl="97" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+        <a data-dc-tpl="98" href="/#work" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Work</a>
+        <a data-dc-tpl="99" href="/thesis.html" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Thesis</a>
+        <a data-dc-tpl="100" href="/" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Home</a>
+        <span data-dc-tpl="101" style="width: 1px; height: 14px; background: rgba(250, 248, 244, 0.2);"></span>
+        <a data-dc-tpl="102" href="https://www.instagram.com/makeitlandstudio/" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">Instagram</a>
+        <a data-dc-tpl="103" href="https://linkedin.com/company/make-it-land-studio" target="_blank" rel="noopener" class="scp2" style="font-size: 14px; color: rgba(250, 248, 244, 0.7); font-weight: 500;">LinkedIn</a>
       </nav>
     </div>
-    <div data-dc-tpl="119" style="border-top: 1px solid rgba(250, 248, 244, 0.1);">
-      <div data-dc-tpl="120" class="cl-pad" style="max-width: 1160px; margin: 0px auto; padding: 20px 40px; font-size: 13px; color: rgba(250, 248, 244, 0.45);">© 2026 Make It Land Studio</div>
+    <div data-dc-tpl="104" style="border-top: 1px solid rgba(250, 248, 244, 0.1);">
+      <div data-dc-tpl="105" class="cl-pad" style="max-width: 1000px; margin: 0px auto; padding: 20px 40px; font-size: 13px; color: rgba(250, 248, 244, 0.62);">© 2026 Make It Land Studio</div>
     </div>
   </footer></div></div></div>
 
-
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Cuppa Lumpia",
+      "description": "A 50-year family lumpia recipe built like a brand you would cross the island for. Naming, identity, packaging, and site.",
+      "author": {
+        "@type": "Person",
+        "name": "Nicole Miñoza"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://makeitland.studio/#organization",
+        "name": "Make It Land Studio",
+        "url": "https://makeitland.studio"
+      },
+      "image": "https://makeitland.studio/og-cuppa-lumpia.png",
+      "url": "https://makeitland.studio/work/cuppa-lumpia.html",
+      "mainEntityOfPage": "https://makeitland.studio/work/cuppa-lumpia.html",
+      "about": {
+        "@type": "Organization",
+        "name": "Cuppa Lumpia",
+        "url": "https://cuppalumpia.com",
+        "areaServed": "Bainbridge Island, Washington"
+      },
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Make It Land",
+        "url": "https://makeitland.studio"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://makeitland.studio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Work",
+          "item": "https://makeitland.studio/#work"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Cuppa Lumpia",
+          "item": "https://makeitland.studio/work/cuppa-lumpia.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
 </body></html>
