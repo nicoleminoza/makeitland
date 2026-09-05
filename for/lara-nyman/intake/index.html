@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="/favicon.png" type="image/png">
+<link rel="icon" sizes="32x32" href="/favicon-32.png" type="image/png">
+<link rel="icon" sizes="16x16" href="/favicon-16.png" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Intake · Make It Land</title>
+<meta name="theme-color" content="#1A1A1A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #FAF8F4; font-family: 'Hanken Grotesk', sans-serif; color: #1A1A1A; -webkit-font-smoothing: antialiased; }
+  a { color: #C8492E; text-decoration: none; }
+  a:hover { color: #B23E26; }
+  input[type="text"], input[type="email"], input[type="url"], textarea {
+    font-family: 'Hanken Grotesk', sans-serif; font-size: 17px; font-weight: 400; color: #1A1A1A;
+    background: #FDFCFA; border: 1px solid #E7E2D9; border-radius: 0; padding: 12px 14px;
+    line-height: 1.6; width: 100%; outline: none; min-height: 46px;
+  }
+  textarea { resize: vertical; }
+  input::placeholder, textarea::placeholder { color: #6B6661; opacity: 1; }
+  input:focus, textarea:focus { border-color: #C8492E; }
+  input[type="radio"] { accent-color: #C8492E; width: 17px; height: 17px; margin: 0; flex: none; }
+  label.choice { display: flex; align-items: center; gap: 12px; min-height: 44px; font-size: 17px; cursor: pointer; }
+  .q { margin-bottom: 34px; }
+  .qlabel { display: block; font-weight: 500; font-size: 17.5px; line-height: 1.45; margin-bottom: 6px; }
+  .qhelp { font-size: 15px; color: #6B6661; line-height: 1.55; margin-bottom: 12px; }
+  .pair { display: flex; gap: 20px; }
+  .pair > div { flex: 1; }
+  .btn-primary { font-family: 'Hanken Grotesk', sans-serif; font-size: 16px; font-weight: 600; background: #B23E26; color: #FAF8F4; border: 1px solid #B23E26; border-radius: 0; padding: 0 26px; height: 48px; cursor: pointer; white-space: nowrap; flex: none; }
+  .sec { border-top: 1px solid #1A1A1A; padding: 34px 0 10px; }
+  .ih1 { font-size: clamp(36px, 8vw, 64px); }
+  @media (max-width: 620px) { .pair { flex-direction: column; gap: 0; } }
+</style>
+</head>
+<body>
+
+<div id="intake-root" style="max-width:760px; margin:0 auto; padding:0 24px 120px;">
+
+  <div style="position:sticky; top:0; background:#FAF8F4; padding:26px 0 14px; z-index:5;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:16px; flex-wrap:wrap;">
+      <span style="font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 600; font-size:20px; letter-spacing:-0.015em; white-space:nowrap;">Make It Land<span style="color:#C8492E;">.</span></span>
+      <span data-count="" style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#6B6661; font-weight:600;">Saved as you type</span>
+    </div>
+    <div style="height:2px; background:#E7E2D9;"><div data-bar="" style="height:2px; width:0%; background:#C8492E;"></div></div>
+  </div>
+
+  <div style="padding:46px 0 10px;">
+    <div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:18px;">For Science Lever</div>
+    <h1 class="ih1" style="margin:0 0 20px; font-family:'Fraunces',serif; font-variation-settings:'opsz' 144,'wght' 600; line-height:1.03; letter-spacing:-0.015em; text-wrap:pretty;">Intake</h1>
+    <p style="margin:0 0 18px; font-size:19px; line-height:1.6; color:#6B6661; text-wrap:pretty;">This is the part I cannot get from looking at sciencelever.com. Thirty to forty-five minutes, at a desk rather than on a phone. Write the way you talk, and short is fine.</p>
+    <p style="margin:0 0 44px; font-size:17px; line-height:1.6; text-wrap:pretty;">Your answers save in this browser as you go, so you can close the tab and come back. When you are done, the button at the bottom sends everything to me.</p>
+  </div>
+
+  <div class="sec">
+    <div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:10px;">Section 1</div>
+    <h2 style="margin:0 0 14px; font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 500; font-size:30px; line-height:1.2; letter-spacing:-0.015em;">The work</h2>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.6; color:#6B6661; text-wrap:pretty;">Start with what you actually do, in your own words rather than the version on the site.</p>
+
+    <div class="q">
+      <label class="qlabel" for="worth">What has to change for this to have been worth your time?</label>
+      <div class="qhelp">Be as concrete as you can. Fewer misread inquiries, a site you are willing to send people to, knowing which kind of client to go after.</div>
+      <textarea id="worth" name="worth" rows="6"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="business">Walk me through Science Lever. What do you do, and who for?</label>
+      <textarea id="business" name="business" rows="7"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="moreof">Of the work you have done so far, which project would you want more of, and which kind of request would you rather stop getting?</label>
+      <div class="qhelp">No client names needed. The type of question and the type of company is enough.</div>
+      <textarea id="moreof" name="moreof" rows="7"></textarea>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:10px;">Section 2</div>
+    <h2 style="margin:0 0 14px; font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 500; font-size:30px; line-height:1.2; letter-spacing:-0.015em;">The misread</h2>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.6; color:#6B6661; text-wrap:pretty;">You said the messaging clarifies once you talk to someone. These questions get that conversation onto the page.</p>
+
+    <div class="q">
+      <label class="qlabel" for="misread">What do people assume you do that you do not?</label>
+      <textarea id="misread" name="misread" rows="5"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="correction">Write the sentence you say on a first call to correct it.</label>
+      <div class="qhelp">As close to your actual words as you can manage. Do not tidy it up.</div>
+      <textarea id="correction" name="correction" rows="5"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="painpoint">What is the problem a client has in the week before they call you?</label>
+      <div class="qhelp">The thing that is going wrong, in their language rather than yours. A claim they cannot substantiate, a formulation that will not hold up, a regulator asking a question nobody can answer.</div>
+      <textarea id="painpoint" name="painpoint" rows="6"></textarea>
+    </div>
+
+    <div class="q">
+      <div class="qlabel" id="audience-label">Who do you want the site to speak to first?</div>
+      <div class="qhelp">You drew this line on our call. A page cannot lead with both, so tell me which one you would pick.</div>
+      <div role="radiogroup" aria-labelledby="audience-label" style="display:flex; flex-direction:column;">
+        <label class="choice"><input type="radio" name="audience" value="Established companies buying strategy"><span>Established companies buying high-level strategy</span></label>
+        <label class="choice"><input type="radio" name="audience" value="Startups needing execution now"><span>Startups that need execution now</span></label>
+        <label class="choice"><input type="radio" name="audience" value="Both equally, and I do not want to choose"><span>Both equally, and I do not want to choose</span></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:10px;">Section 3</div>
+    <h2 style="margin:0 0 14px; font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 500; font-size:30px; line-height:1.2; letter-spacing:-0.015em;">Three words</h2>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.6; color:#6B6661; text-wrap:pretty;">Answer the first column before you read the second, and do not go back and tidy either afterward.</p>
+    <div class="pair" style="gap:36px; margin-bottom:20px;">
+      <div>
+        <label class="qlabel" style="margin-bottom:16px;" for="want1">Three words you want people using about Science Lever.</label>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <input type="text" id="want1" name="want1" placeholder="1">
+          <input type="text" name="want2" aria-label="Second word you want people using" placeholder="2">
+          <input type="text" name="want3" aria-label="Third word you want people using" placeholder="3">
+        </div>
+      </div>
+      <div>
+        <label class="qlabel" style="margin-bottom:16px;" for="actual1">Three words your clients would actually use.</label>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <input type="text" id="actual1" name="actual1" placeholder="1">
+          <input type="text" name="actual2" aria-label="Second word your clients would use" placeholder="2">
+          <input type="text" name="actual3" aria-label="Third word your clients would use" placeholder="3">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:10px;">Section 4</div>
+    <h2 style="margin:0 0 14px; font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 500; font-size:30px; line-height:1.2; letter-spacing:-0.015em;">Proof</h2>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.6; color:#6B6661; text-wrap:pretty;">A scientific buyer wants evidence before personality. What can you show them?</p>
+
+    <div class="q">
+      <label class="qlabel" for="publicline">Describe a piece of work you would want a prospect to hear about.</label>
+      <div class="qhelp">The question you were brought in to answer, what you did, and how it turned out. No need to name the client.</div>
+      <textarea id="publicline" name="publicline" rows="6"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="credentials">What credentials, publications, and affiliations do you have?</label>
+      <div class="qhelp">Papers, degrees, review panels, professional bodies, speaking. Paste links if you have them.</div>
+      <textarea id="credentials" name="credentials" rows="6"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="referral">What makes someone refer you?</label>
+      <div class="qhelp">Every client you have came by referral, so the words those people use matter more than anything on the site. If you know what they say about you, write it down.</div>
+      <textarea id="referral" name="referral" rows="5"></textarea>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:10px;">Section 5</div>
+    <h2 style="margin:0 0 14px; font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 500; font-size:30px; line-height:1.2; letter-spacing:-0.015em;">The site</h2>
+    <p style="margin:0 0 34px; font-size:17px; line-height:1.6; color:#6B6661; text-wrap:pretty;">I will do the reading. I need to know what you want the site to do.</p>
+
+    <div class="q">
+      <label class="qlabel" for="action">When a referred prospect lands on the site, what do you want them to do?</label>
+      <div class="qhelp">One action. Book a call, email you, read something specific, or just come away convinced.</div>
+      <textarea id="action" name="action" rows="4"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="suspect">Which part of the site do you already suspect is wrong?</label>
+      <div class="qhelp">Name it even if you cannot say why.</div>
+      <textarea id="suspect" name="suspect" rows="5"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="keep">Anything on the site you are attached to and would rather keep? <span style="font-weight:400; color:#6B6661;">Optional</span></label>
+      <textarea id="keep" name="keep" rows="4"></textarea>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="ref1link">Two or three sites you wish yours felt like. <span style="font-weight:400; color:#6B6661;">Optional</span></label>
+      <div class="qhelp">They do not have to be in your field, and it is more useful if one is not.</div>
+      <div style="display:flex; flex-direction:column; gap:14px;">
+        <div class="pair"><div><input type="url" id="ref1link" name="ref1link" placeholder="Link"></div><div><input type="text" name="ref1why" aria-label="What you like about the first site" placeholder="What you like about it"></div></div>
+        <div class="pair"><div><input type="url" name="ref2link" aria-label="Second site link" placeholder="Link"></div><div><input type="text" name="ref2why" aria-label="What you like about the second site" placeholder="What you like about it"></div></div>
+        <div class="pair"><div><input type="url" name="ref3link" aria-label="Third site link" placeholder="Link"></div><div><input type="text" name="ref3why" aria-label="What you like about the third site" placeholder="What you like about it"></div></div>
+      </div>
+    </div>
+
+    <div class="q">
+      <label class="qlabel" for="anything">Anything I have not asked that I should know? <span style="font-weight:400; color:#6B6661;">Optional</span></label>
+      <textarea id="anything" name="anything" rows="5"></textarea>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="pair" style="margin-bottom:20px;">
+      <div><label class="qlabel" for="yourname">Your name</label><input type="text" id="yourname" name="yourname"></div>
+      <div><label class="qlabel" for="youremail">Your email</label><input type="email" id="youremail" name="youremail"></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <p style="margin:0 0 6px; font-size:15px; line-height:1.6; color:#6B6661; max-width:620px; text-wrap:pretty;">Your answers stay in this browser until you send them, and nothing is submitted anywhere on its own. Once you send them, I am the only person who reads them, I keep them for the length of this project, and nothing you write here is published or quoted without your approval.</p>
+  </div>
+
+  <div style="border-top:1px solid #E7E2D9; padding-top:26px; display:flex; align-items:center; gap:16px; flex-wrap:wrap;">
+    <button data-send="" class="btn-primary" type="button">Send my answers</button>
+    <a data-mailto="" href="mailto:hello@makeitland.studio?subject=Science%20Lever%20intake" style="font-size:16px; font-weight:600;">Email them to Nicole</a>
+    <span data-status="" style="font-size:15px; color:#6B6661;"></span>
+  </div>
+  <p style="margin:16px 0 0; font-size:15px; line-height:1.6; color:#6B6661; max-width:560px; text-wrap:pretty;">Send delivers your answers straight to me. If anything here does not work, write to hello@makeitland.studio.</p>
+
+  <div style="border-top:1px solid #E7E2D9; margin-top:64px; padding:26px 0 0; display:flex; justify-content:space-between; align-items:baseline; gap:16px; flex-wrap:wrap; font-size:13px; color:#6B6661;">
+    <span style="font-family:'Fraunces',serif; font-variation-settings:'opsz' 90,'wght' 600; font-size:16px; letter-spacing:-0.015em; white-space:nowrap; color:#1A1A1A;">Make It Land<span style="color:#C8492E;">.</span></span>
+    <div>hello@makeitland.studio</div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  var KEY = 'mil-intake-sciencelever';
+  var SLUG = 'lara-nyman';
+  // When the intake backend is deployed, set this to its POST URL to switch from
+  // email-send to server submit. Empty means the button sends by email.
+  var ENDPOINT = '';
+
+  var root = document.getElementById('intake-root');
+  var fields = Array.prototype.slice.call(root.querySelectorAll('[name]'));
+  var status = root.querySelector('[data-status]');
+  var mailtoLink = root.querySelector('[data-mailto]');
+  var btn = root.querySelector('[data-send]');
+
+  function values() {
+    var out = {};
+    fields.forEach(function (f) {
+      if (f.type === 'radio') { if (f.checked) out[f.name] = f.value; }
+      else out[f.name] = f.value;
+    });
+    return out;
+  }
+
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(values())); } catch (e) {} }
+
+  function restore() {
+    var data = null;
+    try { data = JSON.parse(localStorage.getItem(KEY) || 'null'); } catch (e) {}
+    if (!data) return;
+    fields.forEach(function (f) {
+      var v = data[f.name];
+      if (v == null) return;
+      if (f.type === 'radio') { if (f.value === v) f.checked = true; }
+      else f.value = v;
+    });
+  }
+
+  function groups() {
+    var out = [];
+    root.querySelectorAll('.q, .pair').forEach(function (el) {
+      if (el.classList.contains('pair') && el.closest('.q')) return;
+      if (el.classList.contains('pair')) {
+        Array.prototype.slice.call(el.children).forEach(function (col) {
+          var inputs = Array.prototype.slice.call(col.querySelectorAll('[name]'));
+          if (inputs.length) out.push({ el: col, inputs: inputs });
+        });
+      } else {
+        var inputs = Array.prototype.slice.call(el.querySelectorAll('[name]'));
+        if (inputs.length) out.push({ el: el, inputs: inputs });
+      }
+    });
+    return out;
+  }
+
+  function isOptional(g) {
+    var lbl = g.el.querySelector('.qlabel');
+    return lbl ? /Optional$/.test((lbl.textContent || '').trim()) : false;
+  }
+
+  function transcript() {
+    var vals = values();
+    var lines = [];
+    groups().forEach(function (g) {
+      var label = g.el.querySelector('.qlabel');
+      var answers = g.inputs.map(function (i) {
+        return i.type === 'radio' ? (i.checked ? i.value : '') : (vals[i.name] || '');
+      }).filter(function (a) { return a.trim(); });
+      if (!answers.length) return;
+      if (label) lines.push(label.textContent.replace(/\s+Optional$/, '').trim());
+      lines.push(answers.join(g.inputs.length > 2 ? ', ' : ' / '));
+      lines.push('');
+    });
+    return 'Science Lever intake\n\n' + lines.join('\n');
+  }
+
+  function refreshMailto() {
+    if (!mailtoLink) return;
+    mailtoLink.href = 'mailto:hello@makeitland.studio?subject=' +
+      encodeURIComponent('Science Lever intake') +
+      '&body=' + encodeURIComponent(transcript());
+  }
+
+  function update() {
+    var vals = values();
+    var counted = groups().filter(function (g) { return !isOptional(g); });
+    var done = counted.filter(function (g) {
+      return g.inputs.some(function (i) {
+        return i.type === 'radio' ? i.checked : (vals[i.name] || '').trim().length > 0;
+      });
+    }).length;
+    var total = counted.length;
+    var pct = total ? Math.round(done / total * 100) : 0;
+    var bar = root.querySelector('[data-bar]');
+    if (bar) bar.style.width = pct + '%';
+    var count = root.querySelector('[data-count]');
+    if (count) count.textContent = done === 0 ? 'Saved as you type' : done + ' of ' + total + ' answered';
+  }
+
+  function confirmation() {
+    root.innerHTML =
+      '<div style="padding:120px 0 64px; max-width:620px;">' +
+      '<div style="font-size:11.5px; letter-spacing:0.16em; text-transform:uppercase; color:#C8492E; font-weight:600; margin-bottom:18px;">For Science Lever</div>' +
+      '<h1 style="margin:0 0 20px; font-family:\'Fraunces\',serif; font-variation-settings:\'opsz\' 144,\'wght\' 600; font-size:clamp(36px, 8vw, 64px); line-height:1.03; letter-spacing:-0.015em;">Got it. Thank you, Lara.</h1>' +
+      '<p style="margin:0; font-size:19px; line-height:1.6; color:#6B6661; text-wrap:pretty;">Your answers are with me. I will read them before the walkthrough and be in touch if anything needs a follow-up. Nothing you wrote is published or quoted without your approval.</p>' +
+      '</div>';
+  }
+
+  function sendByEmail() {
+    refreshMailto();
+    if (status) { status.style.color = '#6B6661'; status.textContent = 'Opening your email so you can send. If nothing opens, write to hello@makeitland.studio.'; }
+    if (mailtoLink) window.location.href = mailtoLink.href;
+  }
+
+  function submit() {
+    if (!ENDPOINT) { sendByEmail(); return; }
+    if (status) { status.style.color = '#6B6661'; status.textContent = 'Sending...'; }
+    if (btn) btn.disabled = true;
+    fetch(ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ slug: SLUG, answers: values(), transcript: transcript() })
+    }).then(function (r) {
+      if (!r.ok) throw new Error('bad status');
+      try { localStorage.removeItem(KEY); } catch (e) {}
+      confirmation();
+      window.scrollTo(0, 0);
+    }).catch(function () {
+      if (btn) btn.disabled = false;
+      if (status) { status.style.color = '#B23E26'; status.textContent = 'That did not send, and your answers are still here. Use Email them to Nicole, or write to hello@makeitland.studio.'; }
+    });
+  }
+
+  restore();
+  update();
+  refreshMailto();
+  root.addEventListener('input', function () { save(); update(); refreshMailto(); });
+  root.addEventListener('change', function () { save(); update(); refreshMailto(); });
+  if (btn) btn.addEventListener('click', submit);
+})();
+</script>
+
+</body>
+</html>
