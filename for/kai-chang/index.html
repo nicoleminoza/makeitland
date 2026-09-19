@@ -38,6 +38,12 @@
     font-display: swap;
   }
   @keyframes emberIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  #faq summary { list-style: none; }
+  #faq summary::-webkit-details-marker { display: none; }
+  #faq summary:focus-visible { outline: 2px solid #6C5730; outline-offset: 3px; }
+  #faq .faq-mk { transition: transform .2s ease; }
+  #faq summary:hover .faq-mk { color: #DED2BF; }
+  #faq details[open] .faq-mk { transform: rotate(45deg); }
 </style>
 </helmet>
 <div style="background:#15120E;color:#EFE7DB;font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
@@ -388,34 +394,51 @@
 
   <!-- FAQ: six only. Everything else moves to the confirmation email. -->
   <section id="faq" style="padding:52px clamp(26px,4vw,52px);background:#15120E;border-top:1px solid #332C24;">
-    <div style="max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:26px;">
+    <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:26px;">
       <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#DED2BF;">Before you buy</h2>
 
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:26px 48px;">
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">Is this the same as the public opening?</p>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">No. This is a private screening on December 16, before opening weekend. The auditorium is booked for guests of Citizen Medic.</p>
-      </div>
+      <div style="display:flex;flex-direction:column;border-bottom:1px solid #39312A;">
 
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">Where do I go, and where do I park?</p>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">Everything happens at the Culver Theater. Park in any of the three Culver City lots: 9099 Washington, 3846 Cardiff, or 3844 Watseka. The city covers the first hour, and the theater validates two more, so bring your ticket inside. Three EV charging stations are at 9099 Washington.</p>
-      </div>
+        <details style="border-top:1px solid #39312A;">
+          <summary style="cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">
+            <span>Is this the same as the public opening?</span>
+            <span class="faq-mk" aria-hidden="true" style="flex:0 0 auto;font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:22px;line-height:1;color:#AEA294;">+</span>
+          </summary>
+          <p style="margin:0 0 20px;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">No. This is a private screening on December 16, before opening weekend. The auditorium is booked for guests of Citizen Medic.</p>
+        </details>
 
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">What should I wear?</p>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">No rule, but past guests have dressed up. Blazers, a good jacket, something with personality. Nobody has ever been overdressed here.</p>
-      </div>
+        <details style="border-top:1px solid #39312A;">
+          <summary style="cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">
+            <span>Where do I go, and where do I park?</span>
+            <span class="faq-mk" aria-hidden="true" style="flex:0 0 auto;font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:22px;line-height:1;color:#AEA294;">+</span>
+          </summary>
+          <p style="margin:0 0 20px;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">Everything happens at the Culver Theater. Park in any of the three Culver City lots: 9099 Washington, 3846 Cardiff, or 3844 Watseka. The city covers the first hour, and the theater validates two more, so bring your ticket inside. Three EV charging stations are at 9099 Washington.</p>
+        </details>
 
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">Can I bring my kids?</p>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">This one's for the grown-ups. Drinks are served all night, so every guest needs to be 21 or over.</p>
-      </div>
+        <details style="border-top:1px solid #39312A;">
+          <summary style="cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">
+            <span>What should I wear?</span>
+            <span class="faq-mk" aria-hidden="true" style="flex:0 0 auto;font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:22px;line-height:1;color:#AEA294;">+</span>
+          </summary>
+          <p style="margin:0 0 20px;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">No rule, but past guests have dressed up. Blazers, a good jacket, something with personality. Nobody has ever been overdressed here.</p>
+        </details>
 
-      <div style="display:flex;flex-direction:column;gap:6px;">
-        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">What if I can't make it after all?</p>
-        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">Your seat is transferable. Email <a href="mailto:hello@citizenmedic.org" style="text-decoration: underline;">hello@citizenmedic.org</a> and we'll move it to whoever takes your place.&nbsp;</p>
-      </div>
+        <details style="border-top:1px solid #39312A;">
+          <summary style="cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">
+            <span>Can I bring my kids?</span>
+            <span class="faq-mk" aria-hidden="true" style="flex:0 0 auto;font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:22px;line-height:1;color:#AEA294;">+</span>
+          </summary>
+          <p style="margin:0 0 20px;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">This one's for the grown-ups. Drinks are served all night, so every guest needs to be 21 or over.</p>
+        </details>
+
+        <details style="border-top:1px solid #39312A;">
+          <summary style="cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:18px;padding:18px 0;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.06em;color:#F4EEE4;">
+            <span>What if I can't make it after all?</span>
+            <span class="faq-mk" aria-hidden="true" style="flex:0 0 auto;font-family:'EB Garamond',Georgia,serif;font-weight:400;font-size:22px;line-height:1;color:#AEA294;">+</span>
+          </summary>
+          <p style="margin:0 0 20px;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">Your seat is transferable. Email <a href="mailto:hello@citizenmedic.org" style="text-decoration: underline;">hello@citizenmedic.org</a> and we'll move it to whoever takes your place.&nbsp;</p>
+        </details>
+
       </div>
 
       <p style="margin:0;font-size:17px;line-height:1.6;color:#948A7E;max-width:62ch;text-wrap:pretty;">Anything else, including dietary needs, accessibility, and seating a group together, write to <a href="mailto:hello@citizenmedic.org" style="text-decoration:underline;">hello@citizenmedic.org</a>.</p>
