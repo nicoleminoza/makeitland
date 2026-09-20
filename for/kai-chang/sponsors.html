@@ -16,28 +16,142 @@
   * { box-sizing: border-box; }
   a { color: #E3C179; text-decoration: none; }
   a:hover { color: #E3C179; }
+  @font-face {
+    font-family: 'Dune Rise';
+    src: local('Dune Rise'), local('DuneRise'),
+         url('assets/dune-rise.woff2') format('woff2'),
+         url('assets/Dune_Rise.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
 </style>
 </helmet>
 <div style="background:#15120E;color:#EFE7DB;font-family:'EB Garamond',Georgia,serif;font-size:18px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;">
 
-  <header style="padding:clamp(44px,5vw,72px) clamp(26px,4vw,52px) clamp(34px,4vw,48px);display:flex;flex-direction:column;gap:22px;border-bottom:1px solid #332C24;background:#15120E;">
+  <header style="display:flex;flex-direction:column;background:#15120E;">
+    <div style="position:relative;height:clamp(230px,30vh,320px);padding:0 clamp(26px,4vw,52px);background:#1E1A15;overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:url('assets/hero-web.jpeg');background-size:cover;background-position:52% 38%;background-repeat:no-repeat;"></div>
+      <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg, rgba(19,14,11,.62) 0%, rgba(19,14,11,.30) 38%, rgba(19,14,11,.78) 82%, rgba(19,14,11,.94) 100%);"></div>
+      <div style="position:relative;height:100%;padding:clamp(24px,3vw,36px) 0;display:flex;flex-direction:column;justify-content:space-between;max-width:680px;margin:0 auto;width:100%;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <span style="font-family:'Cinzel',serif;font-weight:700;font-size:clamp(15px,1.4vw,18px);letter-spacing:.2em;text-transform:uppercase;color:#C8A45C;white-space:nowrap;">First Light 2026</span>
+          <span style="flex:1;height:1px;background:rgba(168,118,62,.55);"></span>
+          <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#DED2BF;white-space:nowrap;">A Citizen Medic benefit</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:clamp(10px,1.2vw,14px);">
+          <h1 style="margin:0;font-family:'Dune Rise','DuneRise','Cinzel',serif;font-weight:400;font-size:clamp(34px,5.2vw,62px);line-height:.9;letter-spacing:.14em;text-transform:uppercase;color:#F4EEE4;text-shadow:0 4px 34px rgba(19,14,11,.6);">Sponsorship</h1>
+          <div style="display:flex;align-items:center;gap:16px;">
+            <span style="flex:0 0 clamp(34px,4vw,58px);height:1px;background:#A8763E;"></span>
+            <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:clamp(11px,1vw,13px);line-height:1;letter-spacing:.36em;text-transform:uppercase;color:#DED2BF;white-space:nowrap;">Dune: Part Three</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="height:180px;background:linear-gradient(180deg, rgba(168,118,62,.14) 0%, rgba(168,118,62,.055) 40%, rgba(21,18,14,0) 100%);margin-bottom:-180px;position:relative;pointer-events:none;"></div>
+
+    <div style="padding:clamp(40px,4.5vw,64px) clamp(26px,4vw,52px) clamp(40px,4vw,56px);border-bottom:1px solid #332C24;">
     <div style="max-width:680px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:20px;">
-      <a href="index.html" style="display:inline-flex;align-items:center;min-height:44px;font-size:16px;color:#948A7E;">← Back to the premiere</a>
-      <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#AEA294;">First Light 2026 · Citizen Medic Foundation</p>
-      <h1 style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:40px;line-height:1.1;letter-spacing:.02em;color:#F4EEE4;text-wrap:pretty;">Sponsor the night</h1>
-      <p style="margin:0;font-size:19px;line-height:1.7;color:#C4B9A6;max-width:58ch;text-wrap:pretty;">A private screening of Dune: Part Three before opening weekend, in an auditorium bought out for our guests alone, 150 of them. The third since 2022, and the first two sold out. Your company in the room, on the screen, and attached to the reason the night exists: teaching first aid, CPR, and disaster preparedness to people outside the medical field.</p>
+      <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:clamp(26px,2.5vw,34px);line-height:1.2;letter-spacing:.02em;color:#F4EEE4;text-wrap:pretty;">Put your company in the room.</h2>
+      <p style="margin:0;font-size:19px;line-height:1.7;color:#C4B9A6;max-width:58ch;text-wrap:pretty;">A private screening of Dune: Part Three before opening weekend, in an auditorium bought out for our guests alone. Your company in the room, on the screen, and attached to the reason the night exists.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,132px),1fr));gap:1px;background:#332C24;border:1px solid #332C24;">
+        <div style="display:flex;flex-direction:column;gap:3px;padding:14px 15px;background:#1C1814;">
+          <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#948A7E;">When</span>
+          <span style="font-size:17px;line-height:1.4;color:#F4EEE4;">Wednesday, December 16</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:3px;padding:14px 15px;background:#1C1814;">
+          <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#948A7E;">Where</span>
+          <span style="font-size:17px;line-height:1.4;color:#F4EEE4;">The Culver Theater, Culver City</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:3px;padding:14px 15px;background:#1C1814;">
+          <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#948A7E;">Reach</span>
+          <span style="font-size:17px;line-height:1.4;color:#F4EEE4;">150 guests, sold out twice</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:3px;padding:14px 15px;background:#1C1814;">
+          <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#948A7E;">Tiers</span>
+          <span style="font-size:17px;line-height:1.4;color:#F4EEE4;">$1,000 to $5,000</span>
+        </div>
+      </div>
+
+      <p style="margin:0;font-size:16px;line-height:1.55;color:#948A7E;max-width:58ch;">Citizen Medic Foundation is a 501(c)(3). Sponsorships are tax deductible to the extent the law allows, and we invoice.</p>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <a href="packet.html" style="display:inline-flex;align-items:center;align-self:flex-start;min-height:56px;padding:16px 24px;background:#C8A45C;color:#15120E;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;" style-hover="background:#E3C179;">Read the sponsorship packet</a>
-        <p style="margin:0;font-size:15px;color:#948A7E;">Opens in the browser. A print version follows once the photographs are in.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+          <a href="mailto:sponsorship@citizenmedic.org" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 22px;background:#C8A45C;color:#15120E;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;" style-hover="background:#E3C179;">Email us about sponsoring</a>
+          <a href="packet.html" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 22px;border:1px solid #6C5730;color:#E3C179;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;" style-hover="background:#241E17;">Download the packet</a>
+        </div>
+        <p style="margin:0;font-size:15px;color:#948A7E;">The packet is a PDF, made to forward internally. <span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 7px;white-space:nowrap;">TBD</span> Currently opens in the browser. The PDF follows once the photographs are in.</p>
+      </div>
+
+      <a href="index.html" style="display:inline-flex;align-items:center;align-self:flex-start;min-height:44px;font-size:16px;color:#948A7E;" style-hover="color:#E3C179;">← Back to the premiere</a>
+    </div>
     </div>
   </header>
+
+  <!-- THE ROOM -->
+  <section style="padding:clamp(40px,4vw,56px) clamp(26px,4vw,52px) 8px;">
+    <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
+      <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#DED2BF;">The room</h2>
+      <p style="margin:0;font-size:19px;line-height:1.75;color:#C4B9A6;text-wrap:pretty;">Doors at 4:00, film at 5:30, and your guests are in the building for all of it: a reception with a magician working the room, a live auction called from the floor, then the film. Nobody wanders in off the street, and nobody leaves at the interval.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr));gap:20px 40px;padding:22px 0;border-top:1px solid #39312A;border-bottom:1px solid #39312A;">
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <span style="font-family:'Archivo',sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#AEA294;">The night</span>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Seats, bought out</span><span style="color:#F4EEE4;white-space:nowrap;">150</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Ticket price</span><span style="color:#F4EEE4;white-space:nowrap;">$150 to $200</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Prior years sold out</span><span style="color:#F4EEE4;white-space:nowrap;">2 of 2</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Hours with your guests</span><span style="color:#F4EEE4;white-space:nowrap;">4</span></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <span style="font-family:'Archivo',sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#AEA294;">Citizen Medic, since 2019</span>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Motorcyclists trained</span><span style="color:#F4EEE4;white-space:nowrap;">500+</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>People Kai has taught</span><span style="color:#F4EEE4;white-space:nowrap;">2,000+</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Email list</span><span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 6px;white-space:nowrap;">TBD</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;font-size:17px;color:#C4B9A6;"><span>Instagram following</span><span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 6px;white-space:nowrap;">TBD</span></div>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px;border:1px dashed #6C5730;background:#1C1814;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+          <span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 7px;">TBD</span>
+          <span style="font-size:15px;color:#948A7E;">Who is actually in the room</span>
+        </div>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">Two or three facts from the 2024 guest list: professions, how many own or run a business, where they come from. This is the paragraph a sponsor reads before deciding.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:10px;padding:20px 22px;border-left:2px solid #7A6234;background:#1C1814;">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
+          <span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 7px;">TBD</span>
+          <span style="font-size:15px;color:#948A7E;">One quote from outside the Foundation</span>
+        </div>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">A past sponsor, a rider whose training mattered, or someone who has hosted Kai. Attributed by name and title. Credibility from a person with no reason to be generous.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE SCREEN -->
+  <section style="padding:clamp(36px,4vw,52px) 0 0;">
+    <figure style="margin:0;display:flex;flex-direction:column;">
+      <div style="position:relative;width:100%;aspect-ratio:21/9;overflow:hidden;background:#15120E;">
+        <img src="assets/the-screen.jpg" alt="Illustration of a full auditorium seen from the back rows, every seat taken, facing a lit screen" style="width:100%;height:100%;object-fit:cover;display:block;">
+        <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg, rgba(19,14,11,.50) 0%, rgba(19,14,11,.08) 30%, rgba(19,14,11,.10) 62%, rgba(19,14,11,.80) 100%);"></div>
+      </div>
+      <figcaption style="padding:clamp(26px,3vw,36px) clamp(26px,4vw,52px) 0;">
+        <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:16px;">
+          <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#DED2BF;">Forty seconds on a cinema screen</h2>
+          <p style="margin:0;font-size:19px;line-height:1.75;color:#C4B9A6;text-wrap:pretty;">The Presenting Sponsor's spot plays on the big screen immediately before the film, to 150 people seated in the dark. Nobody scrolls past it, nobody skips it, and nobody is looking at a second screen. You supply the video, up to forty seconds, and we handle the rest.</p>
+          <p style="margin:0;font-size:16px;line-height:1.55;color:#948A7E;text-wrap:pretty;">An illustration of the room, not a photograph of the Culver Theater.</p>
+        </div>
+      </figcaption>
+    </figure>
+  </section>
 
   <!-- COMPARISON: standalone, screenshot-able -->
   <section id="tiers" style="padding:clamp(40px,4vw,56px) clamp(26px,4vw,52px) 24px;">
     <div style="max-width:680px;margin:0 auto;padding:26px 20px 28px;background:#15120E;border:1px solid #4E4438;border-radius:3px;display:flex;flex-direction:column;gap:22px;">
       <div style="display:flex;flex-direction:column;gap:8px;">
         <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#AEA294;">Citizen Medic Foundation · Private premiere, December 16</p>
-        <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:#F4EEE4;">Two tiers</h2>
+        <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:24px;letter-spacing:.06em;text-transform:uppercase;color:#F4EEE4;">Sponsorship tiers</h2>
       </div>
 
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;align-items:start;">
@@ -64,6 +178,10 @@
         <p style="margin:0;font-size:16px;line-height:1.5;color:#C4B9A6;">Named partner of the training program the night funds, first aid, CPR, disaster preparedness</p>
         <p style="margin:0;font-size:16px;line-height:1.5;color:#B6AA98;">Supporter of the training program the night funds</p>
 
+        <p style="grid-column:1 / -1;margin:6px 0 0;font-family:'Archivo',sans-serif;font-weight:500;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#AEA294;border-bottom:1px solid #39312A;padding-bottom:6px;">The year after</p>
+        <p style="margin:0;font-size:16px;line-height:1.5;color:#C4B9A6;">Your name on the five workshops your sponsorship funds, on the materials and in the recap we send afterward, through December 2027</p>
+        <p style="margin:0;font-size:16px;line-height:1.5;color:#B6AA98;">Your name on the two workshops your sponsorship funds, and in the recap we send afterward</p>
+
         <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;">
           <sc-if value="{{ topAvailable }}" hint-placeholder-val="{{ true }}">
             <a href="#contact" style="display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 10px;background:#C8A45C;color:#15120E;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.24em;text-indent:.24em;text-transform:uppercase;text-align:center;" style-hover="background:#E3C179;">Inquire</a>
@@ -88,6 +206,17 @@
         </div>
       </div>
 
+      <div style="display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:1px solid #39312A;">
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;">
+          <h3 style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:16px;letter-spacing:.06em;text-transform:uppercase;color:#F4EEE4;">{{ lowTierName }}</h3>
+          <span style="font-family:'Cinzel',serif;font-weight:700;font-size:18px;color:#E3C179;">$1,000</span>
+        </div>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:#B6AA98;text-wrap:pretty;">Name on the premiere page, name on one workshop, and two seats at the reception and the film.</p>
+        <a href="#contact" style="display:inline-flex;align-items:center;justify-content:center;align-self:flex-start;min-height:48px;padding:12px 24px;border:1px solid #C8A45C;color:#E3C179;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.24em;text-indent:.24em;text-transform:uppercase;" style-hover="background:#241E17;">Inquire</a>
+      </div>
+
+      <p style="margin:0;padding-top:18px;border-top:1px solid #39312A;font-size:17px;line-height:1.6;color:#B6AA98;text-wrap:pretty;">If none of these is the right shape, we will build a sponsorship around your company instead. Tell us what you want the night to do for you and we will put terms together.</p>
+
       <sc-if value="{{ hasSecured }}" hint-placeholder-val="{{ false }}">
         <div style="display:flex;flex-direction:column;gap:12px;align-items:center;padding:20px 10px 4px;border-top:1px solid #39312A;">
           <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#AEA294;">This year's sponsors</p>
@@ -104,24 +233,30 @@
   <!-- WHAT SPONSORS ARE FUNDING -->
   <section style="padding:24px clamp(26px,4vw,52px) clamp(44px,5vw,64px);">
     <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:18px;">
-      <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:24px;letter-spacing:.13em;text-transform:uppercase;color:#DED2BF;">What you're funding</h2>
-      <p style="margin:0;font-size:19px;line-height:1.75;color:#C4B9A6;text-wrap:pretty;">Citizen Medic Foundation teaches first aid, CPR, and disaster preparedness to people outside the medical field, the skills that matter most in the moment nobody plans for. Every ticket and sponsorship goes directly toward training more people to be ready when it counts. The premiere is how we get people in the room. What happens after is the actual mission.</p>
-      <p style="margin:0;font-size:19px;line-height:1.75;color:#C4B9A6;text-wrap:pretty;">The hour before the film is built the same way: a magician working the room close-up, and a live auction called from the floor.</p>
+      <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#DED2BF;">What you're funding</h2>
+
+      <figure style="margin:0;display:flex;flex-direction:column;gap:10px;">
+        <img src="assets/workshop.jpg" alt="Kai Chang teaching a Citizen Medic workshop to a seated group of motorcyclists, CPR mannequins on the table in front of him" style="width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:#241E17;">
+        <figcaption style="margin:0;font-size:15px;line-height:1.5;color:#948A7E;">A Citizen Medic workshop. Kai leads the instruction; associate instructors run the hands-on practice.</figcaption>
+      </figure>
+      <p style="margin:0;font-size:19px;line-height:1.75;color:#C4B9A6;text-wrap:pretty;">Citizen Medic Foundation teaches first aid, CPR, and disaster preparedness to people outside medicine, the ones most likely to be first at the scene.</p>
+      <p style="margin:0;font-size:19px;line-height:1.75;color:#C4B9A6;text-wrap:pretty;">Each workshop trains 30 to 50 people. Students pay $20 to $30, and we waive it for anyone who asks. The Foundation covers the rest, about $1,000 a workshop: extra instructors so the groups stay small enough that everyone practices, mannequin rental, food, and the bandages and slings that get used up. A Supporting Sponsorship covers two of them. A Presenting Sponsorship covers five.</p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact" style="padding:clamp(36px,4vw,56px) clamp(26px,4vw,52px) clamp(56px,6vw,80px);background:#15120E;border-top:1px solid #332C24;">
     <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:14px;">
-      <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:24px;letter-spacing:.13em;text-transform:uppercase;color:#DED2BF;">Start a conversation</h2>
+      <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:#DED2BF;">How sponsorships are sold</h2>
       <p style="margin:0;font-size:18px;line-height:1.6;color:#C4B9A6;text-wrap:pretty;">Sponsorships are sold through a conversation and an invoice, not a checkout. Tell us which tier fits and we'll send terms.</p>
+      <p style="margin:0;font-size:18px;line-height:1.6;color:#C4B9A6;text-wrap:pretty;">The Presenting Sponsorship closes <span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-weight:400;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:4px 7px;white-space:nowrap;">TBD</span> a date, or when it is taken, whichever comes first. Supporting and Community close when the programs go to print.</p>
       <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
-        <a href="mailto:sponsorship@citizenmedic.org" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 22px;background:#C8A45C;color:#15120E;font-family:'Cinzel',serif;font-weight:700;font-size:14px;letter-spacing:.11em;text-transform:uppercase;white-space:nowrap;border-radius:2px;" style-hover="background:#E3C179;">Start the conversation</a>
-        <span style="font-family:'Archivo',sans-serif;font-weight:300;font-size:14px;letter-spacing:.01em;color:#948A7E;">sponsorship@citizenmedic.org</span>
+        <a href="mailto:sponsorship@citizenmedic.org" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 30px;background:#C8A45C;color:#15120E;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;" style-hover="background:#E3C179;">Email us about sponsoring</a>
       </div>
-      <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px;padding:20px;border:1px solid #39312A;background:#15120E;">
-        <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#AEA294;">Beyond the two tiers</p>
-        <p style="margin:0;font-size:18px;line-height:1.6;color:#C4B9A6;text-wrap:pretty;">If neither tier is the right shape, we will build a sponsorship around your company instead. Tell us what you want the night to do for you and we will put terms together.</p>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:14px;padding:20px;border:1px solid #39312A;background:#15120E;">
+        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:#F4EEE4;">Kai Chang</p>
+        <p style="margin:0;font-size:17px;color:#B6AA98;">Executive Director and Founder, Citizen Medic Foundation</p>
+        <p style="margin:0;font-size:17px;color:#C4B9A6;"><a href="mailto:sponsorship@citizenmedic.org">sponsorship@citizenmedic.org</a> <span style="border:1px dashed #6C5730;color:#AEA294;font-family:'Archivo',sans-serif;font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:3px 6px;white-space:nowrap;">TBD</span> A direct phone number</p>
       </div>
     </div>
   </section>
@@ -130,18 +265,18 @@
     <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
       <div style="display:flex;flex-direction:column;gap:14px;font-family:'Archivo',sans-serif;font-weight:300;font-size:13px;line-height:1.65;color:#948A7E;max-width:52ch;">
         <span>Citizen Medic Foundation Inc., Danville, California. A 501(c)(3) public charity since 2019. EIN <span style="white-space:nowrap;">83-2949404</span>.</span>
-        <span style="font-size:12px;line-height:1.6;color:#948A7E;">An independent fundraiser screening. Not affiliated with, endorsed by, or sponsored by Warner Bros., Legendary, or the film's producers.</span>
+        <span style="font-size:12px;line-height:1.6;color:#948A7E;">An independent fundraiser screening. Not affiliated with, endorsed by, or sponsored by Warner Bros., Legendary, or the film's producers. Costumes worn by our hosts are original interpretations, not replicas of any film design.</span>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #332C24;">
         <a href="https://www.citizenmedic.org/" target="_blank" rel="noopener" style="align-self:flex-start;font-family:'Cinzel',serif;font-weight:700;font-size:17px;line-height:1.35;letter-spacing:.14em;text-transform:uppercase;color:#E3C179;">Citizen Medic Foundation</a>
-        <p style="margin:0;font-size:17px;line-height:1.55;color:#B6AA98;max-width:52ch;text-wrap:pretty;">Teaching first aid, CPR, and disaster preparedness to people outside the medical field. This night is how the training gets paid for.</p>
+        <p style="margin:0;font-size:17px;line-height:1.55;color:#B6AA98;max-width:52ch;text-wrap:pretty;">Teaching first aid, CPR, and disaster preparedness to people outside medicine. This night is how the training gets paid for.</p>
       </div>
     </div>
   </footer>
 </div>
 
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;topTierName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Presenting Sponsor&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;midTierName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Supporting Sponsor&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;topSponsorName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;midSponsorNames&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;topTierName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Presenting Sponsor&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;midTierName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Supporting Sponsor&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;lowTierName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Community Sponsor&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;topSponsorName&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;midSponsorNames&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
 class Component extends DCLogic {
   renderVals() {
     const topName = (this.props.topSponsorName || '').trim();
@@ -152,6 +287,7 @@ class Component extends DCLogic {
     return {
       topTierName: this.props.topTierName || 'Presenting Sponsor',
       midTierName: this.props.midTierName || 'Supporting Sponsor',
+      lowTierName: this.props.lowTierName || 'Community Sponsor',
       topSecured: !!topName,
       topAvailable: !topName,
       topSponsorName: topName,
