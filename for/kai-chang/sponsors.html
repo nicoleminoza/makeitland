@@ -54,7 +54,7 @@
     <div style="padding:clamp(40px,4.5vw,64px) clamp(26px,4vw,52px) clamp(40px,4vw,56px);border-bottom:1px solid #332C24;">
     <div style="max-width:680px;margin:0 auto;width:100%;display:flex;flex-direction:column;gap:20px;">
       <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:clamp(26px,2.5vw,34px);line-height:1.2;letter-spacing:.02em;color:#F4EEE4;text-wrap:pretty;">Put your company in the room.</h2>
-      <p style="margin:0;font-size:19px;line-height:1.7;color:#C4B9A6;max-width:58ch;text-wrap:pretty;">A private screening of Dune: Part Three before opening weekend, in an auditorium bought out for our guests alone. Your company in the room, on the screen, and attached to the reason the night exists.</p>
+      <p style="margin:0;font-size:19px;line-height:1.7;color:#C4B9A6;max-width:58ch;text-wrap:pretty;">A private screening of Dune: Part Three before opening weekend, in an auditorium bought out for our guests. Your company in the room, on the screen, and attached to the reason the night exists.</p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,132px),1fr));gap:1px;background:#332C24;border:1px solid #332C24;">
         <div style="display:flex;flex-direction:column;gap:3px;padding:14px 15px;background:#1C1814;">
@@ -183,9 +183,6 @@
         <p style="margin:0;font-size:16px;line-height:1.5;color:#B6AA98;">Your name on the two workshops your sponsorship funds, and in the recap we send afterward</p>
 
         <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;">
-          <sc-if value="{{ topAvailable }}" hint-placeholder-val="{{ true }}">
-            <a href="#contact" style="display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 10px;background:#C8A45C;color:#15120E;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.24em;text-indent:.24em;text-transform:uppercase;text-align:center;" style-hover="background:#E3C179;">Inquire</a>
-          </sc-if>
           <sc-if value="{{ topSecured }}" hint-placeholder-val="{{ false }}">
             <div style="display:flex;flex-direction:column;gap:6px;padding:12px;border:1px solid #6C5730;background:#241E17;">
               <span style="font-family:'Archivo',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#C8A45C;">Secured</span>
@@ -194,9 +191,6 @@
           </sc-if>
         </div>
         <div style="display:flex;flex-direction:column;gap:8px;padding-top:12px;">
-          <sc-if value="{{ midAvailable }}" hint-placeholder-val="{{ true }}">
-            <a href="#contact" style="display:flex;align-items:center;justify-content:center;min-height:48px;padding:12px 10px;border:1px solid #C8A45C;color:#E3C179;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.24em;text-indent:.24em;text-transform:uppercase;text-align:center;" style-hover="background:#241E17;">Inquire</a>
-          </sc-if>
           <sc-if value="{{ midSecured }}" hint-placeholder-val="{{ false }}">
             <div style="display:flex;flex-direction:column;gap:6px;padding:12px;border:1px solid #39312A;background:#1E1A15;">
               <span style="font-family:'Archivo',sans-serif;font-weight:500;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#C8A45C;">Secured</span>
@@ -244,11 +238,8 @@
       <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start;">
         <a href="mailto:events@citizenmedic.org" style="display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:16px 30px;background:#C8A45C;color:#15120E;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;" style-hover="background:#E3C179;">Email us about sponsoring</a>
       </div>
-      <div style="display:flex;flex-direction:column;gap:6px;margin-top:14px;padding:20px;border:1px solid #39312A;background:#15120E;">
-        <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:#F4EEE4;">Kai Chang</p>
-        <p style="margin:0;font-size:17px;color:#B6AA98;">Executive Director and Founder, Citizen Medic Foundation</p>
-        <p style="margin:0;font-size:17px;color:#C4B9A6;"><a href="mailto:events@citizenmedic.org">events@citizenmedic.org</a></p>
-      </div>
+      <p style="margin:0;font-family:'Cinzel',serif;font-weight:700;font-size:17px;letter-spacing:.06em;color:#F4EEE4;">Kai Chang</p>
+      <p style="margin:0;font-size:17px;color:#B6AA98;">Executive Director and Founder, Citizen Medic Foundation</p>
     </div>
   </section>
 
@@ -256,7 +247,8 @@
     <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
       <div style="display:flex;flex-direction:column;gap:14px;font-family:'Archivo',sans-serif;font-weight:300;font-size:13px;line-height:1.65;color:#948A7E;max-width:52ch;">
         <span>Citizen Medic Foundation Inc., Danville, California. A 501(c)(3) public charity since 2019. EIN <span style="white-space:nowrap;">83-2949404</span>.</span>
-        <span style="font-size:12px;line-height:1.6;color:#948A7E;">An independent fundraiser screening. Not affiliated with, endorsed by, or sponsored by Warner Bros., Legendary, or the film's producers. Costumes worn by our hosts are original interpretations, not replicas of any film design.</span>
+        <span style="font-size:12px;line-height:1.6;color:#948A7E;">An independent fundraiser screening. Not affiliated with, endorsed by, or sponsored by Warner Bros., Legendary, or the film's producers.</span>
+        <span style="font-size:12px;line-height:1.6;color:#948A7E;">Film title set in Dune Rise by Jesta Designs, under the SIL Open Font License.</span>
       </div>
       <div style="display:flex;flex-direction:column;gap:10px;padding-top:20px;border-top:1px solid #332C24;">
         <a href="https://www.citizenmedic.org/" target="_blank" rel="noopener" style="align-self:flex-start;font-family:'Cinzel',serif;font-weight:700;font-size:17px;line-height:1.35;letter-spacing:.14em;text-transform:uppercase;color:#E3C179;">Citizen Medic Foundation</a>
