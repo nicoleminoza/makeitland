@@ -78,7 +78,6 @@
       <sc-if value="{{ publicOpen }}" hint-placeholder-val="{{ true }}">
         <p style="margin:0;font-size:19px;line-height:1.7;color:#DED2BF;max-width:60ch;text-wrap:pretty;">You'll watch it with 150 people who care as much as you do, in a theater booked for exactly one audience.</p>
       </sc-if>
-      <p style="margin:0;font-size:19px;line-height:1.6;color:#EFE7DB;text-wrap:pretty;">Dinner, drinks, and the film are all included.</p>
       <div style="display:flex;flex-direction:column;gap:14px;">
         <a href="#tickets" style="display:inline-flex;align-self:flex-start;align-items:center;justify-content:center;min-height:56px;padding:16px 30px;background:#C8A45C;color:#15120E;font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;" style-hover="background:#E3C179;">Get your seat · from $150</a>
         <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;font-size:16px;color:#B6AA98;">
@@ -185,7 +184,7 @@
     <div style="max-width:940px;margin:0 auto;display:flex;flex-direction:column;gap:24px;">
       <div style="display:flex;flex-direction:column;gap:10px;max-width:620px;">
         <h2 style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:28px;letter-spacing:.12em;text-transform:uppercase;color:#DED2BF;">Seats</h2>
-        <p style="margin:0;font-size:18px;color:#B6AA98;">Every seat includes the reception and dinner before the film, plus two drink tickets. There are 150 seats. Choose one to continue to checkout.</p>
+        <p style="margin:0;font-size:18px;color:#B6AA98;">There are 150 seats. VIP includes the reception, with light snacks and drinks, arrival by 4:00 PM. Standard is the film only, with snacks and drinks available at the concession stand, arrival by 5:00 PM. There's no late seating once the film starts at 5:30. Choose one to continue to checkout.</p>
         <sc-if value="{{ earlyOpen }}" hint-placeholder-val="{{ false }}">
           <p style="margin:0;padding:14px 16px;border-left:2px solid #7A6234;background:#15120E;font-size:17px;line-height:1.6;color:#C4B9A6;text-wrap:pretty;">Early access. Seats are open to the invitation list only until {{ cutoffLabel }}, then the page goes public.</p>
         </sc-if>
@@ -238,7 +237,6 @@
           <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:17px;color:#C4B9A6;">
             <li>Guaranteed photos with the costumed performers</li>
             <li>Center, unobstructed seating</li>
-            <li>Snacks and a third drink brought to your seat during the film</li>
           </ul>
           <div style="margin-top:auto;"><button type="button" onClick="{{ selectVip }}" style="width:100%;min-height:48px;padding:14px 18px;background:#C8A45C;border:1px solid #C8A45C;color:#15120E;font-family:'Cinzel',serif;font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;cursor:pointer;" style-hover="background:#E3C179;">{{ vipCta }}</button></div>
         </article>
@@ -255,14 +253,15 @@
             </div>
           </div>
           <ul style="margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:17px;color:#C4B9A6;">
-            <li>Reception and dinner before the screening</li>
-            <li>Two drink tickets</li>
             <li>General theater seating</li>
+            <li>Snacks and drinks available at the concession stand</li>
           </ul>
           <div style="margin-top:auto;"><button type="button" onClick="{{ selectStandard }}" style="width:100%;min-height:48px;padding:14px 18px;background:transparent;border:1px solid #C8A45C;color:#E3C179;font-family:'Cinzel',serif;font-weight:600;font-size:13px;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;cursor:pointer;" style-hover="background:#241E17;">{{ standardCta }}</button></div>
         </article>
 
       </div>
+
+      <p style="margin:0;font-size:17px;line-height:1.6;color:#C4B9A6;text-wrap:pretty;">Buying four together? Four VIP seats are $1,000, four Standard seats are $500. Seating together is guaranteed for the group. Email <a href="mailto:events@citizenmedic.org">events@citizenmedic.org</a> to book as a group.</p>
 
       <div style="display:flex;flex-direction:column;gap:10px;padding:20px;border:1px solid #4E4438;background:#15120E;">
         <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#C8A45C;">Coming as a company?</p>
