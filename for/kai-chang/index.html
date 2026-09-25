@@ -286,18 +286,6 @@
             <button type="button" onClick="{{ clearSelection }}" style="min-height:44px;padding:10px 14px;background:none;border:none;color:#B6AA98;font-family:'EB Garamond',serif;font-size:16px;text-decoration:underline;cursor:pointer;">Change seat</button>
           </div>
 
-          <!-- Raffle add-on, checkout only -->
-          <div style="display:flex;flex-direction:column;gap:12px;padding:18px;background:#15120E;border:1px solid #4E4438;">
-            <p style="margin:0;font-family:'Cinzel',serif;font-weight:600;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#E3C179;">Add raffle tickets</p>
-            <p style="margin:0;font-size:17px;color:#C4B9A6;">$25 each, or six for $100. Add-on only, sold with a seat.</p>
-            <div style="display:flex;flex-wrap:wrap;gap:10px;">
-              <button type="button" onClick="{{ raffleDec }}" style="min-width:48px;min-height:48px;background:transparent;border:1px solid #6C5730;color:#E3C179;font-size:22px;cursor:pointer;">−</button>
-              <span style="min-width:64px;min-height:48px;display:flex;align-items:center;justify-content:center;font-family:'Cinzel',serif;font-size:20px;color:#F4EEE4;border:1px solid #39312A;">{{ raffleCount }}</span>
-              <button type="button" onClick="{{ raffleInc }}" style="min-width:48px;min-height:48px;background:transparent;border:1px solid #6C5730;color:#E3C179;font-size:22px;cursor:pointer;">+</button>
-              <span style="display:flex;align-items:center;min-height:48px;font-size:17px;color:#C4B9A6;">{{ raffleTotal }}</span>
-            </div>
-          </div>
-
           <!-- Integration placeholder -->
           <div style="display:flex;flex-direction:column;gap:8px;padding:22px;border:1px dashed #6C5730;background:#15120E;">
             <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:500;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#AEA294;">Ticketing embed slot</p>
@@ -315,29 +303,7 @@
     </div>
   </section>
 
-  <!-- SPONSOR RECOGNITION: renders only once a sponsor is named -->
-  <sc-if value="{{ hasSecured }}" hint-placeholder-val="{{ false }}">
-  <section id="sponsors" style="padding:40px clamp(26px,4vw,52px) 48px;background:#15120E;">
-    <div style="max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:18px;align-items:center;text-align:center;">
-      <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:400;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#AEA294;">Presented with support from</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
-        <sc-for list="{{ securedSponsors }}" as="s" hint-placeholder-count="1">
-          <span style="display:inline-flex;flex-direction:column;gap:2px;align-items:center;min-height:56px;padding:12px 24px;border:1px solid #6C5730;background:#15120E;">
-            <span style="font-family:'Cinzel',serif;font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;color:#EFE7DB;">{{ s.name }}</span>
-            <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#948A7E;">{{ s.tier }}</span>
-          </span>
-        </sc-for>
-        <sc-for list="{{ openSlots }}" as="o" hint-placeholder-count="2">
-          <span style="display:inline-flex;flex-direction:column;gap:2px;align-items:center;min-height:56px;padding:12px 24px;border:1px dashed #6C5730;">
-            <span style="font-family:'Cinzel',serif;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#AEA294;">{{ o.label }}</span>
-            <span style="font-family:'Archivo',sans-serif;font-weight:400;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#AEA294;">Name TBD</span>
-          </span>
-        </sc-for>
-      </div>
-      <p style="margin:0;font-size:17px;color:#B6AA98;max-width:52ch;text-wrap:pretty;">Sponsors cover the room so ticket revenue can go to training. <a href="sponsors.html" style="text-decoration:underline;">See the two sponsorship tiers</a>.</p>
-    </div>
-  </section>
-  </sc-if>
+  <!-- SPONSOR RECOGNITION strip suppressed for now; restore from git (commit history) when sponsors are confirmed -->
 
   <!-- HOST -->
   <section style="padding:52px clamp(26px,4vw,52px);background:#15120E;">
