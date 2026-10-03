@@ -1,0 +1,203 @@
+/* Make It Land design tokens — generated from _ds, do not edit by hand */
+:root {
+  /* ===== Core palette (7 colors) ===== */
+  --mil-ink: #1A1A1A;          /* text, dark bands, footer */
+  --mil-paper: #FAF8F4;        /* page, cards, text on dark */
+  --mil-linen: #F1ECE3;        /* alternate bands, image placeholders, paper-button hover, browser chrome */
+  --mil-rule: #E7E2D9;         /* every hairline and card border */
+  --mil-rule-strong: #DBD4C8;  /* separators that sit on linen, browser-frame border */
+  --mil-stone: #6B6661;        /* secondary text (5.3:1 on paper) */
+  --mil-brick: #B23E26;        /* THE one red: buttons, CTA band, wordmark period, numerals, stat signs, dots, rules, underlines, accent text, hover (5.5:1 on paper) */
+
+  /* ===== Text on ink / brick (3 steps) ===== */
+  --mil-on-dark: #FAF8F4;                     /* headlines, primary */
+  --mil-on-dark-body: rgba(250,248,244,0.85); /* body copy, links */
+  --mil-on-dark-muted: rgba(250,248,244,0.6); /* labels, captions, copyright */
+  --mil-on-dark-rule: rgba(250,248,244,0.15); /* hairlines on dark */
+
+  /* ===== Deprecated aliases (kept so older files still render; do not use) ===== */
+  --mil-ember: var(--mil-brick);
+  --mil-sand: var(--mil-linen);
+  --mil-chrome: var(--mil-linen);
+  --mil-rule-mid: var(--mil-rule-strong);
+  --mil-chrome-dot: var(--mil-rule-strong);
+  --mil-umber: var(--mil-ink);
+  --mil-paper-90: var(--mil-on-dark-body);
+  --mil-paper-85: var(--mil-on-dark-body);
+  --mil-paper-82: var(--mil-on-dark-body);
+  --mil-paper-80: var(--mil-on-dark-body);
+  --mil-paper-75: var(--mil-on-dark-body);
+  --mil-paper-70: var(--mil-on-dark-body);
+  --mil-paper-62: var(--mil-on-dark-muted);
+  --mil-paper-60: var(--mil-on-dark-muted);
+  --mil-paper-50: var(--mil-on-dark-muted);
+  --mil-paper-45: var(--mil-on-dark-muted);
+  --mil-paper-rule: var(--mil-on-dark-rule);
+  --mil-paper-rule-soft: var(--mil-on-dark-rule);
+  --mil-paper-rule-faint: var(--mil-on-dark-rule);
+
+  /* ===== Semantic aliases ===== */
+  --surface-page: var(--mil-paper);
+  --surface-band: var(--mil-linen);
+  --surface-card: var(--mil-paper);
+  --surface-inverse: var(--mil-ink);
+  --surface-cta: var(--mil-brick);
+  --surface-placeholder: var(--mil-linen);
+  --text-primary: var(--mil-ink);
+  --text-secondary: var(--mil-stone);
+  --text-accent: var(--mil-brick);
+  --text-on-dark: var(--mil-on-dark);
+  --text-on-dark-body: var(--mil-on-dark-body);
+  --text-on-dark-muted: var(--mil-on-dark-muted);
+  --mark-accent: var(--mil-brick);
+  --border-hairline: var(--mil-rule);
+  --border-on-dark: var(--mil-on-dark-rule);
+  --action-primary: var(--mil-brick);
+  --action-on-dark: var(--mil-paper);
+  --action-on-dark-hover: var(--mil-linen);
+  --link-hover: var(--mil-brick);
+}
+
+:root {
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+
+  /* Fraunces is always set via font-variation-settings, not font-weight */
+  --fvs-regular: 'opsz' 90, 'wght' 400; /* @kind font */
+  --fvs-medium: 'opsz' 90, 'wght' 500; /* @kind font */   /* default for headlines, leads, quotes */
+  --fvs-semibold: 'opsz' 90, 'wght' 600; /* @kind font */ /* wordmark, numerals, stats, emphasis word */
+  --fvs-heavy: 'opsz' 90, 'wght' 720; /* @kind font */    /* wordmark magnetic hover peak */
+  --fvs-headline: 'opsz' 144, 'wght' 600; /* @kind font */ /* REFINED: all headlines 28px+ */
+  --fvs-headline-emphasis: 'opsz' 144, 'wght' 760; /* @kind font */ /* home hero only: "chosen". Never elsewhere. */
+  --fvs-poster: 'opsz' 144, 'wght' 600; /* @kind font */  /* writing-page H1 and statement bands */
+
+  /* Display scale (Fraunces) */
+  /* Canonical H1 per page type */
+  --h1-hero: 104px;     /* home only */
+  --h1-page: 76px;      /* every other page */
+  --h1-home: var(--h1-hero);
+  --h1-subpage: var(--h1-page);
+  --h1-essay: var(--h1-page);
+  --h1-project: 136px;
+  --size-display-xxl: 136px; /* project-name H1 (Cuppa Lumpia) */
+  --size-display-xl: 80px;   /* essay H1 */
+  --size-display-lg: 78px;   /* home hero */
+  --size-statement: 80px;    /* statement bands */
+  --size-h1: 60px;           /* thesis / artifact H1 */
+  --size-h1-case: 56px;      /* case-study H1 */
+  --size-cta: 68px;          /* home CTA band */
+  --size-cta-sub: 56px;      /* sub-page CTA band */
+  --size-beat: 52px;         /* case-study beat line */
+  --size-lead-lg: 48px;      /* section lead, essay H2 */
+  --size-h3: 46px;           /* work-card title, about lead */
+  --size-lead-md: 40px;      /* thesis teaser, next case study */
+  --size-lead: 30px;         /* thesis lead, case lead */
+  --size-quote: 27px;        /* pull quote, case display para */
+  --size-quote-sm: 26px;     /* client quote, artifact title */
+  --size-title: 24px;        /* service-card title, display link */
+  --size-wordmark: 23px;
+  --size-numeral: 22px;
+
+  /* Body scale (Hanken Grotesk) */
+  --size-body-xl: 22px;
+  --size-body-lg: 21px;
+  --size-body-hero: 20px;
+  --size-body-article: 19px;
+  --size-body: 18px;
+  --size-body-sm: 17px;
+  --size-body-xs: 16px;
+  --size-ui: 15px;
+  --size-caption: 14px;
+  --size-meta: 13px;
+  --size-eyebrow: 12px;
+  --size-eyebrow-sm: 11px;
+
+  --leading-display: 1.04;
+  --leading-headline: 1.1;
+  --leading-lead: 1.25;
+  --leading-quote: 1.34;
+  --leading-body: 1.6;
+  --leading-long: 1.65;
+
+  --tracking-display: -0.03em;
+  --tracking-headline: -0.015em;
+  --tracking-eyebrow-wide: 0.22em;
+  --tracking-eyebrow: 0.18em;
+  --tracking-footer-label: 0.16em;
+}
+
+:root {
+  /* Grid: one container for every page */
+  --container: 1160px;
+  --container-home: 1160px; /* deprecated aliases */
+  --container-case: 1160px;
+  --container-essay: 1160px;
+  --container-thesis: 1160px;
+  --measure-h1: 900px;
+  --measure-essay: 660px;
+  --measure-case: 620px;
+  --gutter: 40px;          /* page margin = space-5 */
+  --grid-columns: 12; /* @kind other */
+  --grid-gap: 24px;         /* column gutter = space-4 */
+  --gutter-mobile: 24px;
+  --label-offset: calc(25% + 6px); /* @kind spacing */ /* 3 columns + 1 gutter */
+  --opener-top: 104px;
+  --opener-eyebrow-gap: 24px;
+
+  /* Section rhythm */
+  --section: 104px;
+  --section-mobile: 64px;
+
+  /* Spacing scale: 7 steps (~1.6 ratio) + the 2px seam. Nothing else. */
+  --space-seam: 2px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 40px;
+  --space-6: 64px;
+  --space-7: 104px;
+
+  /* Shape */
+  --radius-none: 0;
+  --radius-frame: 10px;
+  --radius-pill: 100px;
+  --radius-round: 50%;
+  --shadow-frame: 0 34px 70px -34px rgba(26,26,26,0.32);
+  --blur-header: blur(8px); /* @kind other */
+
+  /* Motion */
+  --ease-reveal: cubic-bezier(0.16,1,0.3,1); /* @kind other */
+  --ease-magnetic: cubic-bezier(0.22,1,0.36,1); /* @kind other */
+  --dur-reveal: 900ms; /* @kind other */
+  --dur-magnetic: 240ms; /* @kind other */
+}
+
+/* Minimal resets the site applies on every page */
+body { margin: 0; background: var(--mil-paper); color: var(--mil-ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+a { text-decoration: none; color: inherit; }
+@keyframes milHeroReveal {
+  0% { font-variation-settings: 'opsz' 9, 'wght' 300; letter-spacing: 0.04em; opacity: 0; }
+  100% { font-variation-settings: 'opsz' 90, 'wght' 500; letter-spacing: -0.02em; opacity: 1; }
+}
+
+/* Interaction states */
+:focus { outline: none; }
+:focus-visible { outline: 2px solid var(--mil-brick); outline-offset: 4px; }
+[data-on-dark] :focus-visible, [data-on-dark]:focus-visible { outline-color: var(--mil-paper); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; animation: none !important; } }
+
+/* page base (from design helmet) */
+a:hover{color:var(--mil-brick)}
+html{scroll-behavior:auto}
+
+/* ===== Responsive: single breakpoint at 860px (mirrors the current live site) ===== */
+@media (max-width: 860px) {
+  /* header nav links collapse on phones; wordmark + fit-call button stay */
+  [data-navlink] { display: none !important; }
+  /* page gutters drop from 40px to 24px */
+  .mil-container { padding-left: 24px !important; padding-right: 24px !important; }
+  /* fixed multi-column layouts (work cards, footer) collapse to one column */
+  .mil-stack { grid-template-columns: 1fr !important; }
+}
