@@ -19,6 +19,6 @@ Static HTML and CSS, no build step. Served via GitHub Pages from the `main` bran
 
 ## Working with Make It Land
 
-Make It Land takes on one or two engagements at a time. [Schedule a fit call](https://makeitland.studio) or email hello@makeitland.studio.
+Make It Land takes on one or two engagements at a time. [Schedule a fit call](https://calendly.com/make-it-land/intro-fit-call?primary_color=B23E26) or email hello@makeitland.studio.
 
 © 2026 Nicole Miñoza. Site content and design are not licensed for reuse.
