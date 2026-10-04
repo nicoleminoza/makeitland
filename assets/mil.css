@@ -1,3 +1,9 @@
+/* Self-hosted variable webfonts (no Google Fonts) */
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Fraunces';src:url('/assets/fonts/fraunces-italic.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+@font-face{font-family:'Hanken Grotesk';src:url('/assets/fonts/hanken-grotesk.woff2') format('woff2');font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:'Hanken Grotesk';src:url('/assets/fonts/hanken-grotesk-italic.woff2') format('woff2');font-weight:100 900;font-style:italic;font-display:swap}
+
 /* Make It Land design tokens — generated from _ds, do not edit by hand */
 :root {
   /* ===== Core palette (7 colors) ===== */
@@ -200,4 +206,8 @@ html{scroll-behavior:auto}
   .mil-container { padding-left: 24px !important; padding-right: 24px !important; }
   /* fixed multi-column layouts (work cards, footer) collapse to one column */
   .mil-stack { grid-template-columns: 1fr !important; }
+  /* case-study rows: label stacks above content with a 16px gap */
+  .mil-caserow { gap: 16px !important; }
+  /* drop the beat-line indent on mobile */
+  .mil-beat { margin-left: 0 !important; }
 }

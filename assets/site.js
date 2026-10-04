@@ -17,12 +17,20 @@
         try { v.removeAttribute("autoplay"); v.pause(); } catch (e) {}
       });
     } else {
-      /* nudge muted autoplay on browsers that need a script-initiated play() */
-      [].forEach.call(document.querySelectorAll("video[autoplay]"), function (v) {
-        v.muted = true;
-        var p = v.play();
-        if (p && p.catch) p.catch(function () {});
-      });
+      /* nudge muted autoplay; retry when the tab becomes visible (browsers defer
+         autoplay while document.hidden) and when the video scrolls into view. */
+      var vids = [].slice.call(document.querySelectorAll("video[autoplay]"));
+      var kick = function () {
+        vids.forEach(function (v) { v.muted = true; var p = v.play(); if (p && p.catch) p.catch(function () {}); });
+      };
+      kick();
+      document.addEventListener("visibilitychange", function () { if (!document.hidden) kick(); });
+      if ("IntersectionObserver" in window) {
+        var io = new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.muted = true; var p = e.target.play(); if (p && p.catch) p.catch(function () {}); } });
+        }, { threshold: 0.1 });
+        vids.forEach(function (v) { io.observe(v); });
+      }
     }
 
     /* 1. Home hero reveal — play once per browser session, skip under reduced motion. */
