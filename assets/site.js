@@ -11,6 +11,16 @@
   }
 
   ready(function () {
+    /* GoatCounter: count the fit-call conversion. The buttons open Calendly in a new
+       tab, so the page doesn't unload and the event reliably sends. */
+    [].forEach.call(document.querySelectorAll('a[href*="calendly.com/make-it-land"]'), function (a) {
+      a.addEventListener("click", function () {
+        if (window.goatcounter && window.goatcounter.count) {
+          window.goatcounter.count({ path: "fit-call-click", title: "Schedule a fit call", event: true });
+        }
+      });
+    });
+
     /* 0. Reduced motion: pause the looping hero video (How Institutions Behave). */
     if (reduce) {
       [].forEach.call(document.querySelectorAll("video"), function (v) {

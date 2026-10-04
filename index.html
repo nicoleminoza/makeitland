@@ -30,18 +30,111 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/assets/mil.css">
 <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Make It Land Studio",
-    "url": "https://makeitland.studio",
-    "description": "A boutique brand studio for founders and emerging brands. Built to be chosen, not just seen.",
-    "founder": { "@type": "Person", "name": "Nicole Miñoza" },
-    "logo": "https://makeitland.studio/favicon.png",
-    "image": "https://makeitland.studio/og-home.png",
-    "sameAs": ["https://www.instagram.com/makeitlandstudio/", "https://linkedin.com/company/make-it-land-studio"]
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://makeitland.studio/#organization",
+      "name": "Make It Land Studio",
+      "alternateName": "Make It Land",
+      "url": "https://makeitland.studio/",
+      "description": "A boutique brand studio for founders and emerging brands. We find the one advantage a brand is overlooking, build around it, and prove it.",
+      "slogan": "Built to be chosen, not just seen.",
+      "logo": "https://makeitland.studio/assets/brand/icon-512.png",
+      "image": "https://makeitland.studio/og-home.png",
+      "email": "hello@makeitland.studio",
+      "founder": {
+        "@id": "https://makeitland.studio/#nicole"
+      },
+      "areaServed": [
+        "Seattle",
+        "Remote, United States"
+      ],
+      "knowsAbout": [
+        "Brand positioning",
+        "Brand strategy",
+        "Website design",
+        "Copywriting",
+        "Typography"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/makeitlandstudio/",
+        "https://linkedin.com/company/make-it-land-studio"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://makeitland.studio/#nicole",
+      "name": "Nicole Miñoza",
+      "jobTitle": "Founder",
+      "description": "Founder of Make It Land. Twenty-three years at Adobe, where she was Director of Marketing and Product for Adobe Fonts, turning typography into a reason people chose and stayed with the product.",
+      "worksFor": {
+        "@id": "https://makeitland.studio/#organization"
+      },
+      "alumniOf": {
+        "@type": "Organization",
+        "name": "Adobe"
+      },
+      "knowsAbout": [
+        "Brand positioning",
+        "Brand strategy",
+        "Typography",
+        "Marketing",
+        "Product marketing"
+      ],
+      "url": "https://makeitland.studio/"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://makeitland.studio/#website",
+      "name": "Make It Land Studio",
+      "url": "https://makeitland.studio/",
+      "publisher": {
+        "@id": "https://makeitland.studio/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "name": "Brand positioning, website, and proof for founders",
+      "provider": {
+        "@id": "https://makeitland.studio/#organization"
+      },
+      "serviceType": "Brand strategy and design",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Positioning",
+              "description": "Finding the one overlooked thing that makes you the obvious choice, and making it the center of everything."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "The site",
+              "description": "A website designed and built to make the decision easy for whoever is choosing you, and to move them from interest to yes."
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "The proof",
+              "description": "Case studies built around evidence: what happened, what changed, what it was worth."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <div style="background: var(--mil-paper); color: var(--mil-ink); font-family: var(--font-body);">
@@ -58,7 +151,7 @@
 
   <section style="max-width: 1160px; margin: 0px auto; padding: 0px 40px 104px; box-sizing: border-box;" class="mil-container">
     <div style="overflow: hidden; aspect-ratio: 12 / 5; background: var(--mil-rule);">
-      <img src="/assets/nicole/thesis-specimen.jpg" alt="Nicole's hands turning the pages of a type specimen book" style="display: block; width: 100%; height: 100%; object-fit: cover;">
+      <img src="/assets/nicole/thesis-specimen.webp" alt="Nicole's hands turning the pages of a type specimen book" style="display: block; width: 100%; height: 100%; object-fit: cover;">
     </div>
   </section>
 
@@ -85,8 +178,8 @@
       <div style="margin-bottom: 40px;"><div style="display: contents;"><div style="font-family: var(--font-body); font-size: 12px; line-height: 1.4; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--mil-stone); margin: 0px;">Selected work</div></div></div>
       <div style="display: flex; flex-direction: column; gap: 2px;">
         <div style="display: contents;"><a href="/work/my-camino-financial.html" style="display: grid; grid-template-columns: 6fr 6fr; background: var(--mil-paper); color: var(--mil-ink); border: 1px solid var(--mil-rule); text-decoration: none;" class="mil-stack"><div style="background: var(--mil-brick); min-height: 340px; padding: 64px; display: flex; flex-direction: column; gap: 24px;"><blockquote style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 500; letter-spacing: -0.015em; font-size: 27px; line-height: 1.34; color: var(--mil-paper); margin: 0px;">Nicole translated it into a website I am proud to present.</blockquote><div style="font-family: var(--font-body); font-size: 14px; line-height: 1.5; color: var(--mil-paper); font-weight: 500;">Leslie Roulias, Founder, My Camino Financial</div></div><div style="padding: 64px;"><div style="font-family: var(--font-body); font-size: 12px; line-height: 1.4; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--mil-brick); margin: 0px 0px 24px;">Positioning, copy, and a new site</div><h3 style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: 46px; line-height: 1.02; margin: 0px 0px 16px; color: var(--mil-ink); transition: color 160ms;">My Camino Financial</h3><p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--mil-stone); margin: 0px 0px 24px;">Her intro calls already converted eight in ten. The site was the only thing not saying so.</p><span style="font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--mil-ink);">View the case study →</span></div></a></div>
-        <div style="display: contents;"><a data-on-dark="" href="/work/adobe.html" style="display: grid; grid-template-columns: 7fr 5fr; background: var(--mil-ink); color: var(--mil-paper); border: 1px solid var(--mil-ink); text-decoration: none;" class="mil-stack"><div style="padding: 64px;"><div style="font-family: var(--font-body); font-size: 12px; line-height: 1.4; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--mil-on-dark-muted); margin: 0px 0px 24px;">Founder track record, at Adobe</div><h3 style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: 46px; line-height: 1.02; margin: 0px 0px 16px; color: var(--mil-paper); transition: color 160ms;">The overlooked thing, made measurable.</h3><p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--mil-on-dark-body); margin: 0px 0px 24px;">The playbook behind the studio, proven at enterprise scale: find the overlooked capability, make it measurable, and design the path straight to it.</p><span style="font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--mil-paper);">View the case study →</span></div><div style="background: var(--mil-ink); min-height: 340px; position: relative; overflow: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor;"><img src="/assets/nicole/founder-482.jpg" alt="Nicole Miñoza" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 62% 15%;"><div style="position: absolute; inset: 0px; background: linear-gradient(270deg, rgba(26, 26, 26, 0) 68%, rgba(26, 26, 26, 0.28) 90%, rgba(26, 26, 26, 0.6) 100%);"></div></div></a></div>
-        <div style="display: contents;"><a href="/work/cuppa-lumpia.html" style="display: grid; grid-template-columns: 6fr 6fr; background: var(--mil-paper); color: var(--mil-ink); border: 1px solid var(--mil-rule); text-decoration: none;" class="mil-stack"><div style="background: var(--mil-linen); min-height: 340px; position: relative; overflow: hidden; border-right: 1px solid var(--mil-rule);"><img src="/assets/cuppa/stand-sign-cups.jpg" alt="Cuppa Lumpia sign and kraft cups at the driveway stand" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center 60%;"></div><div style="padding: 64px;"><div style="font-family: var(--font-body); font-size: 12px; line-height: 1.4; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--mil-brick); margin: 0px 0px 24px;">A brand built from the ground up</div><h3 style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: 46px; line-height: 1.02; margin: 0px 0px 16px; color: var(--mil-ink); transition: color 160ms;">Cuppa Lumpia</h3><p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--mil-stone); margin: 0px 0px 24px;">Naming, identity, packaging, and the site. Strategy through production on our own venture.</p><span style="font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--mil-ink);">View the case study →</span></div></a></div>
+        <div style="display: contents;"><a data-on-dark="" href="/work/adobe.html" style="display: grid; grid-template-columns: 7fr 5fr; background: var(--mil-ink); color: var(--mil-paper); border: 1px solid var(--mil-ink); text-decoration: none;" class="mil-stack"><div style="padding: 64px;"><div style="font-family: var(--font-body); font-size: 12px; line-height: 1.4; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--mil-on-dark-muted); margin: 0px 0px 24px;">Founder track record, at Adobe</div><h3 style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: 46px; line-height: 1.02; margin: 0px 0px 16px; color: var(--mil-paper); transition: color 160ms;">The overlooked thing, made measurable.</h3><p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--mil-on-dark-body); margin: 0px 0px 24px;">The playbook behind the studio, proven at enterprise scale: find the overlooked capability, make it measurable, and design the path straight to it.</p><span style="font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--mil-paper);">View the case study →</span></div><div style="background: var(--mil-ink); min-height: 340px; position: relative; overflow: hidden; border-right-width: medium; border-right-style: none; border-right-color: currentcolor;"><img src="/assets/nicole/founder-482.webp" alt="Nicole Miñoza" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: 62% 15%;" loading="lazy" decoding="async"><div style="position: absolute; inset: 0px; background: linear-gradient(270deg, rgba(26, 26, 26, 0) 68%, rgba(26, 26, 26, 0.28) 90%, rgba(26, 26, 26, 0.6) 100%);"></div></div></a></div>
+        <div style="display: contents;"><a href="/work/cuppa-lumpia.html" style="display: grid; grid-template-columns: 6fr 6fr; background: var(--mil-paper); color: var(--mil-ink); border: 1px solid var(--mil-rule); text-decoration: none;" class="mil-stack"><div style="background: var(--mil-linen); min-height: 340px; position: relative; overflow: hidden; border-right: 1px solid var(--mil-rule);"><img src="/assets/cuppa/stand-sign-cups.webp" alt="Cuppa Lumpia sign and kraft cups at the driveway stand" style="position: absolute; inset: 0px; width: 100%; height: 100%; object-fit: cover; object-position: center 60%;" loading="lazy" decoding="async"></div><div style="padding: 64px;"><div style="font-family: var(--font-body); font-size: 12px; line-height: 1.4; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; color: var(--mil-brick); margin: 0px 0px 24px;">A brand built from the ground up</div><h3 style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: 46px; line-height: 1.02; margin: 0px 0px 16px; color: var(--mil-ink); transition: color 160ms;">Cuppa Lumpia</h3><p style="font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--mil-stone); margin: 0px 0px 24px;">Naming, identity, packaging, and the site. Strategy through production on our own venture.</p><span style="font-family: var(--font-body); font-size: 15px; font-weight: 600; color: var(--mil-ink);">View the case study →</span></div></a></div>
         <div style="margin-top: 2px; padding: 40px 4px 24px; display: flex; align-items: center; gap: 16px;">
           <div style="font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mil-stone); font-weight: 600; white-space: nowrap;">Also from the studio</div>
           <div style="flex: 1 1 0%; height: 1px; background: var(--mil-rule);"></div>
@@ -119,7 +212,7 @@
       <p style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: clamp(36px, 5vw, 48px); line-height: 1.1; margin: 0px 0px 64px; max-width: 980px; text-wrap: balance;">Make It Land Studio is the practice of Nicole Miñoza.</p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px 104px; align-items: start;">
         <div style="overflow: hidden; aspect-ratio: 1200 / 1458; background: var(--mil-rule);">
-          <img src="/assets/nicole/about-desk.jpg" alt="Nicole Miñoza at a table with an open design book" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+          <img src="/assets/nicole/about-desk.webp" alt="Nicole Miñoza at a table with an open design book" style="display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top;" loading="lazy" decoding="async">
         </div>
         <div style="display: flex; flex-direction: column; gap: 24px; padding-top: 4px;">
           <p style="font-size: 18px; line-height: 1.65; color: var(--mil-on-dark-body); margin: 0px;">For two decades I worked on the most overlooked thing in software: typography. Everyone used it; almost no one thought it mattered. I turned it from a finishing touch into a reason people chose Adobe and stayed.</p>
@@ -139,6 +232,7 @@
     <div style="display: contents;"><section data-on-dark="" style="background: var(--mil-brick); color: var(--mil-paper);"><div style="max-width: 1160px; margin: 0px auto; padding: 104px 40px; text-align: center;" class="mil-container"><h2 style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 144, &quot;wght&quot; 600; letter-spacing: -0.025em; font-size: 56px; line-height: 1.02; text-wrap: balance; margin: 0px auto 24px; max-width: 900px;">What are you trying to land?</h2><p style="font-family: var(--font-body); font-size: 18px; line-height: 1.55; color: var(--mil-on-dark-body); margin: 0px auto 40px; max-width: 560px;">Make It Land takes on one or two engagements at a time.</p><div style="display: flex; flex-direction: column; align-items: center; gap: 16px;"><a href="https://calendly.com/make-it-land/intro-fit-call?primary_color=B23E26" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; justify-content: center; background: var(--mil-paper); color: var(--mil-ink); font-family: var(--font-body); font-weight: 600; line-height: 1.2; white-space: nowrap; text-decoration: none; border-radius: 0px; cursor: pointer; transition: background 120ms; font-size: 16px; padding: 16px 40px; min-height: 56px;">Schedule a fit call</a><div style="font-family: var(--font-body); font-size: 14px; color: var(--mil-on-dark-body);">Prefer email? <a href="mailto:hello@makeitland.studio" style="color: var(--mil-paper); font-weight: 500; text-decoration: underline 1px rgba(250, 248, 244, 0.6); text-underline-offset: 3px;">hello@makeitland.studio</a></div></div></div></section></div>
   </div>
   <div style="display: contents;"><footer data-on-dark="" style="background: var(--mil-ink); color: var(--mil-paper);"><div style="max-width: 1160px; margin: 0px auto; padding: 64px 40px 40px;" class="mil-container"><div style="display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: start; padding-bottom: 40px; border-bottom: 1px solid var(--mil-paper-rule-soft);" class="mil-stack"><span style="font-family: var(--font-display); font-variation-settings: &quot;opsz&quot; 90, &quot;wght&quot; 600; letter-spacing: -0.015em; font-size: 34px; white-space: nowrap; color: var(--mil-paper); text-decoration: none;">Make It Land<span style="color: var(--mil-brick);">.</span></span><div style="display: flex; gap: 64px; flex-wrap: wrap;"><div style="display: flex; flex-direction: column; gap: 16px;"><div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mil-on-dark-muted); font-weight: 600; margin-bottom: 4px;">Explore</div><a href="/#work" style="font-family: var(--font-body); font-weight: 500; text-decoration: none; font-size: 15px; color: var(--mil-on-dark-body);">Work</a><a href="/#thesis" style="font-family: var(--font-body); font-weight: 500; text-decoration: none; font-size: 15px; color: var(--mil-on-dark-body);">Thesis</a><a href="/#about" style="font-family: var(--font-body); font-weight: 500; text-decoration: none; font-size: 15px; color: var(--mil-on-dark-body);">About</a></div><div style="display: flex; flex-direction: column; gap: 16px;"><div style="font-family: var(--font-body); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mil-on-dark-muted); font-weight: 600; margin-bottom: 4px;">Connect</div><a href="mailto:hello@makeitland.studio" style="font-family: var(--font-body); font-weight: 500; text-decoration: none; font-size: 15px; color: var(--mil-on-dark-body);">hello@makeitland.studio</a><a href="https://www.instagram.com/makeitlandstudio/" style="font-family: var(--font-body); font-weight: 500; text-decoration: none; font-size: 15px; color: var(--mil-on-dark-body);" target="_blank" rel="noopener">Instagram</a><a href="https://linkedin.com/company/make-it-land-studio" style="font-family: var(--font-body); font-weight: 500; text-decoration: none; font-size: 15px; color: var(--mil-on-dark-body);" target="_blank" rel="noopener">LinkedIn</a></div></div></div><div style="padding-top: 24px; font-family: var(--font-body); font-size: 14px; color: var(--mil-on-dark-muted);">© 2026 Make It Land Studio</div></div></footer></div></div>
+<script data-goatcounter="https://nicoleminoza.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 <script src="/assets/site.js" defer></script>
 </body>
 </html>
